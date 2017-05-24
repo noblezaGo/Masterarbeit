@@ -1,0 +1,91 @@
+
+\documentclass[oneside,openright,a4paper,12pt]{report}
+%\documentclass[twoside,openright,a4paper,12pt]{report}
+
+
+
+\input{src/mySettings}
+
+% eigene Kommandos erzeugen
+\newcommand{\uemlaut}{\text{\textit{\"u}}}
+\newcommand{\todo}[1]{{\color{red}\textbf{TODO:}~{#1}}}
+\newcommand{\dd}{\,\mathrm{d}}
+
+
+\begin{document}
+
+ \pagenumbering{Roman}			% Römische Seitenzahlen
+% \nonfrenchspacing  				% doppele Leerzeichen nach Punkte                   		
+																	
+ % Titelseite, Sperrvermerk, Danksagung, Abstract
+ \input{src/Titel}  
+ \thispagestyle{empty}
+ \clearpage 
+ \setcounter{page}{1}
+ \include{src/chp_Sperr}
+ \clearpage  
+ %\include{src/chp_Vorwort}  
+
+ % Inhaltsverzeichnis
+ \clearpage
+ \phantomsection
+ \addcontentsline{toc}{chapter}{Inhaltsverzeichnis} % include to Inhaltsverzeichnis 
+ \tableofcontents
+
+ % Aufgabenstellung
+ \clearpage
+ \phantomsection
+ \include{src/chp_Aufgabenstellung}
+
+ % Die Kapitel
+ \clearpage  
+ \pagenumbering{arabic} 		% Normale Seitenzahlen
+ \setcounter{page}{1} 			% Beginnen mit 1  
+  
+	\include{src/chp_Einleitung}
+	\include{src/chp_Grundlagen} 	
+	\include{src/chp_Anforderungsanalyse}
+	\include{src/chp_IstAnalyse}
+	\include{src/chp_Evaluation}
+	\include{src/chp_Konzeption}
+	\include{src/chp_Design}
+	
+	
+ 
+
+ % Abbkürzungsverzeichnis, Symbolverzeichnis
+ %\clearpage 
+ %\ohead[{}]{} 							% keine Kapitelbezeichnung im Header
+ %\pagenumbering{Roman}			% Römische Seitenzahlen
+ %\setcounter{page}{8} 			% Beginnen mit 8 (!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!)   
+ %\include{src/chp_kurz}
+
+
+ % Abbildungsverzeichnis + Tabellenverzeichnis
+ \clearpage
+ \phantomsection
+ \addcontentsline{toc}{chapter}{Abbildungsverzeichnis} 
+ \listoffigures
+ 
+ \clearpage
+ \phantomsection
+ \addcontentsline{toc}{chapter}{Tabellenverzeichnis}  
+ \listoftables 
+ 
+	
+ % Literaturverzeichnis 
+ \clearpage
+ \phantomsection
+ \addcontentsline{toc}{chapter}{Literaturverzeichnis}   
+ %\bibliographystyle{gerplain}
+ \bibliographystyle{unsrt}
+ \bibliography{Literaturdatenbank}  
+ 
+ 
+
+ % Anhang 
+ \clearpage 
+ %\include{src/chp_Anhang} 
+ 
+  
+\end{document}
