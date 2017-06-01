@@ -1,0 +1,152 @@
+\chapter{Grundlagen} 
+
+
+
+\section{GIGABOX}
+
+\subsection{Überblick}
+GIGABOX ist eine Produktfamilie von Steuergeräten der Firma GIGATRONIK. GIGABOX-Steuergeräte werden hauptsächlich in der Fahrzeugentwicklung eingesetzt, um prototypische Kommunikationslösungen im Fahrzeug schnell realisieren zu können. Beispielhafte Anwendungen sind der Einsatz als Gateway zur Übersetzung zwischen unterschiedlichen Busprotokollen und zur Ansteuerung von Treiber-ICs im Automobil. Das Use-Case-Diagramm in Abbildung XX zeigt die Einsatzmöglichkeiten von GIGABOXEN.
+
+
+
+
+GIGABOX-Steuergeräte werden in unterschiedlicher Hardwareausstattung und Funktionalität angeboten. Tabelle XX bietet eine Übersicht über die verschiedenen GIGABOX Varianten. 
+
+\textcolor[rgb]{1,0,0}{TODO: Welche GIGABOX-Varianten gibt es? Auf Homepage sind nur wenige gelistet. Warum?}
+In Confluence: S,FR Degraded, FR Extended, FR Gateway, FR Gateway BLE, XL Standard
+-> Vermutung: Nur die auf der Homepage angebotenen werden noch verkauft: BEO, flex-i-FlexRay USB Interface, FlexRay Active Star, Gateway, XL. 
+\textcolor[rgb]{1,0,0}{Warum heißt sense ironCUBE auch GIGABOX? -> ist kein Steuergerät}
+
+
+
+Eine GIGABOX besteht aus einer Basisplatine und einer Applikationsplatine. Das GIGABOX gate Grundmodul verfügt über Stromversorgung, USB-Anschluss und einen leistungsfähigen Mikrocontroller mit einer Vielzahl von Standard-Schnittstellen (FlexRay, CAN, LIN) sowie der dazugehörenden Treiber-Software.
+
+\textcolor[rgb]{1,0,0}{TODO: Wenn auf Basisplatine LIN,CAN,Flexray ist, warum haben alle GIGABOXEN diese Bussysteme? Sind grundsätzlich alle Module für LIN,CAN,Flexray vorhanden, aber je nach Applikationsplatine werden nur einzelne Module zur Verfügung gestellt?}
+
+Beschreibung Funktionsweise GIGABOX aus Softwaresicht. Skript-Applikation und Bootapplikation. Virtuelle Maschine läuft in Skript-Applikation. Auf virtueller Maschine wird Bytecode ausgeführt. Der Bytecode wurde vom PAWN-Compiler (in configurAIDER) aus einer Skriptdatei erzeugt.  Quelle: Bachelorarbeit Christian Eissler Absch. 4.1 \textcolor[rgb]{1,0,0}{(Arbeit über GIGABOX FD -> Funktionsweise bei den alten GIGABOXEN gleich?)}
+
+Prozessor
+Flash-Speicher
+
+Der integrierte Mikrocontroller bietet eine UART-Schnittstelle. Mithilfe eines USB-to-Serial Port Adapters \textcolor[rgb]{1,0,0}{(Korrekt?)} kann die GIGABOX per Kabel mit der USB-Schnittstelle eines PCs verbunden werden, um z.B. neu zu flashen.
+
+Abbildung \ref{fig:UseCasesGIGABOX} zeigt typische Einsatzszenarien der GIGABOX. 
+
+1. Use Case: Einsatz als Gateway zur Modifikation von Busbotschaften
+
+Anwendungsbeispiel: Es soll getestet werden, ob Klimaanlage in neuer Fahrzeugserie funktioniert. Busbotschaften in der neuen Serie wurden modifiziert im Vergleich zur alten Serie.
+Fahrzeug aus neuer Serie steht aber noch nicht zur Verfügung. Deshalb werden Bussignale aus alter Serie mit der GIGABOX so verändert, dass Sie den Signalen der neuen Serie entsprechen.
+
+2. Use Case: Funktionalität des Fahrzeugs erweitern
+
+\begin{itemize}
+	\item Rapid Prototyping: Neues Feature soll möglichst schnell und unkompliziert gestestet werden
+	
+	Bsp: Blinker-LEDs sollen nicht mehr gleichzeitig angesteuert werden, sondern nacheinander von innen nach außen mit kurzer zeitlicher Verzögerung
+	\item Serieneinsatz: Neue Funktion bei Fahrzeugumbau realisieren
+	
+	Bsp: Mercedes E-Klasse wird zu einem Leichenwagen umgebaut. Neue Funktionen wie Rollladen hoch- und runterfahren sollen realisiert werden.
+\end{itemize}
+ 
+3. Use Case: Restbussimulation: 
+
+Nachrichten von nicht real im Netzwerk vorhandenen Steuergeräten werden nachgebildet (von der GIGABOX). Steuergeräte können getestet werden, ohne dass der komplette Bus aufgebaut werden muss. Quelle: http://www.samtec.de/hauptmenu/loesungen-fuer/restbussimulation.html
+
+Kann auch mit Tools wie CANoe gemacht werden. Für CANoe wird aber teure Lizenz benötigt und ein Laptop. GIGABOX ist handlicher und billiger.
+
+\textcolor[rgb]{1,0,0}{Unterschied zu HiL?}
+
+
+\begin{figure}[!htbp]
+	\centering
+		\includegraphics[width=\textwidth]{images/UseCasesGigabox.png}
+	\caption{Use-Case-Diagramm GIGABOX}
+	\label{fig:UseCasesGIGABOX}
+\end{figure}
+
+
+\subsection{Skriptsprache PAWN}
+
+Siehe Pawn\_Language\_Guide.pdf, Foreword \\
+Pawn\_Implementation\_Guide.pdf, The Compiler, The abstract machine
+
+\colorbox[rgb]{1,0,0}{Warum wurde PAWN gewählt?}
+-frei verfügbar
+
+\colorbox[rgb]{1,0,0}{Vorteile PAWN auf VM gegenüber C?}
+- einfacher zu programmieren
+-durch VM ist Code hardwareunabhängig und muss nicht an eingesetzten Mikrocontroller angepasst werden 
+	-> VM muss aber an Hardware angepasst werden
+
+
+
+
+\subsection{configurAIDER}
+
+Der configurAIDER ist eine von GIGATRONIK entwickelte integrierte Entwicklungsumgebung (IDE), die es Benutzern ermöglicht, mit einer GIGABOX zu kommunizieren und diese zu programmieren. Es können Diagnoseinformationen abgerufen werden und Bytecode auf das Steuergerät geflasht werden. Die IDE besteht aus Editoren (skriptEDITOR und multiEDITOR), Interpreter und Linker. Der scriptEDITOR ist ein Texteditor, mit dem PAWN-Skripte geschrieben werden können. Mit dem multiEDITOR können tabellarisch WENN DANN Anweisungen konfiguriert werden, aus denen ein Skript mit PAWN-Code generiert werden kann. Der multiEDITOR stellt für Benutzer ohne Programmierkenntnisse eine Möglichkeit dar, die GIGABOX mit rudimentären Funktionen zu konfigurieren. 
+Der integrierte Interpreter kann Bytecode aus den erstellten PAWN-Skripten erstellen und auf die GIGABOXEN flashen.
+
+\section{Softwareentwicklungsprozess}
+\subsection{V-Modell}
+
+\subsection{Qualitätskriterien an Software} \label{sec:QualitätskriterienSW}
+
+Qualitätskriterien an Software nach ISO 9126 (aus Wiki)
+
+\begin{itemize}
+	\item Wartbarkeit
+	\begin{itemize} 
+		\item Analysierbarkeit:
+		
+		\item Modifizierbarkeit:
+		
+	
+		\item Testbarkeit:
+		
+
+	\end{itemize}
+		
+	\item Benutzbarkeit (genauer definiert in Norm EN ISO 9241-110)
+	
+		\begin{itemize}
+		\item Aufgabenangemessenheit: "`Ein Dialog ist aufgabenangemessen, wenn er den Benutzer unterstützt, seine Arbeitsaufgabe effektiv und effizient zu erledigen."'
+		\item Selbstbeschreibungsfähigkeit: "`Ein Dialog ist in dem Maße selbstbeschreibungsfähig, in dem für den Benutzer zu jeder Zeit offensichtlich ist, in welchem Dialog, an welcher Stelle er sich befindet, welche Handlungen unternommen werden können und wie diese ausgeführt werden können."'
+		\item Lernförderlichkeit
+		\item Steuerbarkeit
+		\item Erwartungskonformität: "`Ein Dialog ist erwartungskonform, wenn er konsistent ist und den Merkmalen des Benutzers entspricht, z.B. seinen Kenntnissen aus dem Arbeitsgebiet, seiner Ausbildung und seiner Erfahrung sowie den allgemein anerkannten Konventionen."'
+		\item Individualisierbarkeit
+		\item Fehlertolerant:  "`Ein Dialog ist fehlertolerant, wenn das beabsichtigte Arbeitsergebnis trotz erkennbar fehlerhafter Eingaben entweder mit keinem oder mit minimalem Korrekturaufwand durch den Benutzer erreicht werden kann."'
+	\end{itemize}
+
+	Quelle: Wikipedia -> überprüfen ob andere Quelle verfügbar ist, am Besten die Norm direkt
+
+	
+	\item Effizienz
+		
+	
+	\item Übertragbarkeit
+		
+		\begin{itemize}
+			\item Anpassbarkeit: Möglichkeit, Software an verschiedene Umgebungen anzupassen
+			
+			Verschiedene Betriebssysteme? 32/64Bit?
+		\end{itemize}
+	
+	\item Zuverlässigkeit
+	
+	\begin{itemize}
+		\item Reife: Geringe Versagenshäufigkeit durch Fehlerzustände
+		
+		\item Wiederherstellbarkeit: Fähigkeit, bei einem Versagen das Leistungsniveau wiederherzustellen und die direkt betroffenen Daten wiederzugewinnen. Zu berücksichtigen sind die dafür benötigte Zeit und der benötigte Aufwand.
+	\end{itemize}
+
+	
+\end{itemize}
+
+\section{Entwicklungsframework}
+
+\subsection{.NET-Framework}
+
+\subsection{Windows Presentation Framework(WPF)}
+
+MVVM-Pattern

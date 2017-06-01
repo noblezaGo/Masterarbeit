@@ -1,0 +1,108 @@
+\chapter{Evaluation}
+
+\section{Funktionalität und Usability des Ist-Zustands}
+
+Es sollen die Funktionen des configurAIDERs bewertet werden hinsichtlich Umfang, Umsetzung und Fehlerzuständen. Zusätzlich soll die Usability nach EN ISO 9241-110 (siehe Abschnitt \ref{sec:QualitätskriterienSW}) bewertet werden.
+
+\subsection{Einstellung der Sprache}
+Es kann Deutsch und Englisch als Sprache eingestellt werden. Hier wäre zu überlegen, ob noch weitere Spracheinstellungen zur Verfügung gestellt werden sollten, falls es eine größere Anzahl an Benutzern aus nicht deutsch- oder englischsprachigen Ländern gibt.
+Die englische Spracheinstellung ist nicht konsistent umgesetzt, hier sollte darauf geachtet werden, dass durchgängig alle Bedienelemente englisch beschriftet werden.  
+
+\subsection{Bereitstellung von Dokumentation zur GIGABOX, configurAIDER und PAWN}
+Über den Menüeintrag "`Hilfe"' können PDF-Dokumente zu den verschiedenen GIGABOX-Modellen, configurAIDER und zur Skriptsprache PAWN abgerufen werden. Für den configurAIDER steht ein allgemeines Handbuch, Hinweise zur Installation und jeweils für scriptEDITOR und multiEDITOR ein eigenes Handbuch zur Verfügung. Hier ist zu kritisieren, dass der Menüeintrag "`linEDITOR"' nur einen ausgegrauten Eintrag enthält und somit unnötig ist.
+Zu den GIGABOX-Modellen stehen Handbücher, Flyer und Informationen zu Firmwareupdates zur Verfügung. Leider werden die Dokumentationen nicht durchgängig für alle GIGABOX-Modelle zur Verfügung gestellt. So wird für die GIGABOX gate xl kein Handbuch angeboten, für die GIGABOX gate powerAIDER kein Flyer.
+
+\subsection{Verbindung zu einer GIGABOX herstellen}
+
+
+Für den Benutzer ist nicht zu unterscheiden, ob ein Gerät in der Liste real oder simuliert ist. 
+Simulierte Geräte werden in der Liste nicht hervorgehoben oder markiert. Die gewünschte Aufgabenangemessenheit ist für dieses Fenster damit nicht gegeben, da der Benutzer die Auswahl einer GIGABOX nicht effizient erledigen kann. 
+
+Die Auswahl eines zu simulierenden Gerätes erfolgt über ein eigenes Dialogfenster "`Simuliertes Gerät"' (siehe Abbildung \ref{fig:SimuliertesGerät}). 
+Für den Benutzer ist in diesem Dialog nicht ersichtlich, was die Checkbox "`Loopback"' bewirkt. Die Selbsterklärungsfähigkeit des Dialogs ist nicht ausreichend. 
+
+Bei der Auswahl eines zu simulierenden Gerätes im Fenster "`Simuliertes Gerät"' wird das angewählte Gerät der Liste  im Fenster "`Verfügbare Geräte"' hinzugefügt, bevor die Auswahl mit "`Ok"' bestätigt wird. Diese Reaktion entspricht nicht den üblichen, dem Benutzer bekannten Konventionen von Software und ist damit nicht erwartungskonform.
+
+
+
+Aufgrund von diverse Fehlerzuständen, die beobachtet wurden, kann die Verbindung zu einem Gerät nicht zuverlässig und fehlerfrei hergestellt werden. Das Tool produziert Ergebnisse, die vom Benutzer so nicht erwartet werden und erfordert lästiges Neustarten des Programmes. 
+
+
+
+
+
+\subsection{PAWN-Code kompilieren}
+
+Die Kompilierung funktioniert ohne Probleme.
+
+
+\subsection{PAWN-Code entwickeln}
+
+	\subsubsection{PAWN-Skripte schreiben}
+	
+	Keine Möglichkeit, letzte Aktion rückgängig zu machen -> schlechte Steuerbarkeit
+	
+Keine Erkennung von Syntaxfehlern -> schlechte Selbstbeschreibungsfähigkeit
+
+Buttons Herunterladen/Heraufladen sind missverständlich -> schlechte Selbstbeschreibungsf
+ähigkeit
+
+Nur ein Skript kann geöffnet werden, nicht mehrere gleichzeitig -> Aufgabenangemessenheit
+
+Autovervollständigung nur teilweise umgesetzt -> Aufgabenangemessenheit
+
+Codeblöcke können nicht auskommentiert werden über Buttons/Tastenkombination
+-> Aufgabenangemessenheit
+
+
+
+	
+	Die Buttons "`Herunterladen"' und "`Heraufladen"' in der oberen Buttonleiste sind nicht klar verständlich benannt. Dem Benutzer wird nicht klar, in welche Richtung der Datenaustausch erfolgt. Der Button "`Log"' öffnet die Konsole, die Erwartung wäre, dass sich das Programmlog-Fenster öffnet. Die Selbstbeschreibungsfähigkeit und Erwartungskonformität der Buttonleiste ist negativ zu bewerten.
+
+
+
+
+
+	\subsubsection{PAWN-Skripte aus Funktionstabellen generieren}
+
+	Im Signaleditor ist Bit/CAN-Bit Unterschied nicht klar ersichtlich -> Selbstbeschreibungsfähigkeit
+	
+	Es können keine CAN-Nachrichten gesendet werden -> eingeschränkte Funktionalität
+	
+	Keine Reaktion auf LIN-Nachrichten möglich/ kein Senden von LIN-Nachrichten möglich
+	
+	Keine Möglichkeit, SWITCH CASE-Anweisung einzufügen. Deshalb müssen verschachtelte WENN DANN-Anweisungen erstellt werden, die 	schnell unübersichtlich werden
+	
+	Es ist nicht ersichtlich, dass über den DBC-Button auf .arxml-Dateien geladen werden können
+	
+Bei Klick auf DBC-Button öffnet sich Fenster zum Laden von .dbc und .armxl-Dateien. In diesem Fenster befindet sich eine Tabelle zur Anzeige der geladenen Signale. Bei Anwahl einer .dbc-Datei bleibt die Tabelle allerdings leer. Die im ausgewählten DBC definierten Signale werden dort nicht angezeigt
+
+\subsection{Übertragen von Skript-Applikationen}
+
+Das Übertragen 	von Skript-Applikationen funktioniert ohne Probleme.
+
+\subsection{Kommunikaton mit verbundener GIGABOX}
+
+Wenn die Schaltfläche "`Terminal"' aktiviert ist, kann eine erfolgte Texteingabe nicht mehr mit der Rücktaste korrigiert werden. Bei deaktivierter Schaltfläche ist die Korrektur möglich. Die Konsole mangelt es folglich an Fehlertolernaz, was einer schlechten Usability entspricht. 
+
+\subsection{Ausgabe von Ereignismeldungen des configurAIDERs}
+
+Die Ausgabe von Ereignismeldungen über das Programmlog-Fenster ist zufriedenstellend.
+
+\section{Differenz zwischen Anforderungen und Ist-Zustand}
+
+\includepdf[pages=-, landscape=false]{images/SollIstVergleich}
+
+
+
+
+\section{Quellcode des configurAIDERs}
+
+\colorbox[rgb]{1,0,0}{Was wurde mit WinForms gemacht, was mit WPF?}
+
+Entstand aus mehreren studentischen Arbeiten
+
+\colorbox[rgb]{1,0,0}{Diagramm mit bestehender Architektur erstellen}
+
+\section{Ergebnis}
+

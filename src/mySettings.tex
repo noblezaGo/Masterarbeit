@@ -1,0 +1,82 @@
+\usepackage[ngerman]{babel}       		% Deutsche Sprache
+%\usepackage[ngerman]{betababel}      % Deutsche Sprache
+%\usepackage[latin1]{inputenc}
+
+\usepackage{geometry}
+\geometry{a4paper,left=40mm,right=30mm, top=40mm, bottom=45mm} 
+
+\usepackage[ansinew]{inputenc}    % Komfortable Einageb von Umlauten
+\usepackage[T1]{fontenc}          % 8-Bit statt 7-Bit Zeichensatzkodierung
+%\usepackage{bibgerm}							% Literaturpacket 
+%\usepackage{graphicx}					  	% Bilder einbinden
+\usepackage{paralist}							% kompakte itemliste
+\usepackage{amsmath,amssymb}			% Für Formelsatz
+\usepackage{textcomp}             % Eurozeichen
+\usepackage{esdiff}								% Ableitungen
+\usepackage{hyperref}							% benutzt links als referenzen
+\usepackage[all]{hypcap}					% figure linken nicht nur label (hyperref)
+\usepackage[usenames,dvipsnames]{xcolor} % erweiterte Farben
+\usepackage{tikz}									% Bilder zeichnen			
+\usepackage[automark, headsepline, plainheadsepline]{scrpage2}
+\usepackage{acronym}
+\usepackage{nicefrac}
+\usepackage[format=hang,margin=10pt,labelfont=bf,labelsep=endash,justification=raggedright]{caption}
+\usepackage{subcaption}
+\usepackage{units}
+\usepackage{listings} % C++ (listings)
+\usepackage{xcolor}
+\usepackage{enumerate}
+%\usepackage{enumitem}
+\usepackage{upgreek}
+\usepackage{epigraph}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{pdflscape}
+\usepackage{pdfpages}
+\usepackage{url}
+\usepackage{tabularx}
+\usepackage{rotating}
+
+\hyphenation{Konsolen-an-wendung}
+
+
+
+% Konfiguration von Absätzen
+\parindent0ex
+\parskip1.4ex plus0.2ex minus0.2ex
+
+%Kopfzeile/Fußzeile
+\setlength{\headheight}{25pt}
+
+%automark für Aktualisierungen
+\pagestyle{scrheadings}
+\clearscrheadings
+\clearscrplain
+\clearscrheadfoot
+\ofoot[\pagemark]{\pagemark}
+
+%Kopfzeile
+\ihead[{\includegraphics[height=20pt]{images/logo_hska}}]
+{\includegraphics[height=20pt]{images/logo_hska}}
+\chead{}
+\ohead[{\leftmark}]{\leftmark}
+
+
+%Trennlinien
+\setheadsepline{0.4pt} 
+
+%XML-Code
+\definecolor{maroon}{rgb}{0.5,0,0}
+\definecolor{darkgreen}{rgb}{0,0.5,0}
+\lstdefinelanguage{XML}
+{
+  basicstyle=	=\footnotesize,
+  morestring=[s]{"}{"},
+  morecomment=[s]{?}{?},
+  morecomment=[s]{!--}{--},
+  commentstyle=\color{darkgreen},
+  moredelim=[s][\color{black}]{>}{<},
+  moredelim=[s][\color{red}]{\ }{=},
+  stringstyle=\color{blue},
+  identifierstyle=\color{maroon}
+}\lstset{ numberbychapter=false,captionpos=b, flexiblecolumns=true}

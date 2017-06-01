@@ -1,0 +1,727 @@
+\chapter{Anforderungsanalyse} \label{chp:Anforderungsanalyse}
+
+\section{Übersicht}
+
+In diesem Kapitel soll eine Anforderungsanalyse für eine Entwicklungsumgebung für GIGABOX-Steuergeräte durchgeführt werden.
+In Abbildung \ref{fig:UseCasesGIGABOX} wurde gezeigt, für welche Anwendungen GIGABOXEN eingesetzt werden. 
+Die Anforderungen an die Entwicklungsumgebung wurden so gestellt, dass sie Softwareentwicklern für GIGABOX-Funktionen die Umsetzung dieser Anwendungen ermöglicht und möglichst große Unterstützung bei der Codeentwicklung bietet.
+
+Zur Ermittlung der funktionalen Anforderungen wurden Gespräche mit Entwicklern geführt, vorhandener Programmcode aus realisierten Projekten analysiert und selbstständig Codeentwicklung mit dem configurAIDER betrieben. Aus diesen Eindrücken heraus entstanden die im Folgenden beschriebenen funktionalen Anforderungen.
+
+Jede funktionale Anforderung soll bewertet werden nach der Priorität der Umsetzung. 
+Die Bewertung der Anforderungen soll qualitativ erfolgen anhand von Meinungen befragter Entwickler. Die Anforderungen werden eingeordnet in vier Klassen:
+
+\begin{itemize}
+	\item Klasse A: Anforderung, die essenziell wichtige Grundfunktionalitäten bereitstellt
+	\item Klasse B: Anforderung, die wichtige Funktionalitäten bereitstellt
+	\item Klasse C: Anforderung, die mäßig wichtige Funktionalitäten bereitstellt
+	\item Klasse D: Anforderung, die wenige wichtige Funktionalitäten bereitstellt
+\end{itemize}
+
+
+Zur Ermittlung der nichtfunktionalen Anforderungen wurden bekannte Vorgehensmodelle und Normen der Softwareentwicklung herangezogen.  
+Die hergeleiteten nichtfunktionalen Anforderungen sollen bei der Entwicklung beachtet werden, um eine hohe Qualität der zu entwickelenden Software sicherzustellen. Auf eine Bewertung wird verzichtet.
+
+
+
+\section{Ermittlung und Bewertung von funktionalen Anforderungen}
+
+\subsection{Erstellung von Projekten mit Baumstruktur}
+
+\emph{Beschreibung}: 
+
+Innerhalb eines Projektes können verschiedene GIGABOX-Modelle angelegt werden. Für jedes angelegte GIGABOX-Modell können PAWN-Skripte erstellt werden mit der zum Modell passenden Dateiendung .gt**.p. Für jedes angelegte GIGABOX-Modell können Include-Files hinzugefügt werden
+
+\emph{Bewertung}:
+
+Der Benutzer erhält einen strukturierten Überblick über alle seine GIGABOX-Projekte und alle für ein Projekt entwickelten Skripte. Das Öffnen eines Skriptes erfolgt komfortabel über Doppelklick auf ein Skript in der Projektstruktur. Lästiges navigieren durch die Dateistruktur des PCs beim Öffnen eines Skriptes entfällt + der Benutzer muss den Ablageort im Dateisystem nicht wissen. Erhöht den Benutzerkomfort signikfikant, deshalb Einstufung in Klasse B als wichtiges Feature.
+
+
+\subsection{Einstellung der Sprache}
+
+\emph{Beschreibung}:
+
+Die Sprache der Benutzeroberfläche kann angepasst werden. Es soll Deutsch und Englisch zur Verfügung stehen. 
+
+\emph{Bewertung}:
+
+Die Darstellung der Benutzeroberfläche in der Muttersprache des Benutzers erhöht die Usability, da es die Selbstbeschreibungsfähigkeit und Individualisierbarkeit fördert. Englisch muss auf jeden Fall zur Verfügung stehen, da es die international am weitesten verbreitete Sprache ist und auch in Deutschland von einem Großteil der Menschen verstanden wird. Die Darstellung der Benutzeroberfläche in Englisch wird deshalb in Klasse A eingeteilt. 
+Die Darstellung in Deutsch wird in Klasse C eingeteilt, da die Usability dadurch nur mäßig erhöht wird. 
+Das liegt daran, dass der potenzielle Benutzerkreis des Tools Entwickler sind, denen größtenteils der Umgang mit englischen GUIs vertraut ist.
+
+\subsection{Texteditor zur Erstellung von PAWN-Skripten}
+
+\begin{itemize}
+	\item Schreiben von PAWN-Code
+	
+	\emph{Beschreibung:}
+	
+	Es steht ein Textfeld zur Verfügung, in dem PAWN-Code editiert werden kann.
+	
+	\emph{Bewertung:}
+	
+	Klasse A, da als Grundfunktionalität einer IDE einzustufen.
+	
+	\item Copy/Paste
+	
+	\emph{Beschreibung:}
+	
+	Codefragmente können kopiert und an anderer Stelle eingefügt werden. 
+	
+	\emph{Bewertung:}
+	
+	Macht die Codeentwicklung bedeutend effektiver, da dem Benutzer Tipparbeit erspart bleibt. Weiterer Vorteil ist die Fehlervermeidung durch Tippfehler. Deshalb Einstufung in Klasse B. 
+
+	\item Suchen/Ersetzen
+	
+	\emph{Beschreibung:} 
+	
+	Ein Skript kann nach Zeichenketten durchsucht werden. Die gefundenen Ergebnisse werden farblich hervorgehoben und es kann zu den Ergebnissen gesprungen werden. Alle gefundenen Ergebnisse können ersetzt werden durch eine neue Zeichenkette. 
+	
+	\emph{Bewertung:}
+	
+	Das Auffinden von Variablen und Methoden im Skript wird erheblich erleichtert. Bei Umbenennung von Variablen oder Methoden wird viel Zeit eingespart und es werden Tippfehler vermieden. Klasse B
+	
+	\item Letzte Schritte rückgängig machen
+	
+	\emph{Beschreibung:}
+	
+	Die letzten vom Benutzer vorgenommenen Anweisungen können rückgängig gemacht werden.
+	
+	Bewertung:
+	
+	Fördert die Fehlertoleranz. Klasse B
+	
+	\item Anzeige aller instanziierten Variablen im Skript
+	
+	\emph{Beschreibung:}
+	
+	Alle instanziierten Variablen werden aufgelistet. Doppelklick auf einen Variablennamen in der Liste markiert im Skript alle Verwendungen der Variable. Per Drag\&Drop kann ein Variablenname aus der Liste in das Skript eingefügt werden.
+				
+	\emph{Bewertung: }
+
+	Benutzer hat alle instanziierten Variablen im Blick und kann leicht zu Verwendungsstellen im Skript navigieren. Das Einfügen per Drag\&Drop bietet eine komfortable Möglichkeit der Variablenverwendung und verhindert Fehleingaben durch Tippfehler. 
+	Klasse C
+	
+	\item Anzeige aller implementierten Funktionen zur Navigation im Skript
+	
+	\emph{Beschreibung:}
+	
+	Alle implementierten Funktionen werden gelistet. Doppelklick auf eine Funktion führt zu einem Sprung zur Funktionsimplementierung. Per Drag\&Drop kann ein Funktionsname in das Skript gezogen werden, ein Aufruf der Funktion wird in das Skript eingefügt. Es können alle Stellen im Skript markiert werden, an denen die gewählte Funktion aufgerufen wird.
+	
+\emph{	Bewertung:  }
+	
+	Benutzer hat alle implementierten Funktionen im Blick und kann leicht zu Verwendungsstellen im Skript navigieren. Komfortable Möglichkeit der Funktionsverwendung, Verhindert Fehleingaben durch Tippfehler.
+	Klasse C
+	
+	\item Bei der Codeentwicklung unterstützende Funktionen
+	
+	\emph{Beschreibung:} 
+	
+	Es sollen Funktionen integriert werden, die schnelleres und effektiveres Schreiben von Code ermöglichen.
+	Bsp: Autovervollständigung von Variablen, Funktionen und Anweisungen bei der Tastatureingabe
+	
+	\emph{Bewertung: }
+	
+	Klasse C
+	
+	\item Routingeditor
+	
+	\emph{Beschreibung:}
+	
+	\textcolor[rgb]{1,0,0}{Beschreibung für CAN}
+	Aus einer Datenbankdatei (.dbc/.arxml) können dort definierte Bussignale geladen werden. Die Signale können in verschiedenen CAN-Botschaften enthalten sein. 	
+	Aus den Bussignalen kann im Routingeditor eine eigene CAN-Busbotschaft konfiguriert werden mit einer vom Benutzer definierten ID. Dazu können die Signale innerhalb der Nutzdatenfeldes einer PDU frei angeordnet werden.   
+	
+	Aus der im Routing-Editor konfigurierten Botschaft kann PAWN-Code generiert werden und in die Funktion OnCanRxEvent() eines geöffneten Skriptes im Texteditor eingefügt werden.
+	
+	\emph{Bewertung:}
+	Beim Programmieren der GIGABOX tritt des öfteren der Use-Case auf, dass aus Signalen, die in verschiedenen auf dem Bus ankommenden Botschaften enthalten sind, eine neue Botschaft erstellt und verschickt werden soll.
+	
+	Dabei werden oft Bitverschiebungen benötigt, deren Programmierung viel Zeit- und Denkaufwand bedeuten. 
+	Der Routingeditor ermöglicht die grafische Konfiguration von Busbotschaften und erleichtern die Umsetzung dieser Routingaufgaben.
+	Klasse C
+	
+\end{itemize}
+ 
+\subsection{Konfigurieren einer GIGABOX ohne PAWN-Kenntnisse}
+
+ \emph{Beschreibung:}
+	Grundlegende Funktionen einer GIGABOX sollen ohne Kenntnisse von PAWN konfiguriert werden können. 
+	Dazu bietet sich die Funktionsbausteinsprache an.
+
+\emph{Bewertung:}
+
+Erleichtert es Kunden ohne Programmierkenntnisse, selbständig GIGABOX-Funktionalitäten zu konfigurieren. Erweitert möglicherweise den Kreis an potentiellen Käufern der GIGABOX. 
+Im Vergleich zur direkten Codeentwicklung können allerdings nur eingeschränkte Funktionalitäten realisiert werden. Erfahrene Softwareentwickler werden aufgrund dieser Tatsache PAWN-Code direkt entwickeln. 
+Klasse C
+
+\subsection{Verbindung zu einer GIGABOX herstellen}
+
+\begin{itemize}
+	\item Anzeige aller mit dem PC verbundenen GIGABOXEN
+	
+	\emph{Beschreibung:} 
+	
+	Alle GIGABOXEN, die mit dem PC per Kabel oder Bluetooth verbunden sind, werden aufgelistet. Es werden Geräteinformationen wie z.B. Modellname, Seriennummer bereitgestellt.
+	
+	
+
+
+	\emph{Bewertung:}
+	
+	
+	Wird als Grundfunktionalität eingestuft, Klasse A. 
+	
+
+	
+	\item Benutzer kann GIGABOX auswählen, mit der kommuniziert werden soll
+	
+	\emph{Beschreibung:}
+	
+	
+	
+	\emph{Bewertung:}
+
+
+	
+\end{itemize}
+
+
+
+\subsection{PAWN-Compiler}
+
+	\emph{Beschreibung:}
+	
+	PAWN-Skripte können in Bytecode übersetzt werden. 
+	Wenn Include-Files verwendet werden, soll ein Linker den Bytecode des Skriptes und des Include-Files nach dem Übersetzen zusammenfügen. 
+	
+	\emph{Bewertung:}
+	
+	Das Kompilieren ist eine Grundfunktionalität und wird deshalb als Klasse A eingestuft.
+
+
+
+\subsection{Beschreiben/Auslesen des Flash-Speichers der GIGABOX}
+
+	\emph{Beschreibung:}
+	
+	Skript-Applikationen können vom PC auf den Flash-Speicher einer GIGABOX übertragen werden. Sich bereits auf dem Flash-Speicher befindliche Skripte können auf den PC geladen und angezeigt werden. Die Übertragung soll jeweils per Kabel über die USB-Schnittstelle und per Bluetooth möglich sein.
+	
+	
+	\emph{Bewertung:}
+
+	Die Übertragung von Skripten vom PC auf eine GIGABOX über die USB-Schnittstelle wird als Grundfunktionalität (Klasse A) bewertet. Die Übertragung von der GIGABOX auf den PC über die USB-Schnittstelle ist für den Entwickler sehr nützlich, aber nicht unbedingt notwendig und wird deshalb als Klasse B eingestuft.
+Bluetooth-Übertragung wird in Klasse C eingestuft, da es wenige Use-Cases gibt, bei denen eine Funkübertragung Vorteile gegenüber der Kabelübertragung bietet. Ein möglicher Use-Case wäre eine schwer zugängliche GIGABOX im Fahrzeug, auf die ein neues Skript aufgespielt werden soll. Eine Übertragung per Bluetooth würde einen aufwändigen Ausbau der GIGABOX aus dem Fahrzeug ersparen.	
+
+
+\subsection{Kommunikation mit einer GIGABOX}
+
+	\emph{Beschreibung:}
+	
+	Benutzer soll Befehle an eine GIGABOX senden können, z. B. einen Reset der GIGABOX veranlassen, den Bootloader aufrufen. Außerdem sollen Diagnose- und Geräteinformationen abgerufen werden können. Die Datenübertragung soll per Kabel über die USB-Schnittstelle und per Bluetooth möglich sein.
+	
+	
+	\emph{Bewertung:}
+	
+	Das Senden von Befehlen und Abrufen von Diagnose- und Geräteinformationen per Kabel über die USB-Schnittstelle wird in Klasse A eingestuft. Die Datenübertragung per Bluetooth wird in Klasse C eingestuft, da es wenige Use-Cases gibt, bei denen eine Funkübertragung Vorteile gegenüber der Kabelübertragung bietet. Ein möglicher Use-Case wäre eine schwer zugängliche GIGABOX im Fahrzeug, auf die ein neues Skript aufgespielt werden soll. Eine Übertragung per Bluetooth würde einen aufwändigen Ausbau der GIGABOX aus dem Fahrzeug ersparen.
+
+
+\subsection{Kommunikation mit dem Benutzer}
+
+	\emph{Beschreibung:}
+	
+	Benutzer soll Befehle an configurAIDER senden können, z. B. das Kompilieren eines Skriptes veranlassen.
+	Außerdem sollen Diagnose- und Programminformationen des configurAIDERs abgerufen werden können.
+	
+	
+	\emph{Bewertung:}
+
+	Einstufung in Klasse A.
+
+
+\subsection{Steuern und Beobachten von Ein-/Ausgängen und Timern}
+
+
+	\emph{Beschreibung:}
+	
+	Die Zustände der digitalen und analogen Ausgänge sowie der internen Timer sollen gesteuert und beobachtet werden können. 
+	CAN- und LIN-Botschaften sollen gesendet und empfangen werden können. Dabei soll einmaliges und zyklisches Senden von Botschaften möglich sein. 
+	Zusätzlich soll die Möglichkeit bestehen, Buskommunikation innerhalb eines Zeitfensters mitzuloggen. Alle Busbotschaften, die innerhalb dieses Zeitfensters auf dem Bus liegen, sollen dabei mit Zeitstempel gelistet werden. 
+
+	\emph{Bewertung:}
+
+	
+
+
+\begin{itemize}
+	
+
+	\item Texteditor zur Erstellung von PAWN-Skripten
+	
+		\begin{itemize}		
+			\item Schreiben von PAWN-Code
+			\item mehrere Skripte lassen sich parallel über Tabs öffnen
+			\item Copy/Paste
+			\item Suchen/Ersetzen
+			\item Möglichkeit, letzte Schritte rückgängig zu machen		
+			\item Anzeige aller implementierten Funktionen zur Navigation im Skript
+			\item Anzeige aller instanziierten Variablen. Einfügen des Variablennamens per Drag\&Drop.
+			\item Einfügen von Variablennamen aus Datenbankdateien (.dbc/.arxml)
+			
+			\item Routing-Editor. Erleichtert Codeentwicklung für GIGABOX Use-Case "`Einsatz als Gateway"'.
+			
+			\begin{itemize}
+				\item Laden und Anzeigen von Botschaften/Signalen aus Datenbank (.dbc/.arxml)
+				\item Eigene Botschaft kann definiert werden mit ID sowie Channel, auf die sie gelegt werden soll
+				\item Inhalt der eigenen Botschaft kann aus Signalen, die in Datenbank definiert sind, zusammengestellt werden
+				\item Aus der im Routing-Editor zusammengestellten Botschaft kann PAWN-Code generiert werden und in die Funktion OnCanRxEvent() eines geöffneten Skriptes im Texteditor eingefügt werden
+			\end{itemize}
+			
+			\item Bei der Codeentwicklung unterstützende Funktionen, z.B. Autovervollständigung. Ziel: Schnelles und effektives Schreiben von fehlerfreiem Code
+		\end{itemize}
+
+
+	\item Konfigurieren einer GIGABOX ohne PAWN-Kenntnisse
+		
+		\begin{itemize}
+			\item Realisierung von Funktionen ohne PAWN-Kenntnisse
+			\item Realisierung von Funktionen mit Funktionsbausteinsprache
+		\end{itemize}
+
+	\item Frei andockbare Fenster
+	
+	\item Verbindung zu einer GIGABOX herstellen
+	
+		\begin{itemize}
+			\item Anzeige aller mit dem PC per Kabel oder Bluetooth verbundenen GIGABOXEN
+			\item Benutzer kann GIGABOX auswählen, mit der kommuniziert werden soll 
+		\end{itemize}
+	
+	\item PAWN-Compiler 
+	
+	\begin{itemize}
+		\item Compiler zum Übersetzen von PAWN-Code in Bytecode
+		\item Linker, um Bytecode zusammenzufügen 
+	\end{itemize}
+	
+		
+	\item Beschreiben/Auslesen des Flash-Speichers der GIGABOX
+	
+		\begin{itemize}
+			\item Übertragen der Skript-Applikation vom PC auf den Flash-Speicher der GIGABOX per Kabel/Bluetooth
+			\item Übertragen der Skript-Applikation von einer GIGABOX auf den PC per Kabel/Bluetooth
+		\end{itemize}
+	
+	
+	\item Kommunikation mit einer GIGABOX
+	
+		\begin{itemize}
+			\item Benutzer kann Befehle an eine GIGABOX senden (per Kabel/Bluetooth). Bsp: Reset der GIGABOX veranlassen, Bootloader aufrufen, Skript starten/stoppen
+			\item Benutzer kann Diagnose- und Geräteinformationen von GIGABOX abrufen (per Kabel/Bluetooth)
+		\end{itemize}
+			
+		\item Kommunikation mit dem Benutzer
+		
+			\begin{itemize}
+				\item Benutzer kann Konsolenbefehle an configurAIDER senden
+				\item Benutzer kann Diagnose- und Programminformationen von configurAIDER abrufen
+			\end{itemize}
+	
+	\item Steuern und Beobachten von Ein-/Ausgängen und Timer
+	
+		\begin{itemize}
+			\item Steuern und Beobachten von DIN, AIN, DOUT, SWITCH
+			\item CAN-/LIN-Botschaften senden (einmalig und zyklisch) und empfangen
+			\item CAN/LIN beobachten über Schnittstelle zu CANoe
+			\item Steuern und Beobachten der internen Timer
+			\item Buskommunikation loggen
+		\end{itemize}
+
+	\item Debugging
+	
+		\begin{itemize}
+			\item Setzen von Breakpoints
+			\item Zeilenweise Steuerung der Anweisungsausführung
+		\end{itemize}
+	
+	\item Skriptgenerierung aus MATLAB/Simulink
+	
+		\begin{itemize}
+			\item Modellbasierte Entwicklung von Regelalgorithmen in MATLAB/Simulink. Generierung eines PAWN-Skriptes aus Simulink-Modell. 					
+		\end{itemize}
+		
+	\item Bereitstellung von Dokumentationen
+	
+	\begin{itemize}
+		\item Dokumentation zur GIGABOX
+		\item Dokumentation zum configurAIDER
+		\item Dokumentation zu PAWN
+	\end{itemize}
+	
+	
+\end{itemize}
+
+
+Das Use-Case-Diagramm in Abbildung \ref{fig:UseCases} veranschaulicht die grundlegenden Funktionen, die an das Tool gestellt werden.
+
+\begin{figure}[!htbp]
+	\centering
+		\includegraphics[width=\textwidth]{images/RequirementsUseCases.png}
+	\caption{Use-Case-Diagramm funktionale Anforderungen}
+	\label{fig:UseCases}
+\end{figure}
+
+\section{Ermittlung von nichtfunktionalen Anforderungen}
+
+\begin{itemize}
+	\item Entwicklung des Tools mit WPF unter Verwendung MVVM-Pattern
+	\item Entwicklung für Windows 32bit + 64bit  als Zielbetriebssystem
+	\item Entwicklung nach V-Modell
+	\item Qualitätskriterien an Software nach ISO 9126 (aus Wiki)/ siehe auch Kapitel 6 Moderne Softwarearchitektur
+
+
+
+	\begin{itemize}
+		\item Wartbarkeit
+		\begin{itemize} 
+			\item Analysierbarkeit:
+			
+			Coding-Richtlinien sollen eingehalten werden: Verständliche Kommentare, einheitliche Namensgebung etc
+			\item Modifizierbarkeit:
+			
+			SOLID-Prinzipien einhalten, um möglichst wenig Abhängigkeiten unter den Klassen zu erreichen. Dadurch treten bei Modifikationen innerhalb einer Klasse weniger schwer vorhersehbare Fehler auf 
+			
+			\item Testbarkeit:
+			
+			\textcolor[rgb]{1,0,0}{Keine Ahnung auf was bei der Entwicklung geachtet werden soll um gute Testbarkeit zu erreichen}
+		\end{itemize}
+			
+		\item Benutzbarkeit (genauer definiert in Norm EN ISO 9241-110)
+		
+		\item Effizienz
+			
+			\begin{itemize}
+				\item Akzeptable Zeit bis Tool gestartet ist und verwendbar ist
+				\item Unmittelbare und flüssige Reaktion auf Benutzereingaben
+			\end{itemize}
+		
+		\item Übertragbarkeit
+			
+			\begin{itemize}
+				\item Anpassbarkeit: Möglichkeit, Software an verschiedene Umgebungen anzupassen
+				
+				Verschiedene Betriebssysteme? 32/64Bit?
+			\end{itemize}
+		
+		\item Zuverlässigkeit
+		
+		\begin{itemize}
+			\item Reife: Geringe Versagenshäufigkeit durch Fehlerzustände:
+				Ausreichendes Testing
+			\item Wiederherstellbarkeit: Fähigkeit, bei einem Versagen das Leistungsniveau wiederherzustellen und die direkt betroffenen Daten wiederzugewinnen. Zu berücksichtigen sind die dafür benötigte Zeit und der benötigte Aufwand.
+		\end{itemize}
+
+		
+	\end{itemize}
+
+\end{itemize}
+
+\section{Priorisierung der Anforderungen} \label{sec:BewertungAnforderungen}
+
+\textcolor[rgb]{1,0,0}{Wie soll Bewertung vorgenommen werden?? Wie begründen?
+Anforderungen müssen quantifiziert werden}
+
+Die Priorisierung der Anforderungen soll qualitativ erfolgen anhand von Meinungen befragter Entwickler. Die Anforderungen werden eingeordnet in vier Klassen:
+\begin{itemize}
+	\item A: Anforderung, die essenziell wichtige Grundfunktionalitäten bereitstellt
+	\item B: Anforderung, die wichtige Funktionalitäten bereitstellt
+	\item C: Anforderung, die mäßig wichtige Funktionalitäten bereitstellt
+	\item D: Anforderung, die wenige wichtige Funktionalitäten bereitstellt
+\end{itemize}
+
+\subsection{Funktionale Anforderungen}
+
+
+
+
+
+%\begin{itemize}
+	%\item Erstellung von Projekten mit Baumstruktur
+	%
+		%\begin{itemize}
+			%\item Innerhalb eines Projektes können verschiedene GIGABOX-Modelle angelegt werden.
+			%Für jedes angelegte GIGABOX-Modell können PAWN-Skripte erstellt werden mit der zum Modell passenden Dateiendung .gt**.p
+			%
+			%Begründung: Der Benutzer erhält einen strukturierten Überblick über alle seine GIGABOX-Projekte und alle für ein Projekt entwickelten Skripte. Das Öffnen eines Skriptes erfolgt komfortabel über Doppelklick auf ein Skript in der Projektstruktur. Lästiges navigieren durch die Dateistruktur des PCs beim Öffnen eines Skriptes entfällt + der Benutzer muss den Ablageort im Dateisystem nicht wissen. Erhöht den Benutzerkomfort signikfikant, deshalb Einstufung als wichtiges Feature . 
+								%
+			%
+			%\item Für jedes angelegte GIGABOX-Modell können Include-Files hinzugefügt werden
+			%
+			%Begründung: gleich wie oben
+		%\end{itemize}
+%
+%\item Einstellung der Sprache
+%\begin{itemize}
+	%\item Deutsch
+	%\item Englisch
+%\end{itemize}
+%
+	%\item Texteditor zur Erstellung von PAWN-Skripten
+	%
+		%\begin{itemize}		
+			%\item Schreiben von PAWN-Code
+			%\item mehrere Skripte lassen sich parallel über Tabs öffnen
+			%
+				%Begründung: Schnelles wechseln zwischen Skripten möglich. Erleichtert Copy/Paste zwischen mehreren Skripten. Schnellere Codeentwicklung möglich. Erhöhung des Benutzerkomforts. 
+				%
+			%\item Copy/Paste
+			%\item Suchen/Ersetzen
+			%\item Möglichkeit, letzte Schritte rückgängig zu machen		
+			%\item Anzeige aller implementierten Funktionen zur Navigation im Skript
+			%\item Anzeige aller instanziierten Variablen. Einfügen des Variablennamens per Drag\&Drop.
+			%\item Einfügen von Variablennamen aus Datenbankdateien (.dbc/.arxml)
+			%
+			%\item Routing-Editor. Erleichtert Codeentwicklung für GIGABOX Use-Case "`Einsatz als Gateway"'.
+			%
+			%\begin{itemize}
+				%\item Laden und Anzeigen von Botschaften/Signalen aus Datenbank (.dbc/.arxml)
+				%\item Eigene Botschaft kann definiert werden mit ID sowie Channel, auf die sie gelegt werden soll
+				%\item Inhalt der eigenen Botschaft kann aus Signalen, die in Datenbank definiert sind, zusammengestellt werden
+				%\item Aus der im Routing-Editor zusammengestellten Botschaft kann PAWN-Code generiert werden und in die Funktion OnCanRxEvent() eines geöffneten Skriptes im Texteditor eingefügt werden
+			%\end{itemize}
+			%
+			%\item Bei der Codeentwicklung unterstützende Funktionen, z.B. Autovervollständigung. Ziel: Schnelles und effektives Schreiben von fehlerfreiem Code
+		%\end{itemize}
+%
+%
+	%\item Konfigurieren einer GIGABOX ohne PAWN-Kenntnisse
+		%
+		%\begin{itemize}
+			%\item Realisierung von Funktionen ohne PAWN-Kenntnisse
+			%\item Realisierung von Funktionen mit Funktionsbausteinsprache
+		%\end{itemize}
+%
+	%\item Frei andockbare Fenster
+	%
+	%\item Verbindung zu einer GIGABOX herstellen
+	%
+		%\begin{itemize}
+			%\item Anzeige aller mit dem PC per Kabel oder Bluetooth verbundenen GIGABOXEN
+			%\item Benutzer kann GIGABOX auswählen, mit der kommuniziert werden soll 
+		%\end{itemize}
+	%
+	%\item PAWN-Compiler 
+	%
+	%\begin{itemize}
+		%\item Compiler zum Übersetzen von PAWN-Code in Bytecode
+		%\item Linker, um Bytecode zusammenzufügen 
+	%\end{itemize}
+	%
+		%
+	%\item Beschreiben/Auslesen des Flash-Speichers der GIGABOX
+	%
+		%\begin{itemize}
+			%\item Übertragen der Skript-Applikation vom PC auf den Flash-Speicher der GIGABOX per Kabel/Bluetooth
+			%\item Übertragen der Skript-Applikation von einer GIGABOX auf den PC per Kabel/Bluetooth
+		%\end{itemize}
+	%
+	%
+	%\item Kommunikation mit einer GIGABOX
+	%
+		%\begin{itemize}
+			%\item Benutzer kann Befehle an eine GIGABOX senden. Bsp: Reset der GIGABOX veranlassen, Bootloader aufrufen, Skript starten/stoppen
+			%\item Benutzer kann Diagnose- und Geräteinformationen von GIGABOX abrufen
+		%\end{itemize}
+			%
+		%\item Kommunikation mit dem Benutzer
+		%
+			%\begin{itemize}
+				%\item Benutzer kann Konsolenbefehle an configurAIDER senden
+				%\item Benutzer kann Diagnose- und Programminformationen von configurAIDER abrufen
+			%\end{itemize}
+	%
+	%\item Steuern und Beobachten von Ein-/Ausgängen und Timer
+	%
+		%\begin{itemize}
+			%\item Steuern und Beobachten von DIN, AIN, DOUT, SWITCH
+			%\item CAN-/LIN-Botschaften senden (einmalig und zyklisch) und empfangen
+			%\item CAN/LIN beobachten über Schnittstelle zu CANoe
+			%\item Steuern und Beobachten der internen Timer
+			%\item Buskommunikation loggen
+		%\end{itemize}
+%
+	%\item Debugging
+	%
+		%\begin{itemize}
+			%\item Setzen von Breakpoints
+			%\item Zeilenweise Steuerung der Anweisungsausführung
+		%\end{itemize}
+	%
+	%\item Skriptgenerierung aus MATLAB/Simulink
+	%
+		%\begin{itemize}
+			%\item Modellbasierte Entwicklung von Regelalgorithmen in MATLAB/Simulink. Generierung eines PAWN-Skriptes aus Simulink-Modell. 					
+		%\end{itemize}
+		%
+	%\item Bereitstellung von Dokumentationen
+	%
+	%\begin{itemize}
+		%\item Dokumentation zur GIGABOX
+		%\item Dokumentation zum configurAIDER
+		%\item Dokumentation zu PAWN
+	%\end{itemize}
+	%
+	%
+%\end{itemize}
+%
+%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%
+%\begin{itemize}
+	%\item Erstellung von Projekten mit Baumstruktur
+	%
+		%\begin{itemize}
+			%\item Innerhalb eines Projektes können verschiedene GIGABOX-Modelle angelegt werden.
+			 %Für jedes angelegte GIGABOX-Modell können PAWN-Skripte erstellt werden mit der zum Modell passenden Dateiendung .gt**.p (++/A)
+			%
+			%Begründung: Der Benutzer erhält einen strukturierten Überblick über alle seine GIGABOX-Projekte und alle für ein Projekt entwickelten Skripte. Das Öffnen eines Skriptes erfolgt komfortabel über Doppelklick auf ein Skript in der Projektstruktur. Lästiges navigieren durch die Dateistruktur des PCs beim Öffnen eines Skriptes entfällt + der Benutzer muss den Ablageort im Dateisystem nicht wissen. Erhöht den Benutzerkomfort signikfikant, deshalb Einstufung als wichtiges Feature .   
+			%
+			%
+			%\item Für jedes angelegte GIGABOX-Modell können Include-Files hinzugefügt werden (++/A)
+			%
+			%Begründung: gleich wie oben
+		%\end{itemize}
+%
+%
+	%\item Texteditor zur Erstellung von PAWN-Skripten
+	%
+		%\begin{itemize}		
+			%\item mehrere Skripte lassen sich parallel über Tabs öffnen (++)
+			%
+			%Begründung: Schnelles wechseln zwischen Skripten möglich. Erleichtert Copy/Paste zwischen mehreren Skripten. Schnellere Codeentwicklung möglich. Erhöhung des Benutzerkomforts. 
+			%
+			%\item Copy/Paste (++)
+			%
+			%Begründung: Unterstützt schnelle Codeentwicklung, da Code von fertigen Skripten einfach übernommen werden kann
+			%
+			%\item Suchen/Ersetzen (++)
+			%
+			%Begründung: Erleichtert Suchen von Variablen im Skript. Aufgrund von vielen unterschiedlichen Variablen sehr sinnvoll. Ersetzen Funktion erspart viel Zeit.
+			%
+			%\item Möglichkeit, letzte Schritte rückgängig zu machen	(++)	
+			%
+			%Begründung: Erhöht Fehlertoleranz signifikant 
+			%
+			%\item Anzeige aller implementierten Funktionen zur Navigation im Skript (+)
+			%
+			%Begründung: Erleichtert Navigation
+			%\item Anzeige aller instanziierten Variablen (0)		
+			%\item (Signale aus .dbc/.arxml-Dateien werden automatisch als PAWN-Variablen instanziiert)
+			%\item Routing-Editor (+)
+			%
+			%\begin{itemize}
+				%\item Laden und Anzeigen von Botschaften/Signalen aus Datenbank (.dbc/.arxml)
+				%\item Eigene Botschaft kann definiert werden mit ID sowie Channel, auf die sie gelegt werden soll
+				%\item Inhalt der eigenen Botschaft kann aus Signalen, die in Datenbank definiert sind, zusammengestellt werden
+				%\item Aus der im Routing-Editor zusammengestellten Botschaft kann PAWN-Code generiert werden und in die Funktion OnCanRxEvent() eines geöffneten Skriptes im Texteditor eingefügt werden
+			%\end{itemize}
+			%
+			%\item Bei der Codeentwicklung unterstützende Funktionen. Ziel: Schnelles und effektives Schreiben von fehlerfreiem Code (++)
+		%\end{itemize}
+%
+	%\item Frei andockbare Fenster (+)
+	%
+	%\item Erkennung von GIGABOXEN, die mit dem PC verbunden sind 
+	%
+		%\begin{itemize}
+			%\item Anzeige der verfügbaren GIGABOXEN (++)
+			%\item Verbindung zu einer GIGABOX herstellen (++)
+		%\end{itemize}
+	%
+	%\item PAWN-Compiler 
+	%
+	%\begin{itemize}
+		%\item Interpreter zum Übersetzen von PAWN-Code in Bytecode (++)
+		%\item Linker, um Bytecode zusammenzufügen (++) 
+	%\end{itemize}
+	%
+		%
+	%\item Beschreiben/Auslesen des Flash-Speichers der GIGABOX
+	%
+		%\begin{itemize}
+			%\item Übertragen des Bytecodes vom PC auf den Flash-Speicher der GIGABOX (++)
+			%\item Auslesen des auf einer GIGABOX aufgespielten Bytecodes (++)
+		%\end{itemize}
+	%
+	%
+	%\item Konsole
+	%
+		%\begin{itemize}
+			%\item Eingabe von Befehlen (++)
+			%\item Ausgabe von Meldungen/Informationen (++)
+		%\end{itemize}	
+	%
+	%\item Steuern und Beobachten von Ein-/Ausgängen und Timer
+	%
+		%\begin{itemize}
+			%\item Steuern und Beobachten von DIN, AIN, DOUT, SWITCH (+)
+			%\item CAN-/LIN-Botschaften senden (einmalig und zyklisch) (0)
+			%\item CAN/LIN beobachten über Schnittstelle zu CANoe (-)
+			%\item Steuern und Beobachten der internen Timer (0)
+		%\end{itemize}
+%
+	%\item Debugging
+	%
+		%\begin{itemize}
+			%\item Setzen von Breakpoints (0)
+			%\item Zeilenweise Steuerung der Anweisungsausführung (0)
+		%\end{itemize}
+	%
+	%\item Skriptgenerierung aus MATLAB/Simulink
+	%
+		%\begin{itemize}
+			%\item Modellbasierte Entwicklung von Regelalgorithmen in MATLAB/Simulink. Generierung eines PAWN-Skriptes aus Simulink-Modell. (- -)					
+		%\end{itemize}
+		%
+	%\item Bereitstellung von Dokumentationen
+	%
+	%\begin{itemize}
+		%\item Dokumentation zur GIGABOX (++)
+		%\item Dokumentation zum condigurAIDER (++)
+		%\item Dokumentation zu PAWN (++)
+	%\end{itemize}
+	%
+	%
+%\end{itemize}
+%
+%

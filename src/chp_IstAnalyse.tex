@@ -1,0 +1,278 @@
+\chapter{Ist-Zustand}
+
+\section{Überblick}
+
+In diesem Kapitel wird der Ist-Zustand des configurAIDERs beschrieben. Es wird die Benutzeroberfläche vorgestellt und die Funktionalität beschrieben. Im Anschluss wird die Funktionalität und die Usability bewertet. Abbildung \ref{fig:Uebersicht} veranschaulicht die Module, die im configureAIDER enthalten sind.
+
+\begin{figure}[!htbp]
+	\centering
+		\includegraphics[width=\textwidth]{images/configurAIDER_Uebersicht.png}
+	\caption{Übersicht configurAIDER}
+	\label{fig:Uebersicht}
+\end{figure}
+
+
+\section{Elemente des configurAIDER}
+
+\subsection{Rahmenfenster}
+Der configurAIDER besteht aus einem Rahmenfenster, in das weitere Fenster eingebettet werden können. Das Rahmenfenster besitzt im oberen Fensterbereich eine Menüleiste in horizontaler Ausrichtung und ist in einem Hintergrund gehalten, der Firmenlogo und -farbe zeigt. Die Menüeinträge ändern sind dynamisch in Abhängigkeit der vom Benutzer geöffneten Fenster. Beim Start des confiurAIDERs ist das Fenster "`Verfügbare Geräte"' standardmäßig in das Rahmenfenster eingebettet. Eingebettete Fenster können nicht über die Grenzen des Rahmenfensters hinausgezogen werden. 
+
+%\begin{figure}[!htbp]
+	%\centering
+		%\includegraphics[width=\textwidth]{images/Rahmenfenster.png}
+	%\caption{Rahmenfenster configurAIDER}
+	%\label{fig:Rahmenfenster}
+%\end{figure}
+
+
+
+\subsection{Fenster "`Verfügbare Geräte"'}
+
+Im Fenster "`Verfügbare Geräte"' werden alle GIGABOXen angezeigt, die an der USB-Schnittstelle des PC angeschlossen sind. Es wird der Modellname, die Seriennummer und der Verbindungsstatus von GIGABOXen ausgegeben, die am PC erkannt wurden. Über dieses Fenster kann eine GIGABOX angewählt werden, mit der eine Kommunikation gestartet werden soll.  
+Wenn keine reale GIGABOX zur Verfügung steht, kann eine GIGABOX simuliert werden. 
+Die Auswahl eines zu simulierenden Gerätes erfolgt über ein eigenes Dialogfenster "`Simuliertes Gerät"' (siehe Abbildung \ref{fig:SimuliertesGerät}). 
+ 
+
+\begin{figure}[!htbp]
+	\centering
+		\includegraphics[width=\textwidth]{images/SimuliertesGeraet.png}
+	\caption{Fenster "`Simuliertes Gerät"'}
+	\label{fig:SimuliertesGerät}
+\end{figure}
+
+Die simulierte GIGABOX wird wie eine reale GIGABOX gelistet. 
+
+Nach der Anwahl eines GIGABOX-Modelles wird versucht, eine Verbindung zu dem Gerät herzustellen (wird das tatsächlich hardwaremäßig versucht oder ist die Anzeige nur dazu da, dem Benutzer zu signalisieren, welches Gerät er konfiguriert). Bei erfolgreicher Verbindungsherstellung wird das Gerät grün hinterlegt und es öffnet sich ein Fenster zur Editorauswahl. Dort kann ausgewählt werden, ob die Konsole, der scriptEDITOR oder der multiEDITOR geöffnet werden soll. Bei einigen GIGABOX-Modellen steht kein multiEDITOR zur Verfügung. 
+
+\begin{figure}[!htbp]
+	\centering
+		\includegraphics[width=\textwidth]{images/VerfuegbareGeraete.png}
+	\caption{Fenster "`Verfügbare Geräte"'}
+	\label{fig:VerfügbareGeräte}
+\end{figure}
+
+\subsection{Fenster "`Konsole"'}
+
+Die Konsole besteht aus einer Textbox zur Eingabe von Befehlen und einer Textbox zur Ausgabe von Informationen. Sie ermöglicht Kommunikation mit einer GIGABOX. Die Konsole kann z.B eingesetzt werden zur Abfrage von Diagnoseinformationen und um einen Reset zu veranlassen.  
+
+Über die Schaltflächen "`Folgen"' und "`Terminal"' kann gewählt werden, wie die Textein- und ausgabe erfolgen soll. Wenn "`Folgen"' ausgewählt wird, erfolgt die Texteingabe in einem von der Textausgabe getrennten Fenster. Wenn "`Terminal"' ausgewählt wird, erfolgt die Textein- und ausgabe in einem gemeinsamen Fenster. 
+
+
+
+\begin{figure}[!htbp]
+	\centering
+		\includegraphics[width=\textwidth]{images/Konsole.png}
+	\caption{Fenster "`Konsole"'}
+	\label{fig:Konsole}
+\end{figure}
+
+
+\subsection{Fenster "`Programmlog"'}
+
+Das "`Programmlog"'-Fenster besteht aus einer Textbox, über die tabellarisch Erfolgs- und Fehlermeldungen über die ausgeführten Aktionen des configurAIDERs ausgegeben werden.
+
+\begin{figure}[!htbp]
+	\centering
+		\includegraphics[width=\textwidth]{images/Programmlog.png}
+	\caption{Fenster "`Programmlog"'}
+	\label{fig:Programmlog}
+\end{figure}
+
+
+\subsection{Fenster "`scriptEDITOR"'}
+
+Der scriptEDITOR ist ein Texteditor zum Erstellen und Editieren von Funktionen in PAWN. Um den scriptEDITOR aufzurufen, muss zuerst eine Verbindung zu einer realen oder simulierten GIGABOX hergestellt werden über das Fenster "`Verfügbare Geräte"'. Anschließend öffnet sich automatisch ein Fenster zur Editorauswahl. Dort kann der scriptEDITOR angewählt werden. 
+Mit dem scriptEDITOR erstellte Skriptdateien haben die Dateiendung .gt**.p. Die Sterne sind zu ersetzen mit einem Kürzel, das abhängig ist vom verbundenen GIGABOX-Modell. Für die unterschiedlichen GIGABOX-Modelle werden also Skripte mit verschiedenen Dateiendungen erstellt, da die Modelle unterschiedliche Funktionen implementieren. Bsp: GIGABOX gate FR extended: .gtfre.p
+GIGABOX gate XL: .gtxl.p
+GIGABOX gate gateway: .gtfrg.p
+
+
+In der obersten Fensterzeile ist eine Buttonleiste angeordnet mit den folgenden Buttons:
+\begin{itemize}
+	\item Neu: Öffnet ein neues Skript
+	\item Öffnen: Öffnet ein vorhandenes Skript
+	\item Speichern: Speichert das geöffnete Skript unter einem bereits festgelegt Dateinamen und Pfad
+	\item Speichern unter: Speichert das geöffnete Skript unter einem anzugebenden Dateinamen und Pfad	
+	\item Kompilieren: Interpreter erzeugt Bytecode aus dem PAWN-Quellcode  
+	\item Herunterladen: Interpreter erzeugt Bytecode aus dem PAWN-Quellcode. Die PAWN-Skriptdatei wird als ZIP-Datei komprimiert. 
+	Anschließend wird der Bytecode und das gezippte Skript auf die virtuelle Maschine der GIGABOX übertragen.
+	\item Heraufladen: Die als ZIP-Datei komprimierte Skriptdatei auf dem Steuergerät wird auf den PC übertragen, entzippt und im Texteditor geöffnet. 
+	\item Reset: Führt einen Reset der GIGABOX durch
+	\item Log: Öffnet Konsole	
+			
+\end{itemize}
+
+\textcolor[rgb]{1,0,0}{Aufzählung der Buttons zu detailreich
+}
+Mittig ist der Texteditor angeordnet. Hier kann ein Skript angezeigt und bearbeitet werden. Es stehen bei der Entwicklung typische Unterstützungswerkzeuge wie Codefolding zur Verfügung. \textcolor[rgb]{1,0,0}{(Aufzählung der unterstützenden Werkzeuge wie Autovervollständigung etc.)}
+
+
+
+Unten befindet sich ein Fenster zur Ausgabe von Fehlern, Warnungen und Erfolgsmeldungen.
+
+
+\begin{figure}[!htbp]
+	\centering
+		\includegraphics[width=\textwidth]{images/scriptEDITOR.png}
+	\caption{Fenster "`scriptEDITOR"'}
+	\label{fig:scriptEDITOR}
+\end{figure}
+
+
+\subsection{Fenster "`multiEDITOR"'}
+
+Der "`multiEDITOR"' ist ein Editor zur Funktionskonfiguration mit WENN-DANN-Anweisungen in Tabellen. Er soll es Benutzern mit geringer Programmiererfahrung ermöglichen, einfache Funktionen für die GIGABOX zu entwickeln. Aus den konfigurierten Funktionstabellen kann anschließend automatisch ein PAWN-Skript generiert werden. Das erstellte PAWN-Skript kann dann kompiliert und der Bytecode auf den Flash-Speicher der GIGABOX übertragen werden. 
+
+In der obersten Fensterzeile ist eine Buttonleiste angeordnet mit den folgenden Buttons:
+\begin{itemize}
+	\item Neu: Öffnet ein neues Skript
+	\item Öffnen: Öffnet ein vorhandenes Skript
+	\item Speichern: Speichert das geöffnete Skript unter einem bereits festgelegt Dateinamen und Pfad
+	\item Speichern unter: Speichert das geöffnete Skript unter einem anzugebenden Dateinamen und Pfad
+	\item Generieren: Aus den mittels Tabelle konfigurierten Funktionen wird ein PAWN-Skript generiert
+	\item Kompilieren: Interpreter erzeugt Bytecode aus dem PAWN-Quellcode  
+	\item Herunterladen: Aus den mittels Tabelle konfigurierten Funktionen wird ein PAWN-Skript generiert. Interpreter erzeugt Bytecode aus dem PAWN-Quellcode. Die PAWN-Skriptdatei wird als ZIP-Datei komprimiert. 
+	Anschließend wird der Bytecode und das gezippte Skript auf die virtuelle Maschine der GIGABOX übertragen.
+	
+	\item Heraufladen: Die als ZIP-Datei komprimierte Skriptdatei auf dem Steuergerät wird auf den PC übertragen und entzippt.
+	PAWN-Code wird rückgewandelt in Tabelle mit WENN-DANN-SONST-Anweisungen. Die funktioniert nur, wenn der von der GIGABOX hochgeladenen Code ursprünglich mithilfe des multiEDITORs erzeugt wurde. 
+	\item DBC: Es können Vector-DBC Dateien oder AUTOSAR .arxml Dateien erstellt oder geöffnet werden. Dabei handelt es sich um Datenbanken, in denen CAN-Botschaften und Signale definiert sind
+	\item Reset: Führt einen Reset der GIGABOX durch
+	\item Log: Öffnet Konsole
+\end{itemize}
+	
+\textcolor[rgb]{1,0,0}{Aufzählung der Buttons zu detailreich
+}	
+	
+Unter der Buttonleiste befindet sich eine Tabelle, in der CAN-Botschaften und Signale erstellt und bearbeitet werden können. Botschaften und Signale, die aus Datenbank-Dateien (.dbc oder .arxml) geladen wurden, werden hier angezeigt.
+	
+Darunter befindet sich eine Tabelle zur Konfiguration von Funktionen mithilfe von WENN-DANN-SONST-Anweisungen. 
+
+\begin{figure}[!htbp]
+	\centering
+		\includegraphics[width=\textwidth]{images/multiEDITOR.png}
+	\caption{Fenster "`multiEDITOR"'}
+	\label{fig:multiEDITOR}
+\end{figure}
+
+
+
+\section{Funktionalität} \label{sec:Funktionalität}
+
+Abbildung \ref{fig:FunktionalitaetIst} gibt einen Überblick über die verfügbaren Funktionen des configurAIDERs.
+
+\begin{figure}[!htbp]
+	\centering
+		\includegraphics[width=\textwidth]{images/FunktionalitaetIst.png}
+	\caption{Überblick Funktionen des configurAIDERs}
+	\label{fig:FunktionalitaetIst}
+\end{figure}
+
+\subsection{Einstellung der Sprache}
+Die Sprache der Fensterdialoge des configurAIDERs kann in der Menüleiste des Rahmenfenster unter dem Eintrag "`Sprache"' eingestellt werden. Es steht Deutsch und Englisch als Sprache zur Verfügung. 
+Nach der Sprache von Deutsch auf Englisch wird ein Dialog eingeblendet, dass die Sprachänderung erst nach einem Neustart übernommen wird. 
+Nach ausgeführtem Neustart werden nicht alle Menüeinträge auf Englisch dargestellt. So werden beispielsweise im scriptEDITOR die Menüeinträge unter "`Edit"' weiterhin komplett in Deutsch dargestellt. Die Funktionstabellen im multiEDITOR werden auch weiterhin in Deutsch dargestellt.  
+
+\subsection{Bereitstellung von Dokumentation zur GIGABOX, configurAIDER und PAWN}
+Über den Menüeintrag "`Hilfe"' können PDF-Dokumente zu den verschiedenen GIGABOX-Modellen, configurAIDER und zur Skriptsprache PAWN abgerufen werden. Für den configurAIDER steht ein allgemeines Handbuch, Hinweise zur Installation und jeweils für scriptEDITOR und multiEDITOR ein eigenes Handbuch zur Verfügung. Der Menüeintrag "`linEDITOR"' enthält nur einen ausgegrauten Eintrag.
+Zu den GIGABOX-Modellen stehen Handbücher, Flyer und Informationen zu Firmwareupdates zur Verfügung. Die Dokumentationen werden nicht durchgängig für alle GIGABOX-Modelle zur Verfügung gestellt. So wird für die GIGABOX gate xl kein Handbuch angeboten, für die GIGABOX gate powerAIDER kein Flyer.
+
+\subsection{Verbindung zu einer GIGABOX herstellen}
+
+GIGABOXEN, die an der USB-Schnittstelle des PCs erkannt werden sowie simulierte GIGABOXEN werden im Fenster "`Verfügbare Geräte"' (Abbildung \ref{fig:VerfügbareGeräte}) gelistet. Hier kann die Verbindung zu einem Gerät hergestellt werden. 
+Falls keine reale GIGABOX zur Verfügung steht, kann eine GIGABOX simuliert werden. 
+
+
+Die verschiedenen Modelle besitzen unterschiedliche Hardwarefunktionen (unterschiedliche Anzahl von Ein-/Ausgängen, Bussysteme), die zu entwickelnden Funktionen müssen daran angepasst werden. Dem configurAIDER muss deshalb vor der Funktionsentwicklung bekannt sein, für welches Modell Code entwickelt werden soll.
+
+
+Es wurden verschiedene Fehler entdeckt, die im Folgenden aufgelistet werden.
+
+\begin{enumerate}
+	\item Das Fenster "`Verfügbare Geräte"' wird vom Benutzer geschlossen. Bei einem Wiederaufruf des Fensters kann kein neues Gerät mehr simuliert werden. Lösung: configurAIDER neu starten
+	\item Im Fenster "`Verfügbare Geräte"' sind mehrere Geräte gelistet. Bei dem Versuch, die Verbindung zu einem Gerät herzustellen über Rechtsklick auf das Gerät und "`Verbinden"', wird keine Verbindung zum angewählten Gerät hergestellt sondern zum ersten Gerät in der Liste. Lösung: Verbindung herstellen über Doppelklick auf Gerät
+	\item Die Simulation von Geräten schlägt gelegentlich fehl, es wird über das Programmlog-Fenster ein Fehler ausgegeben (ERROR: Internal device table obscurred!) Lösung: Neuer Versuch der Herstellung einer Verbindung
+
+\end{enumerate}
+
+
+\subsection{PAWN-Code kompilieren}
+
+Aus scriptEDITOR und multiEDITOR heraus kann mithilfe des Compilers PAWN-Code in Bytecode übersetzt werden. Der erzeugte Bytecode kann auf der virtuellen Maschine der GIGABOX ausgeführt werden.
+
+
+\subsection{PAWN-Code entwickeln}
+
+	\subsubsection{PAWN-Skripte schreiben}
+
+	PAWN-Skripte können im scriptEDITOR geschrieben werden. 
+	Erstellte Skriptdateien besitzen die Dateiendung .gt**.p. 
+	Die Sterne sind zu ersetzen mit einem Kürzel, das abhängig ist vom verbundenen GIGABOX-Modell.
+Für die unterschiedlichen GIGABOX-Modelle werden also
+	Skripte mit verschiedenen Dateiendungen erstellt, da die Modelle unterschiedliche
+	Funktionen implementieren. Bsp: GIGABOX gate FR extended: .gtfre.p
+	GIGABOX gate XL: .gtxl.p GIGABOX gate gateway: .gtfrg.p
+	
+	Um den Benutzer bei der Codeentwicklung zu unterstützen, sind aus anderen IDEs bekannte Funktionen integriert. Einige ausgewählte Funktionen sind hier beispielhaft angeführt:
+
+	\begin{itemize}
+		\item Codeabschnitte sind auf- und zuklappbar
+		\item Unterschiedliche Farbgebung (Anweisungen in blau, Kommentare in grün etc)
+		\item Eventfunktionen sind als Rumpf vorimplementiert
+		\item Markierung der Zeile, in der sich der Cursor aktuell befindet	
+	\end{itemize}
+
+	Im Vergleich zu weit verbreiteten IDEs wie Visual Studio ist der Umfang an unterstützenden Funktionen aber klein gehalten.
+
+
+
+
+
+
+
+	\subsubsection{PAWN-Skripte aus Funktionstabellen generieren}
+
+	Im multiEDITOR können tabellarisch Funktionen konfiguriert werden mit WENN-DANN-SONST-Anweisungen. Aus den konfigurierten Funktionstabellen kann anschließend automatisch
+	ein PAWN-Skript generiert werden. Das erstellte PAWN-Skript kann
+	dann kompiliert und der Bytecode auf den Flash-Speicher der GIGABOX übertragen
+	werden.
+	
+	Für jede Funktion wird eine neue Tabelle erstellt. Jede Tabelle besteht mindestens aus 3 Zeilen mit den Anweisungen WENN, DANN und SONST. Es können mehrere WENN-Anweisungszeilen erstellt werden, die mit dem Bedingungsoperator UND oder ODER verknüpft werden müssen. Außerdem können mehrere DANN und SONST-Anweisungen erstellt werden, die jeweils miteinander über den UND-Operator verknüpft werden.
+	Unter jeweils jede DANN und SONST-Anweisung kann eine neue, untergeordnete  WENN-DANN-SONST-Anweisung eingefügt werden. Damit sind verschachtelte Anweisungen möglich. 
+
+	In den Spalten der WENN-Anweisungszeile können digitale und analoge Eingänge, digitale Ausgänge sowie eingehende Busbotschaften auf definierte Werte geprüft werden. 
+	Wenn die dort definierten Werte angenommen werden, wird die DANN-Anweisungenszeile ausgeführt. Hier können digitale Ausgänge durchgeschaltet oder ausgeschaltet werden. Das Absetzen von Busbotschaften ist nicht möglich.  
+
+	Wenn die in der WENN-Anweisungszeile definierten Werte nicht angenommen werden, wird die SONST-Anweisungszeile ausgeführt. Auch hier können digitale Ausgänge durchgeschaltet oder ausgeschaltet werden. 
+	
+	\textcolor[rgb]{1,0,0}{Bewertung}
+
+
+\subsection{Übertragen von Skript-Applikationen}
+
+Es kann eine Skript-Applikation auf die GIGABOX übertragen werden. Die Skriptdatei wird als ZIP-Datei komprimiert und zusammen mit dem Bytecode auf den Flash-Speicher geschrieben. Wenn ein Skript mithilfe des multiEDITORs generiert wurde, wird zusätzlich zu der Skriptdatei (.gt**.p) auch die multiEDITOR-Konfigurationsdatei (.gt**.mmx) \textcolor[rgb]{1,0,0}{(+.tmp -> was steht da drin?)} mit in die ZIP-Datei gepackt.
+
+Ein auf der GIGABOX ausgeführtes Skript kann auch von der GIGABOX auf den PC geladen werden. Dabei wird die auf der GIGABOX gespeicherte ZIP-Datei auf den PC geladen, entpackt und im scriptEDITOR angezeigt. Wenn das Skript mit dem multiEDITOR erzeugt wurde, liegt der ZIP-Datei zusätzlich die multiEDITOR-Konfigurationsdatei (.gt**.mmx) bei und kann folglich auch im multiEDITOR geöffnet werden.
+
+
+
+\subsection{Kommunikaton mit verbundener GIGABOX}
+
+Über die Konsole können Befehle an eine reale GIGABOX gesendet werden, z.B. Befehl zum Reset, Aufrufen des Bootloaders. 
+Dort können auch Informationen der GIGABOX abgerufen und ausgeben werden, z.B. Diagnoseinformationen über Bussysteme oder Timer.
+
+Wenn die Schaltfläche "`Terminal"' aktiviert ist, kann eine erfolgte Texteingabe nicht mehr korrigiert werden. Bei deaktivierter Schaltfläche ist die Korrektur möglich. 
+
+\subsection{Ausgabe von Ereignismeldungen}
+
+Es kann über das Programmlog-Fenster nachverfolgt werden, welche Aktionen vom configurAIDER durchgeführt wurden. Wichtige Erfolgs- und Fehlermeldungen werden dort ausgegeben. Bsp: Erfolgreich kompiliert.
+
+
+
+
+
+
+\subsection{Ergebnis}
+
+
+

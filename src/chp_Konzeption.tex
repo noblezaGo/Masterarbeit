@@ -1,0 +1,87 @@
+\chapter{Konzeption}
+
+\section{Übersicht}
+
+Ziel des Kapitels ist es, Konzepte aufzuzeigen, wie die in der Anforderungsanalyse erarbeiteten Anforderungen umgesetzt werden können.
+
+\section{Erweiterung des bestehenden configurAIDERs um neue Features}
+
+Der bestehende Code des configurAIDERs wird erweitert um neue Features, die bei der Bewertung der Anforderungen in Abschnitt \ref{sec:BewertungAnforderungen} mit (+) oder (++) bewertet wurden. Die an bereits bestehenden Features in Abschnitt \ref{sec:Funktionalität} kritisierten Punkte sollen verbessert werden.
+
+Neue Funktionen:
+\begin{itemize}
+	\item Projektverwaltung: Es können Projekte angelegt werden, in denen unterschiedliche Modelle der GIGABOX projektiert sind und die zugehörigen Skripte+Include-Files
+	\item Texteditor wird erweitert um:
+	
+	\begin{enumerate}
+		\item Möglichkeit, letzte Schritte rückgängig zu machen
+		\item Anzeige aller implementierten Funktionen zur Navigation im Skript
+		\item Bei der Codeentwicklung unterstützende Funktionen
+		\item Routing-Editor
+	\end{enumerate}
+	
+	\item Frei andockbare Fenster
+	\item Steuern und Beobachten von DIN, AIN, DOUT, SWITCH
+	
+\end{itemize}
+
+Vorteil: 
+
+\begin{itemize}
+	\item Das Tool erhält damit einen erhöhten Funktionsumfang, als wichtig bewertete funktionale Anforderungen können umgesetzt werden.
+	
+\end{itemize} 
+
+Nachteil: 
+\begin{itemize}
+	\item Nichtfunktionale Anforderungen wie Qualitätskriterien an Software nach ISO9126 (Wartbarkeit, Usability, Effizienz, Übertragbarkeit, Zuverlässigkeit) können nicht erfüllt werden, sondern werden sich verschlechtern durch eine weitere Funktionserweiterung des Tools
+	
+	
+	\item Viel Einarbeitung in bestehenden Code nötig
+
+\end{itemize}
+
+
+\section{Neuentwicklung des configurAIDERs} 
+
+Das Tool wird von Grund auf neu entwickelt. Es sollen die funktionalen und nichtfunktionalen Anforderungen aus Kapitel \ref{chp:Anforderungsanalyse} umgesetzt werden. Im Rahmen dieser Arbeit sollen vorerst nur die wichtigsten funktionalen Anforderungen umgesetzt werden (mit ++ bewertet). Allerdings sollen alle nichtfunktionalen Anforderungen erfüllt werden.
+
+Funktionen:
+
+\begin{itemize}
+\item Projektverwaltung: Es können Projekte angelegt werden, in denen unterschiedliche Modelle der GIGABOX projektiert sind und die zugehörigen Skripte+Include-Files
+\item Texteditor 
+	\begin{itemize}
+		\item mehrere Skripte lassen sich parallel über Tabs öffnen
+		\item Copy/Paste
+		\item Suchen/Ersetzen
+		\item Möglichkeit, letzte Schritte rückgängig zu machen
+		\item Bei der Codeentwicklung unterstützende Funktionen. Ziel: Schnelles
+und effektives Schreiben von fehlerfreiem Code
+	\end{itemize}
+	
+\item Erkennung von GIGABOXEN, die mit dem PC verbunden sind
+\item PAWN-Compiler
+\item Beschreiben/Auslesen des Flash-Speichers der GIGABOX
+\item Konsole
+\item Bereitstellen von Dokus
+
+\end{itemize}
+
+
+Vorteil:
+\begin{itemize}
+	\item Tool wird einfacher erweiterbar als bisheriger Stand. Dies ermöglicht es, zukünftig einfacher neue Features zu integrieren.
+	\item Besser wartbar: Bugs können in Zukunft besser behoben werden, da Verhalten des neuen Codes besser bekannt ist
+	\item Usability kann verbessert werden
+	\item Tool konsistent mit WPF realisiert unter aktueller .NET Version 4.6
+	\item Keine lange Einarbeitung in alten Code nötig
+\end{itemize}
+
+Nachteil:
+\begin{itemize}
+	\item In Entwurf der neuen Softwarearchitektur muss Zeit investiert werden
+	\item Tool bietet keinen direkten Mehrwert in Form von höherem Funktionsumfang 
+	\item Insgesamt höherer Aufwand um die gestellten funktionalen Anforderungen zu erreichen
+\end{itemize}
+
