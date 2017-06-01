@@ -9,20 +9,26 @@ Die Anforderungen an die Entwicklungsumgebung wurden so gestellt, dass sie Softw
 Zur Ermittlung der funktionalen Anforderungen wurden Gespräche mit Entwicklern geführt, vorhandener Programmcode aus realisierten Projekten analysiert und selbstständig Codeentwicklung mit dem configurAIDER betrieben. Aus diesen Eindrücken heraus entstanden die im Folgenden beschriebenen funktionalen Anforderungen.
 
 Jede funktionale Anforderung soll bewertet werden nach der Priorität der Umsetzung. 
-Die Bewertung der Anforderungen soll qualitativ erfolgen anhand von Meinungen befragter Entwickler. Die Anforderungen werden eingeordnet in vier Klassen:
+Die Bewertung der Anforderungen soll qualitativ erfolgen anhand von Meinungen befragter Entwickler. 
+
+
+Auf Basis der Qualitätsmerkmale für die Anforderungsspezifikation im Standard IEEE 830-1998 werden die funktionalen Anforderungen eingeteilt in drei Prioritärsklassen. 
 
 \begin{itemize}
-	\item Klasse A: Anforderung, die essenziell wichtige Grundfunktionalitäten bereitstellt
-	\item Klasse B: Anforderung, die wichtige Funktionalitäten bereitstellt
-	\item Klasse C: Anforderung, die mäßig wichtige Funktionalitäten bereitstellt
-	\item Klasse D: Anforderung, die wenige wichtige Funktionalitäten bereitstellt
+	\item Essential: Das Software-System kann nicht akzeptiert werden, wenn diese Anforderung nicht in der vereinbarten Form geliefert wird.
+	\item Conditional: Diese Anforderungen erweitern das Software-System in geeigneter Form. Wenn sie fehlen, würden sie den Einsatz des Systems jedoch nicht gefährden.
+	\item Optional: Diese Anforderungen sind nicht unbedingt notwendig, für die Anwender jedoch eine angenehme Erweiterung (nice to have)
+
 \end{itemize}
+
+
+Das Use-Case-Diagramm in Abbildung \ref{fig:UseCases} veranschaulicht die grundlegenden Funktionen, die an das Tool gestellt werden.
 
 
 Zur Ermittlung der nichtfunktionalen Anforderungen wurden bekannte Vorgehensmodelle und Normen der Softwareentwicklung herangezogen.  
 Die hergeleiteten nichtfunktionalen Anforderungen sollen bei der Entwicklung beachtet werden, um eine hohe Qualität der zu entwickelenden Software sicherzustellen. Auf eine Bewertung wird verzichtet.
 
-
+Quelle: \cite{SWRequirements}
 
 \section{Ermittlung und Bewertung von funktionalen Anforderungen}
 
@@ -34,7 +40,7 @@ Innerhalb eines Projektes können verschiedene GIGABOX-Modelle angelegt werden. F
 
 \emph{Bewertung}:
 
-Der Benutzer erhält einen strukturierten Überblick über alle seine GIGABOX-Projekte und alle für ein Projekt entwickelten Skripte. Das Öffnen eines Skriptes erfolgt komfortabel über Doppelklick auf ein Skript in der Projektstruktur. Lästiges navigieren durch die Dateistruktur des PCs beim Öffnen eines Skriptes entfällt + der Benutzer muss den Ablageort im Dateisystem nicht wissen. Erhöht den Benutzerkomfort signikfikant, deshalb Einstufung in Klasse B als wichtiges Feature.
+Der Benutzer erhält einen strukturierten Überblick über alle seine GIGABOX-Projekte und alle für ein Projekt entwickelten Skripte. Das Öffnen eines Skriptes erfolgt komfortabel über Doppelklick auf ein Skript in der Projektstruktur. Lästiges navigieren durch die Dateistruktur des PCs beim Öffnen eines Skriptes entfällt + der Benutzer muss den Ablageort im Dateisystem nicht wissen. Erhöht den Benutzerkomfort signikfikant, deshalb Einstufung in Prioritätsklasse "`Conditional"'.
 
 
 \subsection{Einstellung der Sprache}
@@ -45,8 +51,8 @@ Die Sprache der Benutzeroberfläche kann angepasst werden. Es soll Deutsch und En
 
 \emph{Bewertung}:
 
-Die Darstellung der Benutzeroberfläche in der Muttersprache des Benutzers erhöht die Usability, da es die Selbstbeschreibungsfähigkeit und Individualisierbarkeit fördert. Englisch muss auf jeden Fall zur Verfügung stehen, da es die international am weitesten verbreitete Sprache ist und auch in Deutschland von einem Großteil der Menschen verstanden wird. Die Darstellung der Benutzeroberfläche in Englisch wird deshalb in Klasse A eingeteilt. 
-Die Darstellung in Deutsch wird in Klasse C eingeteilt, da die Usability dadurch nur mäßig erhöht wird. 
+Die Darstellung der Benutzeroberfläche in der Muttersprache des Benutzers erhöht die Usability, da es die Selbstbeschreibungsfähigkeit und Individualisierbarkeit fördert. Englisch muss auf jeden Fall zur Verfügung stehen, da es die international am weitesten verbreitete Sprache ist und auch in Deutschland von einem Großteil der Menschen verstanden wird. Die Darstellung der Benutzeroberfläche in Englisch wird deshalb in Prioritätsklasse "`Essential"' eingeteilt. 
+Die Darstellung in Deutsch wird in Klasse "`Optional"' eingeteilt, da die Usability dadurch nur mäßig erhöht wird. 
 Das liegt daran, dass der potenzielle Benutzerkreis des Tools Entwickler sind, denen größtenteils der Umgang mit englischen GUIs vertraut ist.
 
 \subsection{Texteditor zur Erstellung von PAWN-Skripten}
@@ -60,7 +66,7 @@ Das liegt daran, dass der potenzielle Benutzerkreis des Tools Entwickler sind, d
 	
 	\emph{Bewertung:}
 	
-	Klasse A, da als Grundfunktionalität einer IDE einzustufen.
+	Klasse "`Essential"', da als Grundfunktionalität einer IDE einzustufen.
 	
 	\item Copy/Paste
 	
@@ -70,7 +76,7 @@ Das liegt daran, dass der potenzielle Benutzerkreis des Tools Entwickler sind, d
 	
 	\emph{Bewertung:}
 	
-	Macht die Codeentwicklung bedeutend effektiver, da dem Benutzer Tipparbeit erspart bleibt. Weiterer Vorteil ist die Fehlervermeidung durch Tippfehler. Deshalb Einstufung in Klasse B. 
+	Macht die Codeentwicklung bedeutend effektiver, da dem Benutzer Tipparbeit erspart bleibt. Weiterer Vorteil ist die Fehlervermeidung durch Tippfehler. Deshalb Einstufung in Klasse "`Conditional"'. 
 
 	\item Suchen/Ersetzen
 	
@@ -80,7 +86,7 @@ Das liegt daran, dass der potenzielle Benutzerkreis des Tools Entwickler sind, d
 	
 	\emph{Bewertung:}
 	
-	Das Auffinden von Variablen und Methoden im Skript wird erheblich erleichtert. Bei Umbenennung von Variablen oder Methoden wird viel Zeit eingespart und es werden Tippfehler vermieden. Klasse B
+	Das Auffinden von Variablen und Methoden im Skript wird erheblich erleichtert. Bei Umbenennung von Variablen oder Methoden wird viel Zeit eingespart und es werden Tippfehler vermieden. Einteilung in Klasse "`Conditional"'.
 	
 	\item Letzte Schritte rückgängig machen
 	
@@ -90,7 +96,7 @@ Das liegt daran, dass der potenzielle Benutzerkreis des Tools Entwickler sind, d
 	
 	Bewertung:
 	
-	Fördert die Fehlertoleranz. Klasse B
+	Fördert die Fehlertoleranz. Einteilung in Klasse "`Conditional"'
 	
 	\item Anzeige aller instanziierten Variablen im Skript
 	
@@ -101,7 +107,7 @@ Das liegt daran, dass der potenzielle Benutzerkreis des Tools Entwickler sind, d
 	\emph{Bewertung: }
 
 	Benutzer hat alle instanziierten Variablen im Blick und kann leicht zu Verwendungsstellen im Skript navigieren. Das Einfügen per Drag\&Drop bietet eine komfortable Möglichkeit der Variablenverwendung und verhindert Fehleingaben durch Tippfehler. 
-	Klasse C
+	Einteilung in Klasse "`Optional"'.
 	
 	\item Anzeige aller implementierten Funktionen zur Navigation im Skript
 	
@@ -112,7 +118,7 @@ Das liegt daran, dass der potenzielle Benutzerkreis des Tools Entwickler sind, d
 \emph{	Bewertung:  }
 	
 	Benutzer hat alle implementierten Funktionen im Blick und kann leicht zu Verwendungsstellen im Skript navigieren. Komfortable Möglichkeit der Funktionsverwendung, Verhindert Fehleingaben durch Tippfehler.
-	Klasse C
+	Einteilung in Klasse "`Optional"'.
 	
 	\item Bei der Codeentwicklung unterstützende Funktionen
 	
@@ -123,7 +129,7 @@ Das liegt daran, dass der potenzielle Benutzerkreis des Tools Entwickler sind, d
 	
 	\emph{Bewertung: }
 	
-	Klasse C
+	Einteilung in Klasse "`Optional"'.
 	
 	\item Routingeditor
 	
@@ -140,7 +146,7 @@ Das liegt daran, dass der potenzielle Benutzerkreis des Tools Entwickler sind, d
 	
 	Dabei werden oft Bitverschiebungen benötigt, deren Programmierung viel Zeit- und Denkaufwand bedeuten. 
 	Der Routingeditor ermöglicht die grafische Konfiguration von Busbotschaften und erleichtern die Umsetzung dieser Routingaufgaben.
-	Klasse C
+	Einteilung in Klasse "`Optional"'.
 	
 \end{itemize}
  
@@ -154,38 +160,23 @@ Das liegt daran, dass der potenzielle Benutzerkreis des Tools Entwickler sind, d
 
 Erleichtert es Kunden ohne Programmierkenntnisse, selbständig GIGABOX-Funktionalitäten zu konfigurieren. Erweitert möglicherweise den Kreis an potentiellen Käufern der GIGABOX. 
 Im Vergleich zur direkten Codeentwicklung können allerdings nur eingeschränkte Funktionalitäten realisiert werden. Erfahrene Softwareentwickler werden aufgrund dieser Tatsache PAWN-Code direkt entwickeln. 
-Klasse C
+Einteilung in Klasse "`Optional"'.
 
 \subsection{Verbindung zu einer GIGABOX herstellen}
 
-\begin{itemize}
-	\item Anzeige aller mit dem PC verbundenen GIGABOXEN
-	
+
+		
 	\emph{Beschreibung:} 
 	
-	Alle GIGABOXEN, die mit dem PC per Kabel oder Bluetooth verbunden sind, werden aufgelistet. Es werden Geräteinformationen wie z.B. Modellname, Seriennummer bereitgestellt.
+	Alle GIGABOXEN, die mit dem PC per Kabel oder Bluetooth verbunden sind, werden aufgelistet. Es werden Geräteinformationen wie z.B. Modellname, Seriennummer bereitgestellt. Der Benutzer kann aus der Liste eine GIGABOX anwählen, mit der kommuniziert werden soll.	
 	
+	\emph{Bewertung:}	
 	
-
-
-	\emph{Bewertung:}
-	
-	
-	Wird als Grundfunktionalität eingestuft, Klasse A. 
-	
+	Verbindung zu GIGABOX per Kabel herstellen wird als Grundfunktionalität eingestuft, Klasse "`Essential"'. 
+	Verbindung per Bluetooth wird in Klasse "`Optional"' eingestuft.
 
 	
-	\item Benutzer kann GIGABOX auswählen, mit der kommuniziert werden soll
-	
-	\emph{Beschreibung:}
-	
-	
-	
-	\emph{Bewertung:}
 
-
-	
-\end{itemize}
 
 
 
@@ -198,7 +189,8 @@ Klasse C
 	
 	\emph{Bewertung:}
 	
-	Das Kompilieren ist eine Grundfunktionalität und wird deshalb als Klasse A eingestuft.
+	Das Kompilieren ist eine Grundfunktionalität und wird deshalb in die Klasse "`Essential"' eingestuft.
+
 
 
 
@@ -211,8 +203,8 @@ Klasse C
 	
 	\emph{Bewertung:}
 
-	Die Übertragung von Skripten vom PC auf eine GIGABOX über die USB-Schnittstelle wird als Grundfunktionalität (Klasse A) bewertet. Die Übertragung von der GIGABOX auf den PC über die USB-Schnittstelle ist für den Entwickler sehr nützlich, aber nicht unbedingt notwendig und wird deshalb als Klasse B eingestuft.
-Bluetooth-Übertragung wird in Klasse C eingestuft, da es wenige Use-Cases gibt, bei denen eine Funkübertragung Vorteile gegenüber der Kabelübertragung bietet. Ein möglicher Use-Case wäre eine schwer zugängliche GIGABOX im Fahrzeug, auf die ein neues Skript aufgespielt werden soll. Eine Übertragung per Bluetooth würde einen aufwändigen Ausbau der GIGABOX aus dem Fahrzeug ersparen.	
+	Die Übertragung von Skripten vom PC auf eine GIGABOX über die USB-Schnittstelle wird als Grundfunktionalität bewertet und in Klasse "`Essential"' eingeteilt. Die Übertragung von der GIGABOX auf den PC über die USB-Schnittstelle ist für den Entwickler sehr nützlich, aber nicht unbedingt notwendig und wird deshalb als Klasse "`Conditional"' eingestuft.
+Bluetooth-Übertragung wird in Klasse "`Optional"' eingestuft, da es wenige Use-Cases gibt, bei denen eine Funkübertragung Vorteile gegenüber der Kabelübertragung bietet. Ein möglicher Use-Case wäre eine schwer zugängliche GIGABOX im Fahrzeug, auf die ein neues Skript aufgespielt werden soll. Eine Übertragung per Bluetooth würde einen aufwändigen Ausbau der GIGABOX aus dem Fahrzeug ersparen.	
 
 
 \subsection{Kommunikation mit einer GIGABOX}
@@ -224,7 +216,7 @@ Bluetooth-Übertragung wird in Klasse C eingestuft, da es wenige Use-Cases gibt, 
 	
 	\emph{Bewertung:}
 	
-	Das Senden von Befehlen und Abrufen von Diagnose- und Geräteinformationen per Kabel über die USB-Schnittstelle wird in Klasse A eingestuft. Die Datenübertragung per Bluetooth wird in Klasse C eingestuft, da es wenige Use-Cases gibt, bei denen eine Funkübertragung Vorteile gegenüber der Kabelübertragung bietet. Ein möglicher Use-Case wäre eine schwer zugängliche GIGABOX im Fahrzeug, auf die ein neues Skript aufgespielt werden soll. Eine Übertragung per Bluetooth würde einen aufwändigen Ausbau der GIGABOX aus dem Fahrzeug ersparen.
+	Das Senden von Befehlen und Abrufen von Diagnose- und Geräteinformationen per Kabel über die USB-Schnittstelle wird in Klasse "`Essential"' eingestuft. Die Datenübertragung per Bluetooth wird in Klasse "`Optional"' eingestuft, da es wenige Use-Cases gibt, bei denen eine Funkübertragung Vorteile gegenüber der Kabelübertragung bietet. Ein möglicher Use-Case wäre eine schwer zugängliche GIGABOX im Fahrzeug, auf die ein neues Skript aufgespielt werden soll. Eine Übertragung per Bluetooth würde einen aufwändigen Ausbau der GIGABOX aus dem Fahrzeug ersparen.
 
 
 \subsection{Kommunikation mit dem Benutzer}
@@ -237,7 +229,7 @@ Bluetooth-Übertragung wird in Klasse C eingestuft, da es wenige Use-Cases gibt, 
 	
 	\emph{Bewertung:}
 
-	Einstufung in Klasse A.
+	Einstufung in Klasse "`Essential"'.
 
 
 \subsection{Steuern und Beobachten von Ein-/Ausgängen und Timern}
@@ -245,13 +237,37 @@ Bluetooth-Übertragung wird in Klasse C eingestuft, da es wenige Use-Cases gibt, 
 
 	\emph{Beschreibung:}
 	
-	Die Zustände der digitalen und analogen Ausgänge sowie der internen Timer sollen gesteuert und beobachtet werden können. 
-	CAN- und LIN-Botschaften sollen gesendet und empfangen werden können. Dabei soll einmaliges und zyklisches Senden von Botschaften möglich sein. 
-	Zusätzlich soll die Möglichkeit bestehen, Buskommunikation innerhalb eines Zeitfensters mitzuloggen. Alle Busbotschaften, die innerhalb dieses Zeitfensters auf dem Bus liegen, sollen dabei mit Zeitstempel gelistet werden. 
+	Die Zustände der digitalen und analogen Ausgänge sowie der internen Timer sollen über die Entwicklungsumgebung gesteuert und beobachtet werden können. 
+	Außerdem sollen vom Benutzer konfigurierte CAN- und LIN-Botschaften über die IDE gesendet werden können. Dabei soll einmaliges und zyklisches Senden von Botschaften möglich sein. Der Inhalt von eingehende Botschaften mit einer definierten ID soll beobachtet werden können.  
+	
+	Zusätzlich soll die Möglichkeit bestehen, Buskommunikation innerhalb eines definierten Zeitfensters mitzuloggen. Alle Busbotschaften, die innerhalb dieses Zeitfensters auf dem Bus liegen, sollen dabei mit Zeitstempel gelistet werden. 
+
+	\emph{Bewertung:}
+Die beschriebenen Funktionen sind für den Nutzer hilfreich bei der Codeentwicklung, aber nicht unbedingt notwendig. 
+Damit können die Funktionen in die Prioritätsklasse "`Optional"' eingeteilt werden.
+
+
+\subsection{Debugging}
+
+
+	\emph{Beschreibung:}
+Es sollen Breakpoints gesetzt werden können. Wenn ein Breakpoint erreicht wird, wird die Codeausführung auf der virtuellen Maschine der GIGABOX angehalten. Da der Code eventbasiert ist, werden die gesetzten Breakpoints nur erreicht, wenn das Event ausgelöst wird, in dem sich der Breakpoint befindet. Events, die auslösen während die Codeausführung angehalten ist, müssen  ignoriert werden. -> führt zu Problemen, da Timer ablaufen aber nicht neu aufgezogen werden -> Timerevents müssten trotzdem im Hintergrund auslösen und neu aufgezogen werden.
+Aber Anweisungen in den Event außer TimerSet() werden ignoriert.
+
+ CAN und LIN-Events werden ignoriert.
+
+Der Benutzer kann zeilenweise zu den folgenden Anweisungen springen. 
 
 	\emph{Bewertung:}
 
+\subsection{Bereitstellung von Dokumentationen}
+
+	\emph{Beschreibung:}
+	Innerhalb der IDE soll Dokumentation zu den GIGABOX-Modellen, zum configurAIDER und zu PAWN bereitgestellt werden.
 	
+	
+	\emph{Bewertung:}
+	Eine ausreichende Dokumentation wird vom Benutzer erwartet und ermöglicht effizientes arbeiten (Usability). Einteilung in Klasse "`Conditional"'.
 
 
 \begin{itemize}
@@ -363,7 +379,6 @@ Bluetooth-Übertragung wird in Klasse C eingestuft, da es wenige Use-Cases gibt, 
 \end{itemize}
 
 
-Das Use-Case-Diagramm in Abbildung \ref{fig:UseCases} veranschaulicht die grundlegenden Funktionen, die an das Tool gestellt werden.
 
 \begin{figure}[!htbp]
 	\centering

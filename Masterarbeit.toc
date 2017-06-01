@@ -21,7 +21,7 @@
 \contentsline {subsection}{\numberline {3.2.2}Einstellung der Sprache}{8}{subsection.3.2.2}
 \contentsline {subsection}{\numberline {3.2.3}Texteditor zur Erstellung von PAWN-Skripten}{9}{subsection.3.2.3}
 \contentsline {subsection}{\numberline {3.2.4}Konfigurieren einer GIGABOX ohne PAWN-Kenntnisse}{11}{subsection.3.2.4}
-\contentsline {subsection}{\numberline {3.2.5}Verbindung zu einer GIGABOX herstellen}{11}{subsection.3.2.5}
+\contentsline {subsection}{\numberline {3.2.5}Verbindung zu einer GIGABOX herstellen}{12}{subsection.3.2.5}
 \contentsline {subsection}{\numberline {3.2.6}PAWN-Compiler}{12}{subsection.3.2.6}
 \contentsline {subsection}{\numberline {3.2.7}Beschreiben/Auslesen des Flash-Speichers der GIGABOX}{12}{subsection.3.2.7}
 \contentsline {subsection}{\numberline {3.2.8}Kommunikation mit einer GIGABOX}{13}{subsection.3.2.8}
@@ -72,9 +72,7 @@
 \contentsline {section}{\numberline {6.3}Neuentwicklung des configurAIDERs}{43}{section.6.3}
 \contentsline {chapter}{\numberline {7}Design}{45}{chapter.7}
 \contentsline {section}{\numberline {7.1}Entwurf der Benutzeroberfl\"ache}{45}{section.7.1}
-\contentsline {subsection}{\numberline {7.1.1}Texteditor mit Projektbaum}{45}{subsection.7.1.1}
-\contentsline {subsubsection}{Routingeditor}{45}{section*.19}
 \contentsline {section}{\numberline {7.2}Entwurf der Softwarearchitektur}{45}{section.7.2}
-\contentsline {chapter}{Abbildungsverzeichnis}{47}{section*.20}
-\contentsline {chapter}{Tabellenverzeichnis}{48}{section*.22}
-\contentsline {chapter}{Literaturverzeichnis}{49}{section*.24}
+\contentsline {chapter}{Abbildungsverzeichnis}{47}{section*.19}
+\contentsline {chapter}{Tabellenverzeichnis}{48}{section*.21}
+\contentsline {chapter}{Literaturverzeichnis}{49}{section*.23}

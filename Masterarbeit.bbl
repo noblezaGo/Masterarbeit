@@ -1,5 +1,10 @@
 \begin{thebibliography}{1}
 
+\bibitem{SWRequirements}
+Gerd~Beneken Ulrike~Hammerschall.
+\newblock {\em {Software Requirements}}.
+\newblock Pearson Deutschland GmbH, 2013.
+
 \bibitem{EffSWArchitektur}
 Gernot Starke.
 \newblock {\em {Effektive Software Architekturen}}.
