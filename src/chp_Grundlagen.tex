@@ -93,25 +93,66 @@ Der integrierte Interpreter kann Bytecode aus den erstellten PAWN-Skripten erste
 
 \subsection{Qualitätskriterien an Software} \label{sec:QualitätskriterienSW}
 
-Qualitätskriterien an Software nach ISO 9126 (aus Wiki)
-besser: SQuaRE-Standard, Product Quality Model (2 Merkmale mehr als ISO 9126) Übernehme S.87 Software Requirements
+Um Softwarequalität definierbar zu machen, wurden diverse Software-Qualitätsmodelle entwickelt. Die ISO/IEC 25010 definiert unter anderem das Product Quality Model. 
+Dieses Modell definiert acht Qualitätmerkmale für Software, die im folgenden erläutert werden:
 
 \begin{itemize}
-	\item Wartbarkeit
-	\begin{itemize} 
-		\item Analysierbarkeit:
-		
-		\item Modifizierbarkeit:
-		
+	\item \emph{Functional Suitability:} 
 	
-		\item Testbarkeit:
-		
+	"`Das Qualitätsmerkmal der funktionallen Eignung fordert, dass ein Software-System die von ihm erwartete Funktionalität in angemesserner und konkreter Art und Weise und unter Berücksichtigung der festgelegten Randbedingungen und Eigenschaften umsetzt. Dabei geht es um Fragestellungen nach der Angemessenheit der Funktionalitäten für den vorgegebenen Einsatzbereich des Systems."' \cite{SWRequirements}
+	
+	\item \emph{Performance Efficiency}
+	
+	"`Das Merkmal der Performanz und Effizienz betrachtet das Leistungsniveau einer Anwendung in Abhängigkeit der eingesetzten Betriebsmittel und der geforderten Bedingungen. Dabei geht es insbesondere um das Zeitverhalten der Anwendung (Anwendungszeit, Durchsatz) sowie das Verbrauchsverhalten in Bezug auf Speicher, Prozessorzeit und andere Ressourcen."' \cite{SWRequirements}
+	
+	\item \emph{Compatibility}
+	
+	"`Das Merkmal der Kompatibilität betrachtet einerseits die explizite Zusammenarbeit des Systems mit anderen Systemen und andererseits die impliziten Auswirkungen des Systems auf andere Systeme, die auf der gleichen Hardware laufen."' \cite{SWRequirements}
+	
+	\item \emph{Usability}
+	
+	"`Das Qualitätsmerkmal der Benutzerfreundlichkeit beschäftigt sich damit, wie gut ein System seine Nutzer dabei unterstützt ihre Ziele effizient und effektiv zu erreichen. Zu den zentralen Teilmerkmalen zählt hier beispielsweise der Aufwand für die Erlernung des Systems sowie für die Bedienung. Ein weiteres Teilmerkmal ist die Attraktivität des Systems für die Nutzer."' \cite{SWRequirements}
+	
+	\item \emph{Reliability}
+	
+	"`Das Qualitätsmerkmal der Zuverlässigkeit beschreibt die Fähigkeit des Systems sein Leistungsniveau unter festgelegten Bedingungen über einen festgelegten Zeitraum zu bewahren. Zu den Teilmerkmalen zählen hier beispielsweise die Robustheit gegenüber fehlerhaften Eingaben, die Stabilität beim Umgang mit fehlerhaften Systemzuständen und die Wiederherstellbarkeit bei Systemausfällen."' \cite{SWRequirements}
+	
+	
+	\item \emph{Security}
+	
+	"`Das Merkmal umfasst alle in Bezug auf Datensicherheit relevanten Teilmerkmale wie die Datenintegrität, Authentizität und Vertraulichkeit."' \cite{SWRequirements}
+	
+	\item \emph{Maintainability}
+	
+	"`Das Merkmal der Wartbarkeit, teilweise auch als Änderbarkeit bezeichnet, beschäftigt sich vorrangig mit der internen Qualität eines Systems. Zentrale Teilmerkmale hier sind der Aufwand zur Analyse eines Fehlers oder Fehlverhaltens, der Aufwand zur Durchführung von Modifikationen mit entsprechender Testbarkeit sowie die Stabilität des Systems gegenüber unerwarteten Seiteneffekten."' \cite{SWRequirements}
+	
+	\item \emph{Portability}
+	
+	"`Die Portabilität als weiteres Qualitätsmerkmal beschäftigt sich mit dem Aufwand, um ein System strukturell zu verändern, auf eine andere Umgebung zu verlagern oder einzelne Systemkomponenten auszutauschen. Als Teilmerkmale nennt der Standard die Anpassbarkeit eines Systems an unterschiedliche Umgebungen, den Aufwand zur Installation und die Austauschbarkeit von Komponenten."' \cite{SWRequirements}
+	
+\end{itemize}
+ 
 
-	\end{itemize}
-		
-	\item Benutzbarkeit (genauer definiert in Norm EN ISO 9241-110)
+
+
+Abbildung \ref{fig:ProductQualityModel} zeigt eine Übersicht über die acht Qualitätsmerkmale und löst jedes Merkmal feingranular weiter auf.
+
+
+\begin{figure}[!htbp]
+	\centering
+		\includegraphics[width=\textwidth]{images/ProductQualityModel.png}
+	\caption{Qualitätsmerkmale des Product Quality Model nach ISO/IEC 25010}
+	\label{fig:ProductQualityModel}
+\end{figure}
+
+
+Um das Qualitätsmerkmal "`Usability"' zu verfeinern, kann die Norm EN ISO 9241-110 (Grundsätze der Dialoggestaltung) herangezogen werden.
+Diese beschreibt, welche Eigenschaften Dialoge erfüllen sollen, um eine gute Usability zu erreichen und werden im folgenden aufgezählt:
+
+
+
 	
-		\begin{itemize}
+\begin{itemize}
 		\item Aufgabenangemessenheit: "`Ein Dialog ist aufgabenangemessen, wenn er den Benutzer unterstützt, seine Arbeitsaufgabe effektiv und effizient zu erledigen."'
 		\item Selbstbeschreibungsfähigkeit: "`Ein Dialog ist in dem Maße selbstbeschreibungsfähig, in dem für den Benutzer zu jeder Zeit offensichtlich ist, in welchem Dialog, an welcher Stelle er sich befindet, welche Handlungen unternommen werden können und wie diese ausgeführt werden können."'
 		\item Lernförderlichkeit
@@ -119,31 +160,10 @@ besser: SQuaRE-Standard, Product Quality Model (2 Merkmale mehr als ISO 9126) Üb
 		\item Erwartungskonformität: "`Ein Dialog ist erwartungskonform, wenn er konsistent ist und den Merkmalen des Benutzers entspricht, z.B. seinen Kenntnissen aus dem Arbeitsgebiet, seiner Ausbildung und seiner Erfahrung sowie den allgemein anerkannten Konventionen."'
 		\item Individualisierbarkeit
 		\item Fehlertolerant:  "`Ein Dialog ist fehlertolerant, wenn das beabsichtigte Arbeitsergebnis trotz erkennbar fehlerhafter Eingaben entweder mit keinem oder mit minimalem Korrekturaufwand durch den Benutzer erreicht werden kann."'
-	\end{itemize}
+
 
 	Quelle: Wikipedia -> überprüfen ob andere Quelle verfügbar ist, am Besten die Norm direkt
 
-	
-	\item Effizienz
-		
-	
-	\item Übertragbarkeit
-		
-		\begin{itemize}
-			\item Anpassbarkeit: Möglichkeit, Software an verschiedene Umgebungen anzupassen
-			
-			Verschiedene Betriebssysteme? 32/64Bit?
-		\end{itemize}
-	
-	\item Zuverlässigkeit
-	
-	\begin{itemize}
-		\item Reife: Geringe Versagenshäufigkeit durch Fehlerzustände
-		
-		\item Wiederherstellbarkeit: Fähigkeit, bei einem Versagen das Leistungsniveau wiederherzustellen und die direkt betroffenen Daten wiederzugewinnen. Zu berücksichtigen sind die dafür benötigte Zeit und der benötigte Aufwand.
-	\end{itemize}
-
-	
 \end{itemize}
 
 \section{Entwicklungsframework}

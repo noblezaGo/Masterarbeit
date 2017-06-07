@@ -11,68 +11,72 @@
 \contentsline {section}{\numberline {2.2}Softwareentwicklungsprozess}{5}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}V-Modell}{5}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Qualit\"atskriterien an Software}{5}{subsection.2.2.2}
-\contentsline {section}{\numberline {2.3}Entwicklungsframework}{6}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}.NET-Framework}{6}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Windows Presentation Framework(WPF)}{6}{subsection.2.3.2}
-\contentsline {chapter}{\numberline {3}Anforderungsanalyse}{7}{chapter.3}
-\contentsline {section}{\numberline {3.1}\"Ubersicht}{7}{section.3.1}
-\contentsline {section}{\numberline {3.2}Ermittlung und Bewertung von funktionalen Anforderungen}{8}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Erstellung von Projekten mit Baumstruktur}{8}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Einstellung der Sprache}{8}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Texteditor zur Erstellung von PAWN-Skripten}{9}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}Konfigurieren einer GIGABOX ohne PAWN-Kenntnisse}{11}{subsection.3.2.4}
-\contentsline {subsection}{\numberline {3.2.5}Verbindung zu einer GIGABOX herstellen}{12}{subsection.3.2.5}
-\contentsline {subsection}{\numberline {3.2.6}PAWN-Compiler}{12}{subsection.3.2.6}
-\contentsline {subsection}{\numberline {3.2.7}Beschreiben/Auslesen des Flash-Speichers der GIGABOX}{12}{subsection.3.2.7}
-\contentsline {subsection}{\numberline {3.2.8}Kommunikation mit einer GIGABOX}{13}{subsection.3.2.8}
-\contentsline {subsection}{\numberline {3.2.9}Kommunikation mit dem Benutzer}{13}{subsection.3.2.9}
-\contentsline {subsection}{\numberline {3.2.10}Steuern und Beobachten von Ein-/Ausg\"angen und Timern}{13}{subsection.3.2.10}
-\contentsline {section}{\numberline {3.3}Ermittlung von nichtfunktionalen Anforderungen}{16}{section.3.3}
-\contentsline {section}{\numberline {3.4}Priorisierung der Anforderungen}{18}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Funktionale Anforderungen}{19}{subsection.3.4.1}
-\contentsline {chapter}{\numberline {4}Ist-Zustand}{20}{chapter.4}
-\contentsline {section}{\numberline {4.1}\"Uberblick}{20}{section.4.1}
-\contentsline {section}{\numberline {4.2}Elemente des configurAIDER}{20}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Rahmenfenster}{20}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Fenster "`Verf\"ugbare Ger\"ate"'}{20}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Fenster "`Konsole"'}{22}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}Fenster "`Programmlog"'}{23}{subsection.4.2.4}
-\contentsline {subsection}{\numberline {4.2.5}Fenster "`scriptEDITOR"'}{24}{subsection.4.2.5}
-\contentsline {subsection}{\numberline {4.2.6}Fenster "`multiEDITOR"'}{25}{subsection.4.2.6}
-\contentsline {section}{\numberline {4.3}Funktionalit\"at}{27}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Einstellung der Sprache}{30}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Bereitstellung von Dokumentation zur GIGABOX, configurAIDER und PAWN}{30}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}Verbindung zu einer GIGABOX herstellen}{30}{subsection.4.3.3}
-\contentsline {subsection}{\numberline {4.3.4}PAWN-Code kompilieren}{31}{subsection.4.3.4}
-\contentsline {subsection}{\numberline {4.3.5}PAWN-Code entwickeln}{31}{subsection.4.3.5}
-\contentsline {subsubsection}{PAWN-Skripte schreiben}{31}{section*.15}
-\contentsline {subsubsection}{PAWN-Skripte aus Funktionstabellen generieren}{32}{section*.16}
-\contentsline {subsection}{\numberline {4.3.6}\"Ubertragen von Skript-Applikationen}{32}{subsection.4.3.6}
-\contentsline {subsection}{\numberline {4.3.7}Kommunikaton mit verbundener GIGABOX}{33}{subsection.4.3.7}
-\contentsline {subsection}{\numberline {4.3.8}Ausgabe von Ereignismeldungen}{33}{subsection.4.3.8}
-\contentsline {subsection}{\numberline {4.3.9}Ergebnis}{33}{subsection.4.3.9}
-\contentsline {chapter}{\numberline {5}Evaluation}{34}{chapter.5}
-\contentsline {section}{\numberline {5.1}Funktionalit\"at und Usability des Ist-Zustands}{34}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Einstellung der Sprache}{34}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Bereitstellung von Dokumentation zur GIGABOX, configurAIDER und PAWN}{34}{subsection.5.1.2}
-\contentsline {subsection}{\numberline {5.1.3}Verbindung zu einer GIGABOX herstellen}{35}{subsection.5.1.3}
-\contentsline {subsection}{\numberline {5.1.4}PAWN-Code kompilieren}{35}{subsection.5.1.4}
-\contentsline {subsection}{\numberline {5.1.5}PAWN-Code entwickeln}{35}{subsection.5.1.5}
-\contentsline {subsubsection}{PAWN-Skripte schreiben}{35}{section*.17}
-\contentsline {subsubsection}{PAWN-Skripte aus Funktionstabellen generieren}{36}{section*.18}
-\contentsline {subsection}{\numberline {5.1.6}\"Ubertragen von Skript-Applikationen}{36}{subsection.5.1.6}
-\contentsline {subsection}{\numberline {5.1.7}Kommunikaton mit verbundener GIGABOX}{37}{subsection.5.1.7}
-\contentsline {subsection}{\numberline {5.1.8}Ausgabe von Ereignismeldungen des configurAIDERs}{37}{subsection.5.1.8}
-\contentsline {section}{\numberline {5.2}Differenz zwischen Anforderungen und Ist-Zustand}{37}{section.5.2}
-\contentsline {section}{\numberline {5.3}Quellcode des configurAIDERs}{41}{section.5.3}
-\contentsline {section}{\numberline {5.4}Ergebnis}{41}{section.5.4}
-\contentsline {chapter}{\numberline {6}Konzeption}{42}{chapter.6}
-\contentsline {section}{\numberline {6.1}\"Ubersicht}{42}{section.6.1}
-\contentsline {section}{\numberline {6.2}Erweiterung des bestehenden configurAIDERs um neue Features}{42}{section.6.2}
-\contentsline {section}{\numberline {6.3}Neuentwicklung des configurAIDERs}{43}{section.6.3}
-\contentsline {chapter}{\numberline {7}Design}{45}{chapter.7}
-\contentsline {section}{\numberline {7.1}Entwurf der Benutzeroberfl\"ache}{45}{section.7.1}
-\contentsline {section}{\numberline {7.2}Entwurf der Softwarearchitektur}{45}{section.7.2}
-\contentsline {chapter}{Abbildungsverzeichnis}{47}{section*.19}
-\contentsline {chapter}{Tabellenverzeichnis}{48}{section*.21}
-\contentsline {chapter}{Literaturverzeichnis}{49}{section*.23}
+\contentsline {section}{\numberline {2.3}Entwicklungsframework}{9}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}.NET-Framework}{9}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Windows Presentation Framework(WPF)}{9}{subsection.2.3.2}
+\contentsline {chapter}{\numberline {3}Anforderungsanalyse}{10}{chapter.3}
+\contentsline {section}{\numberline {3.1}\"Ubersicht}{10}{section.3.1}
+\contentsline {section}{\numberline {3.2}Ermittlung und Bewertung von funktionalen Anforderungen}{12}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Erstellung von Projekten mit Baumstruktur}{12}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Einstellung der Sprache}{12}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Texteditor zur Erstellung von PAWN-Skripten}{13}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Konfigurieren einer GIGABOX ohne PAWN-Kenntnisse}{15}{subsection.3.2.4}
+\contentsline {subsection}{\numberline {3.2.5}Verbundene GIGABOXEN auflisten}{16}{subsection.3.2.5}
+\contentsline {subsection}{\numberline {3.2.6}PAWN-Compiler}{16}{subsection.3.2.6}
+\contentsline {subsection}{\numberline {3.2.7}Beschreiben/Auslesen des Flash-Speichers der GIGABOX}{17}{subsection.3.2.7}
+\contentsline {subsection}{\numberline {3.2.8}Kommunikation mit einer GIGABOX}{17}{subsection.3.2.8}
+\contentsline {subsection}{\numberline {3.2.9}Kommunikation mit dem Benutzer}{18}{subsection.3.2.9}
+\contentsline {subsection}{\numberline {3.2.10}Steuern und Beobachten von Ein-/Ausg\"angen und Timern}{18}{subsection.3.2.10}
+\contentsline {subsection}{\numberline {3.2.11}Debugging}{18}{subsection.3.2.11}
+\contentsline {subsection}{\numberline {3.2.12}Bereitstellung von Dokumentationen}{19}{subsection.3.2.12}
+\contentsline {subsection}{\numberline {3.2.13}Individualisierbare Oberfl\"ache}{19}{subsection.3.2.13}
+\contentsline {section}{\numberline {3.3}Ermittlung von nichtfunktionalen Anforderungen}{20}{section.3.3}
+\contentsline {chapter}{\numberline {4}Ist-Zustand}{21}{chapter.4}
+\contentsline {section}{\numberline {4.1}\"Uberblick}{21}{section.4.1}
+\contentsline {section}{\numberline {4.2}Elemente des configurAIDER}{21}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Rahmenfenster}{21}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Fenster "`Verf\"ugbare Ger\"ate"'}{21}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Fenster "`Konsole"'}{23}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}Fenster "`Programmlog"'}{24}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.5}Fenster "`scriptEDITOR"'}{25}{subsection.4.2.5}
+\contentsline {subsection}{\numberline {4.2.6}Fenster "`multiEDITOR"'}{26}{subsection.4.2.6}
+\contentsline {section}{\numberline {4.3}Funktionalit\"at}{28}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Einstellung der Sprache}{31}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Bereitstellung von Dokumentation zur GIGABOX, configurAIDER und PAWN}{31}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Verbindung zu einer GIGABOX herstellen}{31}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.4}PAWN-Code kompilieren}{32}{subsection.4.3.4}
+\contentsline {subsection}{\numberline {4.3.5}PAWN-Code entwickeln}{32}{subsection.4.3.5}
+\contentsline {subsubsection}{PAWN-Skripte schreiben}{32}{section*.16}
+\contentsline {subsubsection}{PAWN-Skripte aus Funktionstabellen generieren}{33}{section*.17}
+\contentsline {subsection}{\numberline {4.3.6}\"Ubertragen von Skript-Applikationen}{33}{subsection.4.3.6}
+\contentsline {subsection}{\numberline {4.3.7}Kommunikaton mit verbundener GIGABOX}{34}{subsection.4.3.7}
+\contentsline {subsection}{\numberline {4.3.8}Ausgabe von Ereignismeldungen}{34}{subsection.4.3.8}
+\contentsline {subsection}{\numberline {4.3.9}Ergebnis}{34}{subsection.4.3.9}
+\contentsline {chapter}{\numberline {5}Evaluation}{35}{chapter.5}
+\contentsline {section}{\numberline {5.1}Funktionalit\"at und Usability des Ist-Zustands}{35}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Einstellung der Sprache}{35}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Bereitstellung von Dokumentation zur GIGABOX, configurAIDER und PAWN}{35}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.3}Verbindung zu einer GIGABOX herstellen}{36}{subsection.5.1.3}
+\contentsline {subsection}{\numberline {5.1.4}PAWN-Code kompilieren}{36}{subsection.5.1.4}
+\contentsline {subsection}{\numberline {5.1.5}PAWN-Code entwickeln}{36}{subsection.5.1.5}
+\contentsline {subsubsection}{PAWN-Skripte schreiben}{36}{section*.18}
+\contentsline {subsubsection}{PAWN-Skripte aus Funktionstabellen generieren}{37}{section*.19}
+\contentsline {subsection}{\numberline {5.1.6}\"Ubertragen von Skript-Applikationen}{37}{subsection.5.1.6}
+\contentsline {subsection}{\numberline {5.1.7}Kommunikaton mit verbundener GIGABOX}{38}{subsection.5.1.7}
+\contentsline {subsection}{\numberline {5.1.8}Ausgabe von Ereignismeldungen des configurAIDERs}{38}{subsection.5.1.8}
+\contentsline {section}{\numberline {5.2}Differenz zwischen Anforderungen und Ist-Zustand}{38}{section.5.2}
+\contentsline {section}{\numberline {5.3}Quellcode des configurAIDERs}{43}{section.5.3}
+\contentsline {section}{\numberline {5.4}Ergebnis}{43}{section.5.4}
+\contentsline {chapter}{\numberline {6}Konzeption}{44}{chapter.6}
+\contentsline {section}{\numberline {6.1}\"Ubersicht}{44}{section.6.1}
+\contentsline {section}{\numberline {6.2}Erweiterung des bestehenden configurAIDERs um neue Features}{44}{section.6.2}
+\contentsline {section}{\numberline {6.3}Neuentwicklung des configurAIDERs}{45}{section.6.3}
+\contentsline {section}{\numberline {6.4}Ergebnis}{46}{section.6.4}
+\contentsline {chapter}{\numberline {7}Design}{47}{chapter.7}
+\contentsline {section}{\numberline {7.1}Entwurf der Benutzeroberfl\"ache}{47}{section.7.1}
+\contentsline {section}{\numberline {7.2}Entwurf der Softwarearchitektur}{47}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Entwurf der Kontextabgrenzung}{48}{subsection.7.2.1}
+\contentsline {subsection}{\numberline {7.2.2}Entwurf der Laufzeitsicht}{49}{subsection.7.2.2}
+\contentsline {chapter}{Abbildungsverzeichnis}{51}{section*.22}
+\contentsline {chapter}{Tabellenverzeichnis}{52}{section*.24}
+\contentsline {chapter}{Literaturverzeichnis}{53}{section*.26}

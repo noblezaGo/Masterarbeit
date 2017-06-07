@@ -20,54 +20,58 @@
 \BOOKMARK [2][-]{subsection.3.2.2}{Einstellung der Sprache}{section.3.2}% 20
 \BOOKMARK [2][-]{subsection.3.2.3}{Texteditor zur Erstellung von PAWN-Skripten}{section.3.2}% 21
 \BOOKMARK [2][-]{subsection.3.2.4}{Konfigurieren einer GIGABOX ohne PAWN-Kenntnisse}{section.3.2}% 22
-\BOOKMARK [2][-]{subsection.3.2.5}{Verbindung zu einer GIGABOX herstellen}{section.3.2}% 23
+\BOOKMARK [2][-]{subsection.3.2.5}{Verbundene GIGABOXEN auflisten}{section.3.2}% 23
 \BOOKMARK [2][-]{subsection.3.2.6}{PAWN-Compiler}{section.3.2}% 24
 \BOOKMARK [2][-]{subsection.3.2.7}{Beschreiben/Auslesen des Flash-Speichers der GIGABOX}{section.3.2}% 25
 \BOOKMARK [2][-]{subsection.3.2.8}{Kommunikation mit einer GIGABOX}{section.3.2}% 26
 \BOOKMARK [2][-]{subsection.3.2.9}{Kommunikation mit dem Benutzer}{section.3.2}% 27
 \BOOKMARK [2][-]{subsection.3.2.10}{Steuern und Beobachten von Ein-/Ausg\344ngen und Timern}{section.3.2}% 28
-\BOOKMARK [1][-]{section.3.3}{Ermittlung von nichtfunktionalen Anforderungen}{chapter.3}% 29
-\BOOKMARK [1][-]{section.3.4}{Priorisierung der Anforderungen}{chapter.3}% 30
-\BOOKMARK [2][-]{subsection.3.4.1}{Funktionale Anforderungen}{section.3.4}% 31
-\BOOKMARK [0][-]{chapter.4}{Ist-Zustand}{}% 32
-\BOOKMARK [1][-]{section.4.1}{\334berblick}{chapter.4}% 33
-\BOOKMARK [1][-]{section.4.2}{Elemente des configurAIDER}{chapter.4}% 34
-\BOOKMARK [2][-]{subsection.4.2.1}{Rahmenfenster}{section.4.2}% 35
-\BOOKMARK [2][-]{subsection.4.2.2}{Fenster \214Verf\374gbare Ger\344te\215}{section.4.2}% 36
-\BOOKMARK [2][-]{subsection.4.2.3}{Fenster \214Konsole\215}{section.4.2}% 37
-\BOOKMARK [2][-]{subsection.4.2.4}{Fenster \214Programmlog\215}{section.4.2}% 38
-\BOOKMARK [2][-]{subsection.4.2.5}{Fenster \214scriptEDITOR\215}{section.4.2}% 39
-\BOOKMARK [2][-]{subsection.4.2.6}{Fenster \214multiEDITOR\215}{section.4.2}% 40
-\BOOKMARK [1][-]{section.4.3}{Funktionalit\344t}{chapter.4}% 41
-\BOOKMARK [2][-]{subsection.4.3.1}{Einstellung der Sprache}{section.4.3}% 42
-\BOOKMARK [2][-]{subsection.4.3.2}{Bereitstellung von Dokumentation zur GIGABOX, configurAIDER und PAWN}{section.4.3}% 43
-\BOOKMARK [2][-]{subsection.4.3.3}{Verbindung zu einer GIGABOX herstellen}{section.4.3}% 44
-\BOOKMARK [2][-]{subsection.4.3.4}{PAWN-Code kompilieren}{section.4.3}% 45
-\BOOKMARK [2][-]{subsection.4.3.5}{PAWN-Code entwickeln}{section.4.3}% 46
-\BOOKMARK [2][-]{subsection.4.3.6}{\334bertragen von Skript-Applikationen}{section.4.3}% 47
-\BOOKMARK [2][-]{subsection.4.3.7}{Kommunikaton mit verbundener GIGABOX}{section.4.3}% 48
-\BOOKMARK [2][-]{subsection.4.3.8}{Ausgabe von Ereignismeldungen}{section.4.3}% 49
-\BOOKMARK [2][-]{subsection.4.3.9}{Ergebnis}{section.4.3}% 50
-\BOOKMARK [0][-]{chapter.5}{Evaluation}{}% 51
-\BOOKMARK [1][-]{section.5.1}{Funktionalit\344t und Usability des Ist-Zustands}{chapter.5}% 52
-\BOOKMARK [2][-]{subsection.5.1.1}{Einstellung der Sprache}{section.5.1}% 53
-\BOOKMARK [2][-]{subsection.5.1.2}{Bereitstellung von Dokumentation zur GIGABOX, configurAIDER und PAWN}{section.5.1}% 54
-\BOOKMARK [2][-]{subsection.5.1.3}{Verbindung zu einer GIGABOX herstellen}{section.5.1}% 55
-\BOOKMARK [2][-]{subsection.5.1.4}{PAWN-Code kompilieren}{section.5.1}% 56
-\BOOKMARK [2][-]{subsection.5.1.5}{PAWN-Code entwickeln}{section.5.1}% 57
-\BOOKMARK [2][-]{subsection.5.1.6}{\334bertragen von Skript-Applikationen}{section.5.1}% 58
-\BOOKMARK [2][-]{subsection.5.1.7}{Kommunikaton mit verbundener GIGABOX}{section.5.1}% 59
-\BOOKMARK [2][-]{subsection.5.1.8}{Ausgabe von Ereignismeldungen des configurAIDERs}{section.5.1}% 60
-\BOOKMARK [1][-]{section.5.2}{Differenz zwischen Anforderungen und Ist-Zustand}{chapter.5}% 61
-\BOOKMARK [1][-]{section.5.3}{Quellcode des configurAIDERs}{chapter.5}% 62
-\BOOKMARK [1][-]{section.5.4}{Ergebnis}{chapter.5}% 63
-\BOOKMARK [0][-]{chapter.6}{Konzeption}{}% 64
-\BOOKMARK [1][-]{section.6.1}{\334bersicht}{chapter.6}% 65
-\BOOKMARK [1][-]{section.6.2}{Erweiterung des bestehenden configurAIDERs um neue Features}{chapter.6}% 66
-\BOOKMARK [1][-]{section.6.3}{Neuentwicklung des configurAIDERs}{chapter.6}% 67
-\BOOKMARK [0][-]{chapter.7}{Design}{}% 68
-\BOOKMARK [1][-]{section.7.1}{Entwurf der Benutzeroberfl\344che}{chapter.7}% 69
-\BOOKMARK [1][-]{section.7.2}{Entwurf der Softwarearchitektur}{chapter.7}% 70
-\BOOKMARK [0][-]{section*.19}{Abbildungsverzeichnis}{}% 71
-\BOOKMARK [0][-]{section*.21}{Tabellenverzeichnis}{}% 72
-\BOOKMARK [0][-]{section*.23}{Literaturverzeichnis}{}% 73
+\BOOKMARK [2][-]{subsection.3.2.11}{Debugging}{section.3.2}% 29
+\BOOKMARK [2][-]{subsection.3.2.12}{Bereitstellung von Dokumentationen}{section.3.2}% 30
+\BOOKMARK [2][-]{subsection.3.2.13}{Individualisierbare Oberfl\344che}{section.3.2}% 31
+\BOOKMARK [1][-]{section.3.3}{Ermittlung von nichtfunktionalen Anforderungen}{chapter.3}% 32
+\BOOKMARK [0][-]{chapter.4}{Ist-Zustand}{}% 33
+\BOOKMARK [1][-]{section.4.1}{\334berblick}{chapter.4}% 34
+\BOOKMARK [1][-]{section.4.2}{Elemente des configurAIDER}{chapter.4}% 35
+\BOOKMARK [2][-]{subsection.4.2.1}{Rahmenfenster}{section.4.2}% 36
+\BOOKMARK [2][-]{subsection.4.2.2}{Fenster \214Verf\374gbare Ger\344te\215}{section.4.2}% 37
+\BOOKMARK [2][-]{subsection.4.2.3}{Fenster \214Konsole\215}{section.4.2}% 38
+\BOOKMARK [2][-]{subsection.4.2.4}{Fenster \214Programmlog\215}{section.4.2}% 39
+\BOOKMARK [2][-]{subsection.4.2.5}{Fenster \214scriptEDITOR\215}{section.4.2}% 40
+\BOOKMARK [2][-]{subsection.4.2.6}{Fenster \214multiEDITOR\215}{section.4.2}% 41
+\BOOKMARK [1][-]{section.4.3}{Funktionalit\344t}{chapter.4}% 42
+\BOOKMARK [2][-]{subsection.4.3.1}{Einstellung der Sprache}{section.4.3}% 43
+\BOOKMARK [2][-]{subsection.4.3.2}{Bereitstellung von Dokumentation zur GIGABOX, configurAIDER und PAWN}{section.4.3}% 44
+\BOOKMARK [2][-]{subsection.4.3.3}{Verbindung zu einer GIGABOX herstellen}{section.4.3}% 45
+\BOOKMARK [2][-]{subsection.4.3.4}{PAWN-Code kompilieren}{section.4.3}% 46
+\BOOKMARK [2][-]{subsection.4.3.5}{PAWN-Code entwickeln}{section.4.3}% 47
+\BOOKMARK [2][-]{subsection.4.3.6}{\334bertragen von Skript-Applikationen}{section.4.3}% 48
+\BOOKMARK [2][-]{subsection.4.3.7}{Kommunikaton mit verbundener GIGABOX}{section.4.3}% 49
+\BOOKMARK [2][-]{subsection.4.3.8}{Ausgabe von Ereignismeldungen}{section.4.3}% 50
+\BOOKMARK [2][-]{subsection.4.3.9}{Ergebnis}{section.4.3}% 51
+\BOOKMARK [0][-]{chapter.5}{Evaluation}{}% 52
+\BOOKMARK [1][-]{section.5.1}{Funktionalit\344t und Usability des Ist-Zustands}{chapter.5}% 53
+\BOOKMARK [2][-]{subsection.5.1.1}{Einstellung der Sprache}{section.5.1}% 54
+\BOOKMARK [2][-]{subsection.5.1.2}{Bereitstellung von Dokumentation zur GIGABOX, configurAIDER und PAWN}{section.5.1}% 55
+\BOOKMARK [2][-]{subsection.5.1.3}{Verbindung zu einer GIGABOX herstellen}{section.5.1}% 56
+\BOOKMARK [2][-]{subsection.5.1.4}{PAWN-Code kompilieren}{section.5.1}% 57
+\BOOKMARK [2][-]{subsection.5.1.5}{PAWN-Code entwickeln}{section.5.1}% 58
+\BOOKMARK [2][-]{subsection.5.1.6}{\334bertragen von Skript-Applikationen}{section.5.1}% 59
+\BOOKMARK [2][-]{subsection.5.1.7}{Kommunikaton mit verbundener GIGABOX}{section.5.1}% 60
+\BOOKMARK [2][-]{subsection.5.1.8}{Ausgabe von Ereignismeldungen des configurAIDERs}{section.5.1}% 61
+\BOOKMARK [1][-]{section.5.2}{Differenz zwischen Anforderungen und Ist-Zustand}{chapter.5}% 62
+\BOOKMARK [1][-]{section.5.3}{Quellcode des configurAIDERs}{chapter.5}% 63
+\BOOKMARK [1][-]{section.5.4}{Ergebnis}{chapter.5}% 64
+\BOOKMARK [0][-]{chapter.6}{Konzeption}{}% 65
+\BOOKMARK [1][-]{section.6.1}{\334bersicht}{chapter.6}% 66
+\BOOKMARK [1][-]{section.6.2}{Erweiterung des bestehenden configurAIDERs um neue Features}{chapter.6}% 67
+\BOOKMARK [1][-]{section.6.3}{Neuentwicklung des configurAIDERs}{chapter.6}% 68
+\BOOKMARK [1][-]{section.6.4}{Ergebnis}{chapter.6}% 69
+\BOOKMARK [0][-]{chapter.7}{Design}{}% 70
+\BOOKMARK [1][-]{section.7.1}{Entwurf der Benutzeroberfl\344che}{chapter.7}% 71
+\BOOKMARK [1][-]{section.7.2}{Entwurf der Softwarearchitektur}{chapter.7}% 72
+\BOOKMARK [2][-]{subsection.7.2.1}{Entwurf der Kontextabgrenzung}{section.7.2}% 73
+\BOOKMARK [2][-]{subsection.7.2.2}{Entwurf der Laufzeitsicht}{section.7.2}% 74
+\BOOKMARK [0][-]{section*.22}{Abbildungsverzeichnis}{}% 75
+\BOOKMARK [0][-]{section*.24}{Tabellenverzeichnis}{}% 76
+\BOOKMARK [0][-]{section*.26}{Literaturverzeichnis}{}% 77
