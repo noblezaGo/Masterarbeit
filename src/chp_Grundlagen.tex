@@ -5,58 +5,58 @@
 \section{GIGABOX}
 
 \subsection{Überblick}
-GIGABOX ist eine Produktfamilie von Steuergeräten der Firma GIGATRONIK. GIGABOX-Steuergeräte werden hauptsächlich in der Fahrzeugentwicklung eingesetzt, um prototypische Kommunikationslösungen im Fahrzeug schnell realisieren zu können. Beispielhafte Anwendungen sind der Einsatz als Gateway zur Übersetzung zwischen unterschiedlichen Busprotokollen und zur Ansteuerung von Treiber-ICs im Automobil. Das Use-Case-Diagramm in Abbildung XX zeigt die Einsatzmöglichkeiten von GIGABOXEN.
+GIGABOX ist eine Produktfamilie von Steuergeräten der Firma GIGATRONIK. GIGABOX-Steuergeräte werden hauptsächlich in der Fahrzeugentwicklung eingesetzt, um prototypische Kommunikationslösungen im Fahrzeug schnell realisieren zu können. Beispielhafte Anwendungen sind der Einsatz als Gateway und die Ansteuerung von Treiber-ICs im Automobil. 
+
+GIGABOX-Steuergeräte werden in unterschiedlicher Hardwareausstattung und Funktionalität angeboten. Typischerweise verfügen sie über diverse Kommunikationsschnittstellen die im Automotive-Bereich benötigt werden wie CAN und LIN. Außerdem stehen digitale und analoge Ein- und Ausgänge zur Verfügung.
+Das neueste Modell der GIGABOX, die GIGABOX FD, befindet sich aktuell noch in der Entwicklung.
+Im Folgenden wird ausschließlich auf die GIGABOX FD näher eingegangen, da nur diese für die vorliegende Arbeit von Bedeutung ist. 
+
+\subsection{Einsatzszenarien}
+
+Das Use-Case-Diagramm in Abbildung \ref{fig:UseCasesGIGABOX} zeigt drei typische Einsatzszenarien der GIGABOX. 
 
 
+\begin{enumerate}
+	\item Einsatz als Gateway zur Modifikation von Busbotschaften
 
+	Beispiel:
 
-GIGABOX-Steuergeräte werden in unterschiedlicher Hardwareausstattung und Funktionalität angeboten. Tabelle XX bietet eine Übersicht über die verschiedenen GIGABOX Varianten. 
+Ein Fahrzeughersteller entwickelt das Nachfolgemodell einer PKW-Modellreihe. 
+Einige Busbotschaften, die die Steuergeräte untereinander austauschen, wurden für das neue Modell verändert oder wurden neu hinzugefügt. Der Großteil der Busbotschaften sind allerdings identisch wie beim alten Modell.
+Die Funktion einer neu entwickelten Klimaanlage soll nun im realen neuen Fahrzeugmodell überprüft werden. Allerdings ist das neue Modell noch nicht so weit entwickelt, dass es eine sinnvolle Testumgebung darstellen kann. Die neue Klimaanlage wird deshalb im alten Fahrzeugmodell getestet. Die für das Klimasteuergerät relevanten Busbotschaften werden dann mithilfe einer GIGABOX so manipuliert, dass sie den Botschaften entsprechen, die im neuen Fahrzeugmodell am Klimasteuergerät ankommen.
 
-\textcolor[rgb]{1,0,0}{TODO: Welche GIGABOX-Varianten gibt es? Auf Homepage sind nur wenige gelistet. Warum?}
-In Confluence: S,FR Degraded, FR Extended, FR Gateway, FR Gateway BLE, XL Standard
--> Vermutung: Nur die auf der Homepage angebotenen werden noch verkauft: BEO, flex-i-FlexRay USB Interface, FlexRay Active Star, Gateway, XL. 
-\textcolor[rgb]{1,0,0}{Warum heißt sense ironCUBE auch GIGABOX? -> ist kein Steuergerät}
+ 
 
-
-
-Eine GIGABOX besteht aus einer Basisplatine und einer Applikationsplatine. Das GIGABOX gate Grundmodul verfügt über Stromversorgung, USB-Anschluss und einen leistungsfähigen Mikrocontroller mit einer Vielzahl von Standard-Schnittstellen (FlexRay, CAN, LIN) sowie der dazugehörenden Treiber-Software.
-
-\textcolor[rgb]{1,0,0}{TODO: Wenn auf Basisplatine LIN,CAN,Flexray ist, warum haben alle GIGABOXEN diese Bussysteme? Sind grundsätzlich alle Module für LIN,CAN,Flexray vorhanden, aber je nach Applikationsplatine werden nur einzelne Module zur Verfügung gestellt?}
-
-Beschreibung Funktionsweise GIGABOX aus Softwaresicht. Skript-Applikation und Bootapplikation. Virtuelle Maschine läuft in Skript-Applikation. Auf virtueller Maschine wird Bytecode ausgeführt. Der Bytecode wurde vom PAWN-Compiler (in configurAIDER) aus einer Skriptdatei erzeugt.  Quelle: Bachelorarbeit Christian Eissler Absch. 4.1 \textcolor[rgb]{1,0,0}{(Arbeit über GIGABOX FD -> Funktionsweise bei den alten GIGABOXEN gleich?)}
-
-\textcolor[rgb]{1,0,0}{Eventgetriebene Programmierung -> bei eintreffen einer CAN-Botschaf wird Event ausgelöst}
-
-Prozessor
-Flash-Speicher
-
-Der integrierte Mikrocontroller bietet eine UART-Schnittstelle. Mithilfe eines USB-to-Serial Port Adapters \textcolor[rgb]{1,0,0}{(Korrekt?)} kann die GIGABOX per Kabel mit der USB-Schnittstelle eines PCs verbunden werden, um z.B. neu zu flashen.
-
-Abbildung \ref{fig:UseCasesGIGABOX} zeigt typische Einsatzszenarien der GIGABOX. 
-
-1. Use Case: Einsatz als Gateway zur Modifikation von Busbotschaften
-
-Anwendungsbeispiel: Es soll getestet werden, ob Klimaanlage in neuer Fahrzeugserie funktioniert. Busbotschaften in der neuen Serie wurden modifiziert im Vergleich zur alten Serie.
-Fahrzeug aus neuer Serie steht aber noch nicht zur Verfügung. Deshalb werden Bussignale aus alter Serie mit der GIGABOX so verändert, dass Sie den Signalen der neuen Serie entsprechen.
-
-2. Use Case: Funktionalität des Fahrzeugs erweitern
+	\item Funktionalität des Fahrzeugs erweitern
 
 \begin{itemize}
-	\item Rapid Prototyping: Neues Feature soll möglichst schnell und unkompliziert gestestet werden
+	\item Rapid Prototyping: Eine neue Funktion soll möglichst schnell und unkompliziert gestestet werden
 	
-	Bsp: Blinker-LEDs sollen nicht mehr gleichzeitig angesteuert werden, sondern nacheinander von innen nach außen mit kurzer zeitlicher Verzögerung
-	\item Serieneinsatz: Neue Funktion bei Fahrzeugumbau realisieren
+	Beispiel: 
 	
-	Bsp: Mercedes E-Klasse wird zu einem Leichenwagen umgebaut. Neue Funktionen wie Rollladen hoch- und runterfahren sollen realisiert werden.
+	Blinker-LEDs sollen nicht mehr gleichzeitig angesteuert werden, sondern nacheinander von innen nach außen mit kurzer zeitlicher Verzögerung.
+	
+	\item Serieneinsatz: Eine neue zusätzliche Funktion soll realisiert werden bei Fahrzeugumbau
+	
+	Beispiel:
+	
+	Eine Mercedes E-Klasse soll zu einem Leichenwagen umgebaut werden, der elektrisch verstellbare Fensterjalousien besitzt. Mithilfe einer GIGABOX können die elektrisch verstellbaren Fensterjalousien realisiert werden.
+
+	
 \end{itemize}
  
-3. Use Case: Restbussimulation: 
+\item Restbussimulation: 
 
-Nachrichten von nicht real im Netzwerk vorhandenen Steuergeräten werden nachgebildet (von der GIGABOX). Steuergeräte können getestet werden, ohne dass der komplette Bus aufgebaut werden muss. Quelle: http://www.samtec.de/hauptmenu/loesungen-fuer/restbussimulation.html
+Eine GIGABOX kann Steuergeräte innerhalb eines Bussystems simulieren.
+Steuergeräte können damit getestet werden, ohne das komplette Bussystem aufbauen zu müssen.
 
-Kann auch mit Tools wie CANoe gemacht werden. Für CANoe wird aber teure Lizenz benötigt und ein Laptop. GIGABOX ist handlicher und billiger.
+Restbussimulationen können auch mit PC-Tools wie zum Beispiel "`CANoe"' von Vector Informatik GmbH und passendem Bus-Interface durchgeführt werden. Die Kosten für Softwarelizenzen und benötigter Hardware übersteigen allerdings die Kosten einer konfigurierten GIGABOX und bedingen einen komplizierteren Systemaufbau.
 
-\textcolor[rgb]{1,0,0}{Unterschied zu HiL?}
+Quelle: http://www.samtec.de/hauptmenu/loesungen-fuer/restbussimulation.html
+
+
+
+\end{enumerate}
 
 
 \begin{figure}[!htbp]
@@ -67,26 +67,118 @@ Kann auch mit Tools wie CANoe gemacht werden. Für CANoe wird aber teure Lizenz b
 \end{figure}
 
 
-\subsection{Skriptsprache PAWN}
+
+\subsection{Hardware der GIGABOX FD}
+
+Die GIGABOX FD ist modular aufgebaut bestehend aus einer Basisplatine und diversen Applikationsplatinen, mit denen zusätzliche Funktionalitäten zur Verfügung gestellt werden können.  
+Auf der Basisplatine befindet sich ein Spannungsregler, ein 32-bit Mikrocontroller ARM Cortex M4 STM32F427IIT6, Kommunikationsschnittstellen sowie analoge und digitale Ein- und Ausgänge.  
+Der Spannungsregler wird eingesetzt, um die Batteriespannung des Fahrzeugs auf die Versorgungsspannung des Mikrocontrollers herunterzuregeln.
+
+Der Mikrocontroller wird mit einer Taktfrequenz von 168MHz betrieben und stellt 2MB Flash Speicher sowie 192 kB SRAM + 64 kB core coupled memory (CCM) zur Verfügung.
+
+ 
+
+%Der Mikrocontroller besitzt folgende Features:
+
+%\begin{itemize}
+	%\item 2MB Flash Speicher und 192 kB SRAM (in Datenblatt 256+4kB including 64kB of CCM(core coupled memory))
+	%\item Die Taktfrequenz beträgt bis zu 180MHz (shruti 168Mhz)
+	%\item Drei 12-Bit A/D-Wandler sowie zwei 12-Bit D/A-Wandler
+	%\item 168 I/O Ports mit Interruptfähigkeit
+	%\item Kommunikationsschnittstellen:
+	%
+	%\begin{itemize}
+		%\item 3 IQuadratC Schnittstellen
+		%\item 4 USART sowie 4 UART
+		%\item 6 SPI
+		%\item 1 SAI
+		%\item 2 CAN
+		%\item 1 SDIO
+	%\end{itemize}
+%\end{itemize}
+
+
+ 
+Auf der GIGABOX FD sind als Kommunikationsschnittstellen 2 CAN-, 2 CAN FD- und 2 LIN-Kanäle implementiert. Zusätzlich wird eine USB-Schnittstelle bereitgestellt, die mit einem UART-to-USB-Converter realisiert wird.
+Es sind 4 analoge Eingänge vorhanden um Sensorwerte einzulesen wie z. B. von einem Temperatursensor. Mit den 8 digitalen Eingängen können z. B. Schalterzustände eingelesen werden. Als Ausgänge stehen 8 Halbbrückenausgänge und 2 Highsideausgänge zur Verfügung (Wann werden Halbbrücken- wann Highside benutzt?).  
+
+Einen Überblick über die eingesetzte Hardware bietet Abbildung \ref{fig:HardwareGIGABOXFD} (Von Shruti, Abb neu erstellen wegen schlechter Bildqualität).
+
+Der Einsatz von einer Applikationsplatine ermöglicht die Funktionserweiterung der GIGABOX FD um beispielsweise zusätzliche Kommunikationsschnittstellen wie Bluetooth bereitzustellen.
+
+\begin{figure}[!htbp]
+	\centering
+		\includegraphics[width=\textwidth]{images/HardwareOverviewGIGABOXFD.png}
+	\caption{Hardwareüberblick GIGABOX FD}
+	\label{fig:HardwareGIGABOXFD}
+\end{figure}
+
+
+\subsection{Software der GIGABOX FD}
+
+Abbildung \ref{fig:Softwarearchitektur} gibt einen Überblick über die Softwarearchitektur der GIGABOX FD. 
+
+Der Hardware Abstraction Layer (HAL) ist eine Softwareschicht, die übergeordnete Schichten von der Hardware abstrahiert. Übergeordnete Schichten sind damit unabhängig von der eingesetzten Hardware. Dies bietet den Vorteil, dass bei Hardwareänderungen nur der HAL angepasst werden muss, nicht aber die übergeordneten Schichten. Auf dem HAL sind die Treiber des Mikrocontrollers und der zugehörigen Peripherie implementiert. Die Treiber stellen ein Application Programming Interface (API) bereit, die Zugriff auf den Speicher oder die Peripherie des Mikrocontrollers wie z.B. Analog-Digital-Converter (ADC) ermöglicht.
+
+Vom Middleware Layer aus kann über die API des Hardware Abstraction Layers auf die Hardware zugegriffen werden. Auf dieser Schicht ist ein USB-HID Treiber implementiert, der benötigt wird, damit die GIGABOX FD bei Verbindung mit einem Computer über USB als Human Interface Device (HID) erkannt wird. 
+Außerdem befindet sich dort das Transportprotokoll ISO-TP für CAN-Bus. Das Protokoll wird benötigt, um Botschaften zu verschicken, die die maximale Nutzdatengröße von 8 Byte eines CAN-Frames überschreiten.
+Um die Pawn virtuelle Maschine (VM) an den HAL anzubinden, befindet sich auf dem Middleware Layer zusätzlich die PAWN Driver Abstraction.
+
+
+Auf dem Application Layer läuft das Betriebssystem FreeRTOS, ein Echtzeitbetriebssystem für eingebettete Systeme. Innerhalb von FreeRTOS ist die Pawn VM, der Bootloader und eine Konsole implementiert. In der Pawn-Umgebung wird eine Pawn Skriptapplikation ausgeführt, die vom Endanwender auf den Flash-Speicher der GIGABOX FD aufgespielt werden kann. Das Skript ermöglicht die Ansteuerung bzw. Abfrage der Kommunikationsschnittstellen sowie das Steuern bzw. Beobachten der digitalen/analogen Ein-/Ausgänge der GIGABOX FD.
+ 
+
+
+
+
+\begin{figure}[!htbp]
+	\centering
+		\includegraphics[width=\textwidth]{images/GIGABOXFD_SWArchitektur.png}
+	\caption{Hardwareüberblick GIGABOX FD}
+	\label{fig:Softwarearchitektur}
+\end{figure}
+
+
+
+
+
+
+
+
+
+Beschreibung Funktionsweise GIGABOX aus Softwaresicht. Skript-Applikation und Bootapplikation. Virtuelle Maschine läuft in Skript-Applikation. Auf virtueller Maschine wird Bytecode ausgeführt. Der Bytecode wurde vom PAWN-Compiler (in configurAIDER) aus einer Skriptdatei erzeugt.  Quelle: Bachelorarbeit Christian Eissler Absch. 4.1 \textcolor[rgb]{1,0,0}{(Arbeit über GIGABOX FD -> Funktionsweise bei den alten GIGABOXEN gleich?)}
+
+\textcolor[rgb]{1,0,0}{Eventgetriebene Programmierung -> bei eintreffen einer CAN-Botschaf wird Event ausgelöst}
+
+
+
+
+
+
+
+\section{Pawn}
+
+Pawn ist eine Skriptsprache mit einer C ähnlichen Syntax sowie eine zugehörige virtuelle Maschine, auf der kompilierter Pawn Sourcecode ausgeführt werden kann. Das PAWN-Paket, das Kompiler und virtuelle Maschine beinhaltet, ist kostenlos verfügbar und wurde unter der Apache Lizenz 2.0 veröffentlicht. Die Sprache wurde abgeleitet von der Sprache "`Small-C"', die wiederum eine Teilmenge von C darstellt und für Mikrocontroller entwickelt wurde.
+Pawn wurde erstmal 1998 öffentlich zugänglich gemacht, damals noch unter dem Namen "`SMALL"' und wird seitdem regelmäßig weiterentwickelt.
+
+Pawn Sourcecode kann mithilfe des PAWN-Compilers in Bytecode kompiliert werden. Der Bytecode wird anschließend auf der zugehörigen virtuellen Maschine interpretiert. Dies bedeutet, dass für jede Bytecode-Anweisung definierte Funktionen aus einer C-Klassenbibliothek aufgerufen werden. Die Ausführung von Bytecode auf einer virtuellen Maschine bietet im Vergleich zur Ausführung von nativem Code auf der Zielhardware den Vorteil, dass der Code unabhängig von der eingesetzten Hardware lauffähig ist. Der Code kann folglich plattformunabhängig eingesetzt werden. Die virtuelle Maschine muss dagegen an die eingesetzte Plattform angepasst werden.
+Dieser Vorteil muss allerdings mit Geschwindigkeitseinbußen bei der Programmausführung bezahlt werden.
+Bei der Entwicklung von PAWN wurde besonders auf Einfachheit, Schnelligkeit und Robustheit wert gelegt. Es wurde entwickelt zur Anwendung auf Mikrocontroller mit geringer Rechenleistung und Speicherkapazität. Die Sprache benötigt deshalb wenig Overhead.
+
+\cite{PawnImplementersGuide}, \cite{PawnLanguageGuide}
 
 Siehe Pawn\_Language\_Guide.pdf, Foreword \\
 Pawn\_Implementation\_Guide.pdf, The Compiler, The abstract machine
 
-\colorbox[rgb]{1,0,0}{Warum wurde PAWN gewählt?}
--frei verfügbar
-
-\colorbox[rgb]{1,0,0}{Vorteile PAWN auf VM gegenüber C?}
-- einfacher zu programmieren
--durch VM ist Code hardwareunabhängig und muss nicht an eingesetzten Mikrocontroller angepasst werden 
-	-> VM muss aber an Hardware angepasst werden
 
 
 
 
-\subsection{configurAIDER}
-
-Der configurAIDER ist eine von GIGATRONIK entwickelte integrierte Entwicklungsumgebung (IDE), die es Benutzern ermöglicht, mit einer GIGABOX zu kommunizieren und diese zu programmieren. Es können Diagnoseinformationen abgerufen werden und Bytecode auf das Steuergerät geflasht werden. Die IDE besteht aus Editoren (skriptEDITOR und multiEDITOR), Interpreter und Linker. Der scriptEDITOR ist ein Texteditor, mit dem PAWN-Skripte geschrieben werden können. Mit dem multiEDITOR können tabellarisch WENN DANN Anweisungen konfiguriert werden, aus denen ein Skript mit PAWN-Code generiert werden kann. Der multiEDITOR stellt für Benutzer ohne Programmierkenntnisse eine Möglichkeit dar, die GIGABOX mit rudimentären Funktionen zu konfigurieren. 
-Der integrierte Interpreter kann Bytecode aus den erstellten PAWN-Skripten erstellen und auf die GIGABOXEN flashen.
+%
+%\subsection{configurAIDER}
+%
+%Der configurAIDER ist eine von GIGATRONIK entwickelte integrierte Entwicklungsumgebung (IDE), die es Benutzern ermöglicht, mit einer GIGABOX zu kommunizieren und diese zu programmieren. Es können Diagnoseinformationen abgerufen werden und Bytecode auf das Steuergerät geflasht werden. Die IDE besteht aus Editoren (skriptEDITOR und multiEDITOR), Interpreter und Linker. Der scriptEDITOR ist ein Texteditor, mit dem PAWN-Skripte geschrieben werden können. Mit dem multiEDITOR können tabellarisch WENN DANN Anweisungen konfiguriert werden, aus denen ein Skript mit PAWN-Code generiert werden kann. Der multiEDITOR stellt für Benutzer ohne Programmierkenntnisse eine Möglichkeit dar, die GIGABOX mit rudimentären Funktionen zu konfigurieren. 
+%Der integrierte Interpreter kann Bytecode aus den erstellten PAWN-Skripten erstellen und auf die GIGABOXEN flashen.
 
 \section{Softwareentwicklungsprozess}
 \subsection{V-Modell}
@@ -168,8 +260,32 @@ Diese beschreibt, welche Eigenschaften Dialoge erfüllen sollen, um eine gute Usa
 
 \section{Entwicklungsframework}
 
-\subsection{.NET-Framework}
+\subsection{.NET Framework}
+
+Es wurden im folgenden Abschnitt die Quellen \cite{Louis:CSharp},\cite{msdn} verwendet.
+
+Das .NET Framework ist eine von Microsoft entwickelte Entwicklungsplattform für Anwendersoftware, die erstmals im Januar 2002 in der Version 1.0 erhältlich war. Es stellt die Umsetzung des Common Language Infrastructure (CLI) Standards dar, der sprach- und plattformunabhängige Anwendungsentwicklung spezifiziert.
+Wesentliche Bestandteile des .NET Frameworks sind die Laufzeitumgebung Common Language Runtime (CLR) und die Framework Class Library (FCL). 
+Die CLR verwaltet Speicher, Thread- und Codeausführung, Überprüfung der Codesicherheit und Kompilierung. Von der CLR verwalteter Code wird dabei Managed Code genannt, außerhalb der CLR laufender Code Unmanaged Code. Es wird eine Vielzahl von Programmiersprachen unterstützt, unter anderem C\#, C++ und Visual Basic .NET. Beim Kompilieren der verschiedenen Hochsprachen wird der Code zunächst in eine Zwischensprache übersetzt, der Common Intermediate Language (CIL). Aus dem daraus entstehenden Intermediate Language Code (IL-Code) wird dann von einem Just-In-Time-Compiler (JIT-Compiler) zur Laufzeit Maschinencode erzeugt (Abbildung \ref{fig:NET-Framework}).
+
+\begin{figure}[!htbp]
+	\centering
+		\includegraphics[width=0.8\textwidth]{images/NET-Framework.jpg}
+	\caption{Managed Code und Unmanaged Code}
+	\label{fig:NET-Framework}
+\end{figure}
+
+Die FCL ist eine objektorientierte Klassenbibliothek mit einer Auflistung wiederverwendbarer Typen, von denen eigener Code abgeleitet werden kann.  
+
 
 \subsection{Windows Presentation Framework(WPF)}
 
-MVVM-Pattern
+Mit Einführung des .NET Frameworks 3.0 im Jahr 2006 wurde Windows Presentation Foundation (WPF) veröffentlicht, ein Framework zur Erstellung von grafischen Benutzeroberflächen. WPF stellt den Nachfolger für das seit Version 1.0 im .NET Framework enthaltene Windows Forms. Es können Desktop- sowie Webanwendungen erstellt werden. 
+
+Eines der zentralen Konzepte von WPF ist die Verwendung der XML-basierten Beschreibungssprache Extensible Application Markup Language (XAML) zur Beschreibung der Benutzeroberfläche. XAML ermöglicht eine übersichtlichere und kompaktere Beschreibung der Benutzeroberfläche als die Erstellung in C\#. Die Logik zu einer erstellten Benutzeroberfläche wird in C\# programmiert. Dies kann in der zum XAML-File gehörenden Codebehind-Datei erfolgen oder in einem eigenen C\#-Sourcefile, das über DataBindings oder Commands an die XAML-Datei angebunden werden kann.
+
+Außerdem werden die Leistungsressourcen der Grafikkarten mit 3D-Beschleunigern besser ausgenutzt im Vergleich zu Windows Forms, da zum Rendern der GUI DirectX benutzt wird anstatt Graphics Device Interface+ (GDI+). Mithilfe von DirectX kann WPF grafische Elemente selbst zeichnen anstatt durch dass sie durch das Betriebssystem gezeichnet werden.  
+Ein weiterer Vorteil von WPF ist das vektorbasierte Zeichnen der Anwendungsinhalte. Dies ermöglicht eine beliebige Skalierung der Inhalte ohne Verpixelung.
+
+
+

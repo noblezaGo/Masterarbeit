@@ -1,9 +1,29 @@
 \begin{thebibliography}{1}
 
+\bibitem{PawnImplementersGuide}
+ITB CompuPhase.
+\newblock { Pawn Implementer´s Guide }, 09.2016.
+
+\bibitem{PawnLanguageGuide}
+ITB CompuPhase.
+\newblock { Pawn Language Guide }, 01.2016.
+
 \bibitem{SWRequirements}
 Gerd~Beneken Ulrike~Hammerschall.
 \newblock {\em {Software Requirements}}.
 \newblock Pearson Deutschland GmbH, 2013.
+
+\bibitem{Louis:CSharp}
+K.~Löffelmann D.~Louis, S.~Strasser.
+\newblock {\em Microsoft Visual C\# 2005 - Das Entwicklerbuch}.
+\newblock Hrsg.: Microsoft Press Deutschland, 2006.
+
+\bibitem{msdn}
+Microsoft.
+\newblock {Übersicht über .NET Framework}.
+\newblock
+  \url{https://msdn.microsoft.com/de-de/library/vstudio/zw4w595w(v=vs.11)},
+  Stand: 13.10.2015.
 
 \bibitem{EffSWArchitektur}
 Gernot Starke.
