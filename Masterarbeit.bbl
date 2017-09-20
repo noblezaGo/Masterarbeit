@@ -1,20 +1,31 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{PawnImplementersGuide}
 ITB CompuPhase.
 \newblock { Pawn Implementer´s Guide }, 09.2016.
+\newblock Erhältlich unter \url{https://www.compuphase.com/pawn/pawn.htm},
+  abgerufen am 06.09.2017.
 
 \bibitem{PawnLanguageGuide}
 ITB CompuPhase.
 \newblock { Pawn Language Guide }, 01.2016.
+\newblock Erhältlich unter \url{https://www.compuphase.com/pawn/pawn.htm},
+  abgerufen am 06.09.2017.
 
 \bibitem{SWRequirements}
-Gerd~Beneken Ulrike~Hammerschall.
+Ulrike Hammerschall and Gerd Beneken.
 \newblock {\em {Software Requirements}}.
 \newblock Pearson Deutschland GmbH, 2013.
 
+\bibitem{MCInteraktion}
+Andreas~M. Heinecke.
+\newblock {\em { Mensch-Computer-Interaktion - Basiswissen für Entwickler und
+  Gestalter }}.
+\newblock { Springer-Verlag }, 2012.
+\newblock 2. Auflage.
+
 \bibitem{Louis:CSharp}
-K.~Löffelmann D.~Louis, S.~Strasser.
+D.~Louis, S.~Strasser, and K.~Löffelmann.
 \newblock {\em Microsoft Visual C\# 2005 - Das Entwicklerbuch}.
 \newblock Hrsg.: Microsoft Press Deutschland, 2006.
 
@@ -29,5 +40,65 @@ Microsoft.
 Gernot Starke.
 \newblock {\em {Effektive Software Architekturen}}.
 \newblock Hanser Verlag, 2009.
+
+\bibitem{DefSWArchitektur}
+L.~Bass, P.~Clements, and R.~Kazman.
+\newblock {\em { Software Architecture in Practice }}.
+\newblock Addison-Wesley, 1998.
+
+\bibitem{MSMVVM}
+Microsoft.
+\newblock {The MVVM Pattern}.
+\newblock \url{https://msdn.microsoft.com/en-us/library/hh848246.aspx}, Stand:
+  04.09.2017.
+
+\bibitem{WPF}
+Thomas~Claudius Huber.
+\newblock {\em {Windows Presentation Foundation - Das umfassende Handbuch}}.
+\newblock Rheinwerk Verlag, 2016.
+
+\bibitem{AvalonEdit}
+icsharpcode.
+\newblock {AvalonEdit}.
+\newblock Erhältlich unter \url{http://avalonedit.net}, abgerufen am
+  06.09.2017.
+
+\bibitem{AvalonDock}
+Xceed.
+\newblock {AvalonDock}.
+\newblock Erhältlich unter \url{https://avalondock.codeplex.com}, abgerufen am
+  06.09.2017.
+
+\bibitem{EditTextBox}
+Dirk Bahle.
+\newblock {A WPF MVVM In-Place-Edit TextBox Control}.
+\newblock
+  \url{https://www.codeproject.com/Articles/802385/A-WPF-MVVM-In-Place-Edit-TextBox-Control},
+  Stand: 06.09.2017.
+
+\bibitem{PawnCompiler}
+ITB CompuPhase.
+\newblock { Pawn }.
+\newblock Erhältlich unter \url{https://www.compuphase.com/pawn/pawn.htm},
+  abgerufen am 06.09.2017.
+
+\bibitem{srecCat}
+Peter Miller and Scott Finneran.
+\newblock { SRecord 1.64 }.
+\newblock Erhältlich unter \url{http://srecord.sourceforge.net/download.html},
+  abgerufen am 06.09.2017.
+
+\bibitem{MightyHID}
+Tomasz Watorowski.
+\newblock { MightyHID }.
+\newblock Erhältlich unter \url{https://github.com/MightyDevices/MightyHID},
+  abgerufen am 06.09.2017.
+
+\bibitem{VSImgLib}
+Microsoft.
+\newblock { Visual Studio Image Library }.
+\newblock Erhältlich unter
+  \url{https://www.microsoft.com/en-us/download/details.aspx?id=35825},
+  abgerufen am 12.09.2017.
 
 \end{thebibliography}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.6.12)  23 AUG 2017 16:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.6.12)  20 SEP 2017 15:54
 entering extended mode
 **./Masterarbeit.tex
 (Masterarbeit.tex
@@ -814,6 +814,81 @@ Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
 \rotFPbot=\skip70
 \rot@float@box=\box47
 \rot@mess@toks=\toks44
+)
+(C:\Users\erbda\AppData\Roaming\MiKTeX\2.9\tex\latex\etoolbox\etoolbox.sty
+Package: etoolbox 2017/01/02 v2.4 e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count159
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\fancyvrb\fancyvrb.sty"
+Package: fancyvrb 2008/02/07
+
+Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix <2008/02/07> (tvz)
+\FV@CodeLineNo=\count160
+\FV@InFile=\read2
+\FV@TabBox=\box48
+\c@FancyVerbLine=\count161
+\FV@StepNumber=\count162
+\FV@OutFile=\write5
+)
+(C:\Users\erbda\AppData\Roaming\MiKTeX\2.9\tex\latex\fvextra\fvextra.sty
+Package: fvextra 2017/07/08 v1.3.1 fvextra - extensions and patches for fancyvrb
+
+(C:\Users\erbda\AppData\Roaming\MiKTeX\2.9\tex\latex\upquote\upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbatim
+)
+(C:\Users\erbda\AppData\Roaming\MiKTeX\2.9\tex\latex\lineno\lineno.sty
+Package: lineno 2005/11/02 line numbers on paragraphs v4.41
+\linenopenalty=\count163
+\output=\toks45
+\linenoprevgraf=\count164
+\linenumbersep=\dimen197
+\linenumberwidth=\dimen198
+\c@linenumber=\count165
+\c@pagewiselinenumber=\count166
+\c@LN@truepage=\count167
+\c@internallinenumber=\count168
+\c@internallinenumbers=\count169
+\quotelinenumbersep=\dimen199
+\bframerule=\dimen256
+\bframesep=\dimen257
+\bframebox=\box49
+LaTeX Info: Redefining \\ on input line 3056.
+)
+\c@FV@TrueTabGroupLevel=\count170
+\c@FV@TrueTabCounter=\count171
+\FV@TabBox@Group=\box50
+\FV@TmpLength=\skip71
+\c@FV@HighlightLinesStart=\count172
+\c@FV@HighlightLinesStop=\count173
+\FV@LoopCount=\count174
+\FV@NCharsBox=\box51
+\FV@BreakIndent=\dimen258
+\FV@BreakIndentNChars=\count175
+\FV@BreakSymbolSepLeft=\dimen259
+\FV@BreakSymbolSepLeftNChars=\count176
+\FV@BreakSymbolSepRight=\dimen260
+\FV@BreakSymbolSepRightNChars=\count177
+\FV@BreakSymbolIndentLeft=\dimen261
+\FV@BreakSymbolIndentLeftNChars=\count178
+\FV@BreakSymbolIndentRight=\dimen262
+\FV@BreakSymbolIndentRightNChars=\count179
+\c@FancyVerbLineBreakLast=\count180
+\FV@LineBox=\box52
+\FV@LineIndentBox=\box53
+)
+(C:\Users\erbda\AppData\Roaming\MiKTeX\2.9\tex\latex\ifplatform\ifplatform.sty
+Package: ifplatform 2010/10/22 v0.4 Testing for the operating system
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\catchfile.sty"
+Package: catchfile 2016/05/16 v1.7 Catch the contents of a file (HO)
+))
+(C:\Users\erbda\AppData\Roaming\MiKTeX\2.9\tex\latex\framed\framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip72
+\fb@frw=\dimen263
+\fb@frh=\dimen264
+\FrameRule=\dimen265
+\FrameSep=\dimen266
 )) (Masterarbeit.aux (src/chp_Sperr.aux)
 (src/chp_Aufgabenstellung.aux) (src/chp_Einleitung.aux) (src/chp_Grundlagen.aux) (src/chp_Anforderungsanalyse.aux)
 (src/chp_IstAnalyse.aux) (src/chp_Evaluation.aux) (src/chp_Konzeption.aux) (src/chp_Design.aux)
@@ -875,7 +950,7 @@ LaTeX Font Info:    ... okay on input line 15.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\AtBeginShipoutBox=\box48
+\AtBeginShipoutBox=\box54
 Package hyperref Info: Link coloring OFF on input line 15.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -883,29 +958,29 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count159
+\c@section@level=\count181
 )
 LaTeX Info: Redefining \ref on input line 15.
 LaTeX Info: Redefining \pageref on input line 15.
 LaTeX Info: Redefining \nameref on input line 15.
  (Masterarbeit.out) (Masterarbeit.out)
-\@outlinefile=\write5
-\openout5 = `Masterarbeit.out'.
+\@outlinefile=\write6
+\openout6 = `Masterarbeit.out'.
 
 
 (C:\Users\erbda\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count160
-\scratchdimen=\dimen197
-\scratchbox=\box49
-\nofMPsegments=\count161
-\nofMParguments=\count162
-\everyMPshowfont=\toks45
-\MPscratchCnt=\count163
-\MPscratchDim=\dimen198
-\MPnumerator=\count164
-\makeMPintoPDFobject=\count165
-\everyMPtoPDFconversion=\toks46
+\scratchcounter=\count182
+\scratchdimen=\dimen267
+\scratchbox=\box55
+\nofMPsegments=\count183
+\nofMParguments=\count184
+\everyMPshowfont=\toks46
+\MPscratchCnt=\count185
+\MPscratchDim=\dimen268
+\MPnumerator=\count186
+\makeMPintoPDFobject=\count187
+\everyMPtoPDFconversion=\toks47
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -926,9 +1001,9 @@ Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
 )
 Package caption Info: rotating package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count166
+\c@lstlisting=\count188
  (src/Titel.tex
-<images/logo_hska.png, id=350, 803.0pt x 287.0725pt>
+<images/logo_hska.png, id=382, 803.0pt x 287.0725pt>
 File: images/logo_hska.png Graphic file (type png)
  <use images/logo_hska.png>
 Package pdftex.def Info: images/logo_hska.png used on input line 17.
@@ -1029,8 +1104,8 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 80.
  [4])
-\tf@toc=\write6
-\openout6 = `Masterarbeit.toc'.
+\tf@toc=\write7
+\openout7 = `Masterarbeit.toc'.
 
 File: images/logo_hska.png Graphic file (type png)
  <use images/logo_hska.png>
@@ -1061,9 +1136,9 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 3.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 17.
+(babel)             in language  on input line 18.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 17.
+(babel)             in language  on input line 18.
 )
 File: images/logo_hska.png Graphic file (type png)
  <use images/logo_hska.png>
@@ -1102,12 +1177,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 7.
 
-Overfull \hbox (5.79027pt too wide) in paragraph at lines 8--9
-\T1/cmr/m/n/12 lung ein-ge-setzt, um pro-to-ty-pi-sche Kom-mu-ni-ka-ti-ons-lö-sun-gen im Fahr-zeug schnell
- []
-
-
-Overfull \hbox (1.23889pt too wide) in paragraph at lines 10--13
+Overfull \hbox (1.23889pt too wide) in paragraph at lines 10--11
 []\T1/cmr/m/n/12 GIGABOX-Steuergeräte wer-den in un-ter-schied-li-cher Hard-wa-re-aus-stat-tung und
  []
 
@@ -1116,176 +1186,181 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 14.
 
-Overfull \hbox (31.68819pt too wide) in paragraph at lines 24--27
+Overfull \hbox (31.68819pt too wide) in paragraph at lines 24--28
 []\T1/cmr/m/n/12 Ein Fahr-zeugher-stel-ler ent-wi-ckelt das Nach-fol-ge-mo-dell ei-ner PKW-Modellreihe.
  []
 
 File: images/logo_hska.png Graphic file (type png)
 <use images/logo_hska.png>
-Package pdftex.def Info: images/logo_hska.png used on input line 27.
+Package pdftex.def Info: images/logo_hska.png used on input line 28.
 (pdftex.def)             Requested size: 55.93393pt x 20.0pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 27.
+(babel)             in language  on input line 28.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 27.
+(babel)             in language  on input line 28.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 27.
+(babel)             in language  on input line 28.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 27.
+(babel)             in language  on input line 28.
  [2
 
 
 
 ]
-Overfull \hbox (51.32611pt too wide) in paragraph at lines 55--56
+File: images/logo_hska.png Graphic file (type png)
+ <use images/logo_hska.png>
+Package pdftex.def Info: images/logo_hska.png used on input line 59.
+(pdftex.def)             Requested size: 55.93393pt x 20.0pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 59.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 59.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 59.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 59.
+ [3]
+Overfull \hbox (51.32611pt too wide) in paragraph at lines 62--63
 []\T1/cmr/m/n/12 Quelle: http://www.samtec.de/hauptmenu/loesungen-fuer/restbussimulation.html 
  []
 
-<images/UseCasesGigabox.png, id=490, 2754.29pt x 1798.72pt>
+<images/UseCasesGigabox.png, id=536, 2754.29pt x 1798.72pt>
 File: images/UseCasesGigabox.png Graphic file (type png)
  <use images/UseCasesGigabox.png>
-Package pdftex.def Info: images/UseCasesGigabox.png used on input line 64.
+Package pdftex.def Info: images/UseCasesGigabox.png used on input line 71.
 (pdftex.def)             Requested size: 398.3386pt x 260.13528pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 71.
+(babel)             in language  on input line 78.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 71.
+(babel)             in language  on input line 78.
 File: images/logo_hska.png Graphic file (type png)
  <use images/logo_hska.png>
-Package pdftex.def Info: images/logo_hska.png used on input line 76.
+Package pdftex.def Info: images/logo_hska.png used on input line 85.
 (pdftex.def)             Requested size: 55.93393pt x 20.0pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 76.
+(babel)             in language  on input line 85.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 76.
+(babel)             in language  on input line 85.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 76.
+(babel)             in language  on input line 85.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 76.
+(babel)             in language  on input line 85.
 
-[3]
-File: images/logo_hska.png Graphic file (type png)
- <use images/logo_hska.png>
-Package pdftex.def Info: images/logo_hska.png used on input line 105.
-(pdftex.def)             Requested size: 55.93393pt x 20.0pt.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 105.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 105.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 105.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 105.
- [4 <./images/UseCasesGigabox.png (PNG copy)>]
-<images/HardwareOverviewGIGABOXFD.png, id=502, 694.09312pt x 400.49625pt>
+[4 <./images/UseCasesGigabox.png (PNG copy)>] <images/HardwareOverviewGIGABOXFD.png, id=542, 694.09312pt x 400.49625pt>
 File: images/HardwareOverviewGIGABOXFD.png Graphic file (type png)
- <use images/HardwareOverviewGIGABOXFD.png>
-Package pdftex.def Info: images/HardwareOverviewGIGABOXFD.png used on input line 111.
+
+<use images/HardwareOverviewGIGABOXFD.png>
+Package pdftex.def Info: images/HardwareOverviewGIGABOXFD.png used on input line 118.
 (pdftex.def)             Requested size: 398.3386pt x 229.84967pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 117.
+(babel)             in language  on input line 124.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 117.
+(babel)             in language  on input line 124.
 File: images/logo_hska.png Graphic file (type png)
-
-<use images/logo_hska.png>
-Package pdftex.def Info: images/logo_hska.png used on input line 126.
+ <use images/logo_hska.png>
+Package pdftex.def Info: images/logo_hska.png used on input line 129.
 (pdftex.def)             Requested size: 55.93393pt x 20.0pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 126.
+(babel)             in language  on input line 129.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 126.
+(babel)             in language  on input line 129.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 126.
+(babel)             in language  on input line 129.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 126.
+(babel)             in language  on input line 129.
  [5 <./images/HardwareOverviewGIGABOXFD.png>]
-Overfull \hbox (9.80849pt too wide) in paragraph at lines 128--129
-\T1/cmr/m/n/12 stel-len so-wie das Steu-ern bzw. Be-ob-ach-ten der di-gi-ta-len/ana-lo-gen Ein-/Ausgänge
- []
-
-<images/GIGABOXFD_SWArchitektur.png, id=511, 722.7pt x 542.025pt>
+<images/GIGABOXFD_SWArchitektur.png, id=551, 722.7pt x 542.025pt>
 File: images/GIGABOXFD_SWArchitektur.png Graphic file (type png)
  <use images/GIGABOXFD_SWArchitektur.png>
-Package pdftex.def Info: images/GIGABOXFD_SWArchitektur.png used on input line 136.
+Package pdftex.def Info: images/GIGABOXFD_SWArchitektur.png used on input line 141.
 (pdftex.def)             Requested size: 398.3386pt x 298.7515pt.
-
-Overfull \hbox (1.04518pt too wide) in paragraph at lines 149--150
-[]\T1/cmr/m/n/12 Beschreibung Funk-ti-ons-wei-se GI-GA-BOX aus Soft-wa-re-sicht. Skript-Applikation
- []
-
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 147.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 147.
 File: images/logo_hska.png Graphic file (type png)
+
 <use images/logo_hska.png>
-Package pdftex.def Info: images/logo_hska.png used on input line 150.
+Package pdftex.def Info: images/logo_hska.png used on input line 156.
 (pdftex.def)             Requested size: 55.93393pt x 20.0pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 150.
+(babel)             in language  on input line 156.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 150.
+(babel)             in language  on input line 156.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 150.
+(babel)             in language  on input line 156.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 150.
- [6 <./images/GIGABOXFD_SWArchitektur.png>]
+(babel)             in language  on input line 156.
+ [6]
+File: images/logo_hska.png Graphic file (type png)
+ <use images/logo_hska.png>
+Package pdftex.def Info: images/logo_hska.png used on input line 156.
+(pdftex.def)             Requested size: 55.93393pt x 20.0pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 159.
+(babel)             in language  on input line 156.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 159.
+(babel)             in language  on input line 156.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 183.
+(babel)             in language  on input line 156.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 183.
+(babel)             in language  on input line 156.
+ [7 <./images/GIGABOXFD_SWArchitektur.png>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 184.
+(babel)             in language  on input line 176.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 184.
+(babel)             in language  on input line 176.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 186.
+(babel)             in language  on input line 177.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 186.
+(babel)             in language  on input line 177.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 179.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 179.
 
-Overfull \hbox (39.69603pt too wide) in paragraph at lines 188--190
+Overfull \hbox (39.69603pt too wide) in paragraph at lines 181--183
 \T1/cmr/m/n/12 Um Soft-wa-re-qua-li-tät de-fi-nier-bar zu ma-chen, wur-den di-ver-se Software-Qualitätsmodelle
  []
 
-File: images/logo_hska.png Graphic file (type png)
-<use images/logo_hska.png>
-Package pdftex.def Info: images/logo_hska.png used on input line 190.
-(pdftex.def)             Requested size: 55.93393pt x 20.0pt.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 190.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 190.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 190.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 190.
- [7]
-Overfull \hbox (16.33913pt too wide) in paragraph at lines 194--195
+
+Overfull \hbox (16.33913pt too wide) in paragraph at lines 187--188
 []\T1/cmr/m/n/12 Das Qua-li-täts-merk-mal der funk-tio-nal-len Eig-nung for-dert, dass ein Software-
  []
 
 File: images/logo_hska.png Graphic file (type png)
 <use images/logo_hska.png>
-Package pdftex.def Info: images/logo_hska.png used on input line 211.
+Package pdftex.def Info: images/logo_hska.png used on input line 188.
 (pdftex.def)             Requested size: 55.93393pt x 20.0pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 211.
+(babel)             in language  on input line 188.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 211.
+(babel)             in language  on input line 188.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 211.
+(babel)             in language  on input line 188.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 211.
- [8] <images/ProductQualityModel.png, id=540, 2983.145pt x 4693.535pt>
+(babel)             in language  on input line 188.
+ [8]
+File: images/logo_hska.png Graphic file (type png)
+ <use images/logo_hska.png>
+Package pdftex.def Info: images/logo_hska.png used on input line 213.
+(pdftex.def)             Requested size: 55.93393pt x 20.0pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 213.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 213.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 213.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 213.
+ [9]
+<images/ProductQualityModel.png, id=584, 2983.145pt x 4693.535pt>
 File: images/ProductQualityModel.png Graphic file (type png)
-
-<use images/ProductQualityModel.png>
-Package pdftex.def Info: images/ProductQualityModel.png used on input line 235.
+ <use images/ProductQualityModel.png>
+Package pdftex.def Info: images/ProductQualityModel.png used on input line 228.
 (pdftex.def)             Requested size: 398.3386pt x 626.72462pt.
 
 
-LaTeX Warning: Float too large for page by 62.52618pt on input line 238.
+LaTeX Warning: Float too large for page by 62.52618pt on input line 231.
 
 File: images/logo_hska.png Graphic file (type png)
 <use images/logo_hska.png>
@@ -1299,7 +1374,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 250.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 250.
- [9]
+ [10]
 File: images/logo_hska.png Graphic file (type png)
  <use images/logo_hska.png>
 Package pdftex.def Info: images/logo_hska.png used on input line 250.
@@ -1312,7 +1387,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 250.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 250.
- [10 <./images/ProductQualityModel.png (PNG copy)>]
+ [11 <./images/ProductQualityModel.png (PNG copy)>]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 261.
 Package babel Info: Redefining ngerman shorthand "~
@@ -1321,47 +1396,43 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 263.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 263.
-File: images/logo_hska.png Graphic file (type png)
 
-<use images/logo_hska.png>
-Package pdftex.def Info: images/logo_hska.png used on input line 270.
-(pdftex.def)             Requested size: 55.93393pt x 20.0pt.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 270.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 270.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 270.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 270.
- [11] <images/NET-Framework.jpg, id=559, 722.7pt x 542.025pt>
+<images/NET-Framework.jpg, id=599, 722.7pt x 542.025pt>
 File: images/NET-Framework.jpg Graphic file (type jpg)
  <use images/NET-Framework.jpg>
 Package pdftex.def Info: images/NET-Framework.jpg used on input line 273.
 (pdftex.def)             Requested size: 318.67209pt x 239.0045pt.
+File: images/logo_hska.png Graphic file (type png)
+ <use images/logo_hska.png>
+Package pdftex.def Info: images/logo_hska.png used on input line 279.
+(pdftex.def)             Requested size: 55.93393pt x 20.0pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 279.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 279.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 279.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 279.
+
+[12]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 281.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 281.
 File: images/logo_hska.png Graphic file (type png)
-
-<use images/logo_hska.png>
-Package pdftex.def Info: images/logo_hska.png used on input line 287.
+ <use images/logo_hska.png>
+Package pdftex.def Info: images/logo_hska.png used on input line 289.
 (pdftex.def)             Requested size: 55.93393pt x 20.0pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 287.
+(babel)             in language  on input line 289.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 287.
+(babel)             in language  on input line 289.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 287.
+(babel)             in language  on input line 289.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 287.
- [12 <./images/NET-Framework.jpg>]
-Overfull \hbox (19.24423pt too wide) in paragraph at lines 287--289
-[]\T1/cmr/m/n/12 Auÿerdem wer-den die Leis-tungsres-sour-cen der Gra-fik-kar-ten mit 3D-Beschleunigern
- []
-
-)
+(babel)             in language  on input line 289.
+ [13 <./images/NET-Framework.jpg>])
 File: images/logo_hska.png Graphic file (type png)
  <use images/logo_hska.png>
 Package pdftex.def Info: images/logo_hska.png used on input line 46.
@@ -1374,10 +1445,11 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 46.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 46.
- [13]
+ [14]
 \openout2 = `src/chp_Anforderungsanalyse.aux'.
 
- (src/chp_Anforderungsanalyse.tex
+
+(src/chp_Anforderungsanalyse.tex
 Kapitel 3.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
@@ -1387,11 +1459,11 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 3.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 3.
-<images/RequirementsUseCases.png, id=572, 3364.57pt x 4761.79pt>
+<images/RequirementsUseCases.png, id=618, 838.13126pt x 1193.45876pt>
 File: images/RequirementsUseCases.png Graphic file (type png)
  <use images/RequirementsUseCases.png>
 Package pdftex.def Info: images/RequirementsUseCases.png used on input line 13.
-(pdftex.def)             Requested size: 398.3386pt x 563.76096pt.
+(pdftex.def)             Requested size: 398.3386pt x 567.20839pt.
 File: images/logo_hska.png Graphic file (type png)
 
 <use images/logo_hska.png>
@@ -1405,7 +1477,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 27.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 27.
- [14
+ [15
 
 
 
@@ -1422,7 +1494,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 27.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 27.
- [15 <./images/RequirementsUseCases.png (PNG copy)>]
+ [16 <./images/RequirementsUseCases.png (PNG copy)>]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 39.
 Package babel Info: Redefining ngerman shorthand "~
@@ -1448,7 +1520,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 64.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 64.
- [16]
+ [17]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 65.
 Package babel Info: Redefining ngerman shorthand "~
@@ -1465,7 +1537,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 98.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 98.
- [17]
+ [18]
 File: images/logo_hska.png Graphic file (type png)
  <use images/logo_hska.png>
 Package pdftex.def Info: images/logo_hska.png used on input line 140.
@@ -1478,7 +1550,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 140.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 140.
- [18]
+ [19]
 Overfull \hbox (17.83844pt too wide) in paragraph at lines 159--161
 \T1/cmr/m/n/12 gna-le ge-la-den wer-den. Die Si-gna-le kön-nen in ver-schie-de-nen CAN-Botschaften
  []
@@ -1504,7 +1576,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 181.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 181.
- [19]
+ [20]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 190.
 Package babel Info: Redefining ngerman shorthand "~
@@ -1529,7 +1601,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 227.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 227.
- [20]
+ [21]
 Overfull \hbox (7.75052pt too wide) in paragraph at lines 232--234
 \T1/cmr/m/n/12 dig und wird des-halb als Klas-se Con-di-tio-nal ein-ge-stuft. Bluetooth-Übertragung
  []
@@ -1554,7 +1626,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 252.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 252.
- [21]
+ [22]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 261.
 Package babel Info: Redefining ngerman shorthand "~
@@ -1575,7 +1647,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 286.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 286.
- [22]
+ [23]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 297.
 Package babel Info: Redefining ngerman shorthand "~
@@ -1600,7 +1672,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 328.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 328.
- [23]
+ [24]
 Overfull \hbox (11.98048pt too wide) in paragraph at lines 339--340
 []\T1/cmr/m/n/12 Coding-Richtlinien sol-len ein-ge-hal-ten wer-den: Ver-ständ-li-che Kom-
  []
@@ -1618,7 +1690,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 47.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 47.
- [24]
+ [25]
 \openout2 = `src/chp_IstAnalyse.aux'.
 
  (src/chp_IstAnalyse.tex
@@ -1631,7 +1703,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 3.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 3.
-<images/configurAIDER_Uebersicht.png, id=621, 722.7pt x 542.025pt>
+<images/configurAIDER_Uebersicht.png, id=668, 722.7pt x 542.025pt>
 File: images/configurAIDER_Uebersicht.png Graphic file (type png)
  <use images/configurAIDER_Uebersicht.png>
 Package pdftex.def Info: images/configurAIDER_Uebersicht.png used on input line 9.
@@ -1661,7 +1733,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 34.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 34.
- [25
+ [26
 
 
 
@@ -1678,14 +1750,14 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 34.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 34.
- [26 <./images/configurAIDER_Uebersicht.png>]
-<images/SimuliertesGeraet.png, id=634, 324.46219pt x 167.12437pt>
+ [27 <./images/configurAIDER_Uebersicht.png>]
+<images/SimuliertesGeraet.png, id=680, 324.46219pt x 167.12437pt>
 File: images/SimuliertesGeraet.png Graphic file (type png)
  <use images/SimuliertesGeraet.png>
 Package pdftex.def Info: images/SimuliertesGeraet.png used on input line 38.
 (pdftex.def)             Requested size: 398.3386pt x 205.18942pt.
 
-<images/VerfuegbareGeraete.png, id=635, 532.99126pt x 124.21407pt>
+<images/VerfuegbareGeraete.png, id=681, 532.99126pt x 124.21407pt>
 File: images/VerfuegbareGeraete.png Graphic file (type png)
  <use images/VerfuegbareGeraete.png>
 Package pdftex.def Info: images/VerfuegbareGeraete.png used on input line 49.
@@ -1707,7 +1779,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 59.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 59.
- [27 <./images/SimuliertesGeraet.png>] <images/Konsole.png, id=642, 550.30594pt x 313.9228pt>
+ [28 <./images/SimuliertesGeraet.png>] <images/Konsole.png, id=688, 550.30594pt x 313.9228pt>
 File: images/Konsole.png Graphic file (type png)
 
 <use images/Konsole.png>
@@ -1717,7 +1789,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 70.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 70.
- <images/Programmlog.png, id=643, 602.25pt x 408.77719pt>
+ <images/Programmlog.png, id=689, 602.25pt x 408.77719pt>
 File: images/Programmlog.png Graphic file (type png)
  <use images/Programmlog.png>
 Package pdftex.def Info: images/Programmlog.png used on input line 76.
@@ -1739,7 +1811,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 88.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 88.
- [28 <./images/VerfuegbareGeraete.png> <./images/Konsole.png>]
+ [29 <./images/VerfuegbareGeraete.png> <./images/Konsole.png>]
 File: images/logo_hska.png Graphic file (type png)
  <use images/logo_hska.png>
 Package pdftex.def Info: images/logo_hska.png used on input line 95.
@@ -1753,7 +1825,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 95.
 
-[29 <./images/Programmlog.png>] <images/scriptEDITOR.png, id=658, 1210.5225pt x 879.285pt>
+[30 <./images/Programmlog.png>] <images/scriptEDITOR.png, id=704, 1210.5225pt x 879.285pt>
 File: images/scriptEDITOR.png Graphic file (type png)
 
 <use images/scriptEDITOR.png>
@@ -1775,7 +1847,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 131.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 131.
- [30]
+ [31]
 File: images/logo_hska.png Graphic file (type png)
  <use images/logo_hska.png>
 Package pdftex.def Info: images/logo_hska.png used on input line 131.
@@ -1788,12 +1860,12 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 131.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 131.
- [31 <./images/scriptEDITOR.png>]
+ [32 <./images/scriptEDITOR.png>]
 Overfull \hbox (4.20844pt too wide) in paragraph at lines 134--136
 \T1/cmr/m/n/12 ein PAWN-Skript ge-ne-riert. In-ter-pre-ter er-zeugt By-te-co-de aus dem PAWN-
  []
 
-<images/multiEDITOR.png, id=670, 1210.5225pt x 879.285pt>
+<images/multiEDITOR.png, id=716, 1210.5225pt x 879.285pt>
 File: images/multiEDITOR.png Graphic file (type png)
  <use images/multiEDITOR.png>
 Package pdftex.def Info: images/multiEDITOR.png used on input line 153.
@@ -1803,7 +1875,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 160.
 
-<images/FunktionalitaetIst.png, id=672, 722.7pt x 542.025pt>
+<images/FunktionalitaetIst.png, id=718, 722.7pt x 542.025pt>
 File: images/FunktionalitaetIst.png Graphic file (type png)
  <use images/FunktionalitaetIst.png>
 Package pdftex.def Info: images/FunktionalitaetIst.png used on input line 166.
@@ -1825,7 +1897,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 175.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 175.
- [32]
+ [33]
 File: images/logo_hska.png Graphic file (type png)
  <use images/logo_hska.png>
 Package pdftex.def Info: images/logo_hska.png used on input line 175.
@@ -1838,7 +1910,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 175.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 175.
- [33 <./images/multiEDITOR.png>]
+ [34 <./images/multiEDITOR.png>]
 File: images/logo_hska.png Graphic file (type png)
  <use images/logo_hska.png>
 Package pdftex.def Info: images/logo_hska.png used on input line 175.
@@ -1852,7 +1924,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 175.
 
-[34 <./images/FunktionalitaetIst.png>]
+[35 <./images/FunktionalitaetIst.png>]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 176.
 Package babel Info: Redefining ngerman shorthand "~
@@ -1873,7 +1945,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 193.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 193.
- [35]
+ [36]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 199.
 Package babel Info: Redefining ngerman shorthand "~
@@ -1894,7 +1966,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 222.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 222.
- [36]
+ [37]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 251.
 Package babel Info: Redefining ngerman shorthand "~
@@ -1912,7 +1984,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 254.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 254.
- [37]
+ [38]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 259.
 Package babel Info: Redefining ngerman shorthand "~
@@ -1938,7 +2010,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 48.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 48.
- [38]
+ [39]
 \openout2 = `src/chp_Evaluation.aux'.
 
  (src/chp_Evaluation.tex
@@ -1947,52 +2019,56 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 3.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 3.
 
-Overfull \hbox (9.10352pt too wide) in paragraph at lines 3--3
+Overfull \hbox (9.10352pt too wide) in paragraph at lines 5--5
 []\T1/cmr/bx/n/17.28 Funktionalität und Usa-bi-li-ty des Ist-Zustands 
  []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 3.
+(babel)             in language  on input line 5.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 3.
+(babel)             in language  on input line 5.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 7.
+(babel)             in language  on input line 9.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 7.
+(babel)             in language  on input line 9.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 11.
+(babel)             in language  on input line 13.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 11.
+(babel)             in language  on input line 13.
 File: images/logo_hska.png Graphic file (type png)
 <use images/logo_hska.png>
-Package pdftex.def Info: images/logo_hska.png used on input line 14.
+Package pdftex.def Info: images/logo_hska.png used on input line 16.
 (pdftex.def)             Requested size: 55.93393pt x 20.0pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 14.
+(babel)             in language  on input line 16.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 14.
+(babel)             in language  on input line 16.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 14.
+(babel)             in language  on input line 16.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 14.
- [39
+(babel)             in language  on input line 16.
+ [40
 
 
 
 ]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 15.
+(babel)             in language  on input line 17.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 15.
+(babel)             in language  on input line 17.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 34.
+(babel)             in language  on input line 36.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 34.
+(babel)             in language  on input line 36.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 39.
+(babel)             in language  on input line 41.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 39.
+(babel)             in language  on input line 41.
 File: images/logo_hska.png Graphic file (type png)
  <use images/logo_hska.png>
 Package pdftex.def Info: images/logo_hska.png used on input line 47.
@@ -2005,170 +2081,170 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 47.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 47.
- [40]
-Overfull \hbox (6.41252pt too wide) in paragraph at lines 72--73
+ [41]
+Overfull \hbox (6.41252pt too wide) in paragraph at lines 74--75
 []\T1/cmr/m/n/12 Keine Re-ak-ti-on auf LIN-Nachrichten mög-lich/ kein Sen-den von LIN-Nachrichten
  []
 
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 80.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 80.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 84.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 84.
 File: images/logo_hska.png Graphic file (type png)
 <use images/logo_hska.png>
-Package pdftex.def Info: images/logo_hska.png used on input line 87.
+Package pdftex.def Info: images/logo_hska.png used on input line 81.
 (pdftex.def)             Requested size: 55.93393pt x 20.0pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 87.
+(babel)             in language  on input line 81.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 87.
+(babel)             in language  on input line 81.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 87.
+(babel)             in language  on input line 81.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 87.
- [41]
+(babel)             in language  on input line 81.
+ [42]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 88.
+(babel)             in language  on input line 82.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 88.
+(babel)             in language  on input line 82.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 92.
+(babel)             in language  on input line 86.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 92.
- <images/SollIstVergleich.pdf, id=728, 597.432pt x 844.95674pt>
+(babel)             in language  on input line 86.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 90.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 90.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 94.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 94.
+ <images/SollIstVergleich.pdf, id=774, 597.432pt x 844.95674pt>
 File: images/SollIstVergleich.pdf Graphic file (type pdf)
 
 <use images/SollIstVergleich.pdf>
-Package pdftex.def Info: images/SollIstVergleich.pdf used on input line 94.
+Package pdftex.def Info: images/SollIstVergleich.pdf used on input line 96.
 (pdftex.def)             Requested size: 597.43054pt x 844.95468pt.
 File: images/SollIstVergleich.pdf Graphic file (type pdf)
  <use images/SollIstVergleich.pdf>
-Package pdftex.def Info: images/SollIstVergleich.pdf used on input line 94.
+Package pdftex.def Info: images/SollIstVergleich.pdf used on input line 96.
 (pdftex.def)             Requested size: 597.43054pt x 844.95468pt.
 
-<images/SollIstVergleich.pdf, id=731, page=1, 597.432pt x 844.95674pt>
+<images/SollIstVergleich.pdf, id=777, page=1, 597.432pt x 844.95674pt>
 File: images/SollIstVergleich.pdf Graphic file (type pdf)
  <use images/SollIstVergleich.pdf, page 1>
-Package pdftex.def Info: images/SollIstVergleich.pdf, page1 used on input line 94.
+Package pdftex.def Info: images/SollIstVergleich.pdf, page1 used on input line 96.
 (pdftex.def)             Requested size: 597.43054pt x 844.95468pt.
 File: images/SollIstVergleich.pdf Graphic file (type pdf)
 
 <use images/SollIstVergleich.pdf, page 1>
-Package pdftex.def Info: images/SollIstVergleich.pdf, page1 used on input line 94.
+Package pdftex.def Info: images/SollIstVergleich.pdf, page1 used on input line 96.
 (pdftex.def)             Requested size: 597.93192pt x 845.66379pt.
 File: images/logo_hska.png Graphic file (type png)
  <use images/logo_hska.png>
-Package pdftex.def Info: images/logo_hska.png used on input line 94.
+Package pdftex.def Info: images/logo_hska.png used on input line 96.
 (pdftex.def)             Requested size: 55.93393pt x 20.0pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 94.
+(babel)             in language  on input line 96.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 94.
+(babel)             in language  on input line 96.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 94.
+(babel)             in language  on input line 96.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 94.
- [42]
+(babel)             in language  on input line 96.
+ [43]
 File: images/SollIstVergleich.pdf Graphic file (type pdf)
  <use images/SollIstVergleich.pdf, page 1>
-Package pdftex.def Info: images/SollIstVergleich.pdf, page1 used on input line 94.
+Package pdftex.def Info: images/SollIstVergleich.pdf, page1 used on input line 96.
 (pdftex.def)             Requested size: 597.93192pt x 845.66379pt.
 File: images/SollIstVergleich.pdf Graphic file (type pdf)
 
 <use images/SollIstVergleich.pdf, page 1>
-Package pdftex.def Info: images/SollIstVergleich.pdf, page1 used on input line 94.
+Package pdftex.def Info: images/SollIstVergleich.pdf, page1 used on input line 96.
 (pdftex.def)             Requested size: 597.93192pt x 845.66379pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 94.
+(babel)             in language  on input line 96.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 94.
+(babel)             in language  on input line 96.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 94.
+(babel)             in language  on input line 96.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 94.
+(babel)             in language  on input line 96.
 File: images/SollIstVergleich.pdf Graphic file (type pdf)
  <use images/SollIstVergleich.pdf, page 1>
-Package pdftex.def Info: images/SollIstVergleich.pdf, page1 used on input line 94.
+Package pdftex.def Info: images/SollIstVergleich.pdf, page1 used on input line 96.
 (pdftex.def)             Requested size: 597.93192pt x 845.66379pt.
- [43 <./images/SollIstVergleich.pdf>] <images/SollIstVergleich.pdf, id=758, page=2, 597.432pt x 844.95674pt>
+ [44 <./images/SollIstVergleich.pdf>] <images/SollIstVergleich.pdf, id=804, page=2, 597.432pt x 844.95674pt>
 File: images/SollIstVergleich.pdf Graphic file (type pdf)
  <use images/SollIstVergleich.pdf, page 2>
-Package pdftex.def Info: images/SollIstVergleich.pdf, page2 used on input line 94.
+Package pdftex.def Info: images/SollIstVergleich.pdf, page2 used on input line 96.
 (pdftex.def)             Requested size: 597.93192pt x 845.66379pt.
 File: images/SollIstVergleich.pdf Graphic file (type pdf)
 
 <use images/SollIstVergleich.pdf, page 2>
-Package pdftex.def Info: images/SollIstVergleich.pdf, page2 used on input line 94.
+Package pdftex.def Info: images/SollIstVergleich.pdf, page2 used on input line 96.
 (pdftex.def)             Requested size: 597.93192pt x 845.66379pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 94.
+(babel)             in language  on input line 96.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 94.
+(babel)             in language  on input line 96.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 94.
+(babel)             in language  on input line 96.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 94.
+(babel)             in language  on input line 96.
 File: images/SollIstVergleich.pdf Graphic file (type pdf)
  <use images/SollIstVergleich.pdf, page 2>
-Package pdftex.def Info: images/SollIstVergleich.pdf, page2 used on input line 94.
+Package pdftex.def Info: images/SollIstVergleich.pdf, page2 used on input line 96.
 (pdftex.def)             Requested size: 597.93192pt x 845.66379pt.
- [44 <./images/SollIstVergleich.pdf>] <images/SollIstVergleich.pdf, id=764, page=3, 597.432pt x 844.95674pt>
+ [45 <./images/SollIstVergleich.pdf>] <images/SollIstVergleich.pdf, id=810, page=3, 597.432pt x 844.95674pt>
 File: images/SollIstVergleich.pdf Graphic file (type pdf)
  <use images/SollIstVergleich.pdf, page 3>
-Package pdftex.def Info: images/SollIstVergleich.pdf, page3 used on input line 94.
+Package pdftex.def Info: images/SollIstVergleich.pdf, page3 used on input line 96.
 (pdftex.def)             Requested size: 597.93192pt x 845.66379pt.
 File: images/SollIstVergleich.pdf Graphic file (type pdf)
 
 <use images/SollIstVergleich.pdf, page 3>
-Package pdftex.def Info: images/SollIstVergleich.pdf, page3 used on input line 94.
+Package pdftex.def Info: images/SollIstVergleich.pdf, page3 used on input line 96.
 (pdftex.def)             Requested size: 597.93192pt x 845.66379pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 94.
+(babel)             in language  on input line 96.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 94.
+(babel)             in language  on input line 96.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 94.
+(babel)             in language  on input line 96.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 94.
+(babel)             in language  on input line 96.
 File: images/SollIstVergleich.pdf Graphic file (type pdf)
  <use images/SollIstVergleich.pdf, page 3>
-Package pdftex.def Info: images/SollIstVergleich.pdf, page3 used on input line 94.
+Package pdftex.def Info: images/SollIstVergleich.pdf, page3 used on input line 96.
 (pdftex.def)             Requested size: 597.93192pt x 845.66379pt.
- [45 <./images/SollIstVergleich.pdf>] <images/SollIstVergleich.pdf, id=770, page=4, 597.432pt x 844.95674pt>
+ [46 <./images/SollIstVergleich.pdf>] <images/SollIstVergleich.pdf, id=816, page=4, 597.432pt x 844.95674pt>
 File: images/SollIstVergleich.pdf Graphic file (type pdf)
  <use images/SollIstVergleich.pdf, page 4>
-Package pdftex.def Info: images/SollIstVergleich.pdf, page4 used on input line 94.
+Package pdftex.def Info: images/SollIstVergleich.pdf, page4 used on input line 96.
 (pdftex.def)             Requested size: 597.93192pt x 845.66379pt.
 File: images/SollIstVergleich.pdf Graphic file (type pdf)
 
 <use images/SollIstVergleich.pdf, page 4>
-Package pdftex.def Info: images/SollIstVergleich.pdf, page4 used on input line 94.
+Package pdftex.def Info: images/SollIstVergleich.pdf, page4 used on input line 96.
 (pdftex.def)             Requested size: 597.93192pt x 845.66379pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 94.
+(babel)             in language  on input line 96.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 94.
+(babel)             in language  on input line 96.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 94.
+(babel)             in language  on input line 96.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 94.
+(babel)             in language  on input line 96.
 File: images/SollIstVergleich.pdf Graphic file (type pdf)
  <use images/SollIstVergleich.pdf, page 4>
-Package pdftex.def Info: images/SollIstVergleich.pdf, page4 used on input line 94.
+Package pdftex.def Info: images/SollIstVergleich.pdf, page4 used on input line 96.
 (pdftex.def)             Requested size: 597.93192pt x 845.66379pt.
- [46 <./images/SollIstVergleich.pdf>]
+ [47 <./images/SollIstVergleich.pdf>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 99.
+(babel)             in language  on input line 101.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 99.
+(babel)             in language  on input line 101.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 107.
+(babel)             in language  on input line 109.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 107.
+(babel)             in language  on input line 109.
 )
 File: images/logo_hska.png Graphic file (type png)
  <use images/logo_hska.png>
@@ -2182,7 +2258,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 49.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 49.
- [47]
+ [48]
 \openout2 = `src/chp_Konzeption.aux'.
 
  (src/chp_Konzeption.tex
@@ -2205,7 +2281,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 7.
 
-LaTeX Warning: Reference `sec:BewertungAnforderungen' on page 48 undefined on input line 9.
+LaTeX Warning: Reference `sec:BewertungAnforderungen' on page 49 undefined on input line 9.
 
 File: images/logo_hska.png Graphic file (type png)
 <use images/logo_hska.png>
@@ -2219,7 +2295,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 24.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 24.
- [48
+ [49
 
 
 
@@ -2240,7 +2316,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 62.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 62.
- [49]
+ [50]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 65.
 Package babel Info: Redefining ngerman shorthand "~
@@ -2258,7 +2334,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 50.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 50.
- [50]
+ [51]
 \openout2 = `src/chp_Design.aux'.
 
  (src/chp_Design.tex
@@ -2272,67 +2348,304 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 3.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 14.
+(babel)             in language  on input line 7.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 14.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 24.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 24.
+(babel)             in language  on input line 7.
 File: images/logo_hska.png Graphic file (type png)
 <use images/logo_hska.png>
-Package pdftex.def Info: images/logo_hska.png used on input line 28.
+Package pdftex.def Info: images/logo_hska.png used on input line 22.
 (pdftex.def)             Requested size: 55.93393pt x 20.0pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 28.
+(babel)             in language  on input line 22.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 28.
+(babel)             in language  on input line 22.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 28.
+(babel)             in language  on input line 22.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 28.
- [51
+(babel)             in language  on input line 22.
+ [52
 
 
 
-] <images/DeploymentDiagrammKontextabgrenzung.png, id=807, 3103.595pt x 2714.14pt>
+] <images/configurAIDER_Mockup.png, id=852, 1211.52625pt x 980.66376pt>
+File: images/configurAIDER_Mockup.png Graphic file (type png)
+
+<use images/configurAIDER_Mockup.png>
+Package pdftex.def Info: images/configurAIDER_Mockup.png used on input line 40.
+(pdftex.def)             Requested size: 398.3386pt x 322.43791pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 51.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 51.
+File: images/logo_hska.png Graphic file (type png)
+ <use images/logo_hska.png>
+Package pdftex.def Info: images/logo_hska.png used on input line 60.
+(pdftex.def)             Requested size: 55.93393pt x 20.0pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 60.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 60.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 60.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 60.
+ [53]
+File: images/logo_hska.png Graphic file (type png)
+ <use images/logo_hska.png>
+Package pdftex.def Info: images/logo_hska.png used on input line 60.
+(pdftex.def)             Requested size: 55.93393pt x 20.0pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 60.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 60.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 60.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 60.
+ [54 <./images/configurAIDER_Mockup.png>]
+Overfull \hbox (4.55884pt too wide) in paragraph at lines 61--61
+[]\T1/cmr/bx/n/14.4 Model-View-ViewModel-Pattern (MVVM-Pattern) 
+ []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 61.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 61.
+
+Overfull \hbox (22.10048pt too wide) in paragraph at lines 63--64
+\T1/cmr/m/n/12 Das Model-View-ViewModel-Pattern (MVVM) ist ein Software-Architekturmuster.
+ []
+
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 72.
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
+File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+File: images/logo_hska.png Graphic file (type png)
+ <use images/logo_hska.png>
+Package pdftex.def Info: images/logo_hska.png used on input line 75.
+(pdftex.def)             Requested size: 55.93393pt x 20.0pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 75.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 75.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 75.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 75.
+ [55]
+<images/MVVMPrinciple.png, id=875, 377.15906pt x 249.18094pt>
+File: images/MVVMPrinciple.png Graphic file (type png)
+ <use images/MVVMPrinciple.png>
+Package pdftex.def Info: images/MVVMPrinciple.png used on input line 85.
+(pdftex.def)             Requested size: 398.3386pt x 263.17236pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 93.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 93.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 97.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 97.
+File: images/logo_hska.png Graphic file (type png)
+ <use images/logo_hska.png>
+Package pdftex.def Info: images/logo_hska.png used on input line 100.
+(pdftex.def)             Requested size: 55.93393pt x 20.0pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 100.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 100.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 100.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 100.
+
+[56 <./images/MVVMPrinciple.png>]
+File: images/logo_hska.png Graphic file (type png)
+ <use images/logo_hska.png>
+Package pdftex.def Info: images/logo_hska.png used on input line 114.
+(pdftex.def)             Requested size: 55.93393pt x 20.0pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 114.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 114.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 114.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 114.
+ [57]
+<images/DeploymentDiagrammKontextabgrenzung.png, id=900, 816.04875pt x 686.565pt>
 File: images/DeploymentDiagrammKontextabgrenzung.png Graphic file (type png)
 
 <use images/DeploymentDiagrammKontextabgrenzung.png>
-Package pdftex.def Info: images/DeploymentDiagrammKontextabgrenzung.png used on input line 32.
-(pdftex.def)             Requested size: 398.3386pt x 348.33643pt.
+Package pdftex.def Info: images/DeploymentDiagrammKontextabgrenzung.png used on input line 120.
+(pdftex.def)             Requested size: 398.3386pt x 335.13123pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 38.
+(babel)             in language  on input line 126.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 38.
+(babel)             in language  on input line 126.
 File: images/logo_hska.png Graphic file (type png)
  <use images/logo_hska.png>
-Package pdftex.def Info: images/logo_hska.png used on input line 42.
+Package pdftex.def Info: images/logo_hska.png used on input line 131.
 (pdftex.def)             Requested size: 55.93393pt x 20.0pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 42.
+(babel)             in language  on input line 131.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 42.
+(babel)             in language  on input line 131.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 42.
+(babel)             in language  on input line 131.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 42.
- [52 <./images/DeploymentDiagrammKontextabgrenzung.png (PNG copy)>] <images/SequenzdiagrammLaufzeitsicht.png, id=813, 44
-72.71pt x 9001.63pt>
-File: images/SequenzdiagrammLaufzeitsicht.png Graphic file (type png)
+(babel)             in language  on input line 131.
+ [58 <./images/DeploymentDiagrammKontextabgrenzung.png (PNG copy)>] <images/BausteinsichtTopLayer.png, id=906, 708.6475p
+t x 546.04pt>
+File: images/BausteinsichtTopLayer.png Graphic file (type png)
 
-<use images/SequenzdiagrammLaufzeitsicht.png>
-Package pdftex.def Info: images/SequenzdiagrammLaufzeitsicht.png used on input line 47.
-(pdftex.def)             Requested size: 398.3386pt x 801.59584pt.
+<use images/BausteinsichtTopLayer.png>
+Package pdftex.def Info: images/BausteinsichtTopLayer.png used on input line 138.
+(pdftex.def)             Requested size: 398.3386pt x 306.93845pt.
 
-
-LaTeX Warning: Float too large for page by 237.3974pt on input line 50.
-
-
-Overfull \hbox (10.87486pt too wide) in paragraph at lines 57--59
-[]\T1/cmr/m/n/12 Architekturmuster: Layer-Architektur: MVVM Bild mit MVVM Mo-del, 3 Schich-
+Overfull \hbox (11.68062pt too wide) in paragraph at lines 144--145
+[]\T1/cmr/m/n/12 Das \T1/cmtt/m/n/12 Core\T1/cmr/m/n/12 -Paket be-nutzt die Pa-ke-te \T1/cmtt/m/n/12 AvalonEdit\T1/cmr/m
+/n/12 , \T1/cmtt/m/n/12 AvalonDock\T1/cmr/m/n/12 , \T1/cmtt/m/n/12 PawnCompilerLib\T1/cmr/m/n/12 ,
  []
 
+File: images/logo_hska.png Graphic file (type png)
+<use images/logo_hska.png>
+Package pdftex.def Info: images/logo_hska.png used on input line 147.
+(pdftex.def)             Requested size: 55.93393pt x 20.0pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 147.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 147.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 147.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 147.
+ [59 <./images/BausteinsichtTopLayer.png (PNG copy)>]
+Overfull \hbox (20.026pt too wide) in paragraph at lines 158--167
+\T1/cmr/m/n/12 Eine Ab-strak-ti-ons-ebe-ne un-ter \T1/cmtt/m/n/12 UsbNotification \T1/cmr/m/n/12 lie-gen die Pa-ke-te \T
+1/cmtt/m/n/12 UsbDevicesLib\T1/cmr/m/n/12 ,
+ []
+
+File: images/logo_hska.png Graphic file (type png)
+<use images/logo_hska.png>
+Package pdftex.def Info: images/logo_hska.png used on input line 168.
+(pdftex.def)             Requested size: 55.93393pt x 20.0pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 168.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 168.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 168.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 168.
+ [60] <images/ViewViewModelBinding.png, id=929, 850.17625pt x 608.2725pt>
+File: images/ViewViewModelBinding.png Graphic file (type png)
+
+<use images/ViewViewModelBinding.png>
+Package pdftex.def Info: images/ViewViewModelBinding.png used on input line 176.
+(pdftex.def)             Requested size: 398.3386pt x 284.9971pt.
+ <images/ClassDiagramViewModels.png, id=931, 816.04875pt x 571.13374pt>
+File: images/ClassDiagramViewModels.png Graphic file (type png)
+
+<use images/ClassDiagramViewModels.png>
+Package pdftex.def Info: images/ClassDiagramViewModels.png used on input line 185.
+(pdftex.def)             Requested size: 398.3386pt x 278.78607pt.
+File: images/logo_hska.png Graphic file (type png)
+ <use images/logo_hska.png>
+Package pdftex.def Info: images/logo_hska.png used on input line 194.
+(pdftex.def)             Requested size: 55.93393pt x 20.0pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 194.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 194.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 194.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 194.
+ [61 <./images/ViewViewModelBinding.png (PNG copy)>]
+File: images/logo_hska.png Graphic file (type png)
+
+<use images/logo_hska.png>
+Package pdftex.def Info: images/logo_hska.png used on input line 194.
+(pdftex.def)             Requested size: 55.93393pt x 20.0pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 194.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 194.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 194.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 194.
+ [62 <./images/ClassDiagramViewModels.png (PNG copy)>]
+Overfull \hbox (54.61331pt too wide) in paragraph at lines 200--205
+[]\T1/cmr/m/n/12 Das Pro-jekt-ex-plo-rer-fens-ter wird durch die Klas-se \T1/cmtt/m/n/12 ProjectExplorerContainerViewMod
+el
+ []
+
+
+Overfull \hbox (20.7683pt too wide) in paragraph at lines 200--205
+\T1/cmr/m/n/12 den. In-ner-halb ei-nes Ord-ners kön-nen Pawn-Skriptdateien und Pawn-Includedateien
+ []
+
+
+Overfull \hbox (3.16615pt too wide) in paragraph at lines 200--205
+\T1/cmr/m/n/12 Abbildung []7.7[] zeigt die-se Zu-sam-men-hän-ge der Klas-sen-in-stan-zen in ei-nem UML-
+ []
+
+<images/ProjectExplorerItemsComposition.png, id=947, 851.18pt x 542.025pt>
+File: images/ProjectExplorerItemsComposition.png Graphic file (type png)
+
+<use images/ProjectExplorerItemsComposition.png>
+Package pdftex.def Info: images/ProjectExplorerItemsComposition.png used on input line 209.
+(pdftex.def)             Requested size: 398.3386pt x 253.66005pt.
+
+Overfull \hbox (69.2134pt too wide) in paragraph at lines 214--216
+\T1/cmr/m/n/12 lei-ten von \T1/cmtt/m/n/12 ProjectExplorerItemViewModelBase \T1/cmr/m/n/12 ab. \T1/cmtt/m/n/12 ProjectEx
+plorerItemViewModelBase
+ []
+
+<images/ProjectExplorerClassStructure.png, id=949, 831.105pt x 505.89pt>
+File: images/ProjectExplorerClassStructure.png Graphic file (type png)
+ <use images/ProjectExplorerClassStructure.png>
+Package pdftex.def Info: images/ProjectExplorerClassStructure.png used on input line 219.
+(pdftex.def)             Requested size: 398.3386pt x 242.46935pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 225.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 225.
+File: images/logo_hska.png Graphic file (type png)
+
+<use images/logo_hska.png>
+Package pdftex.def Info: images/logo_hska.png used on input line 231.
+(pdftex.def)             Requested size: 55.93393pt x 20.0pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 231.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 231.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 231.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 231.
+ [63]
+File: images/logo_hska.png Graphic file (type png)
+ <use images/logo_hska.png>
+Package pdftex.def Info: images/logo_hska.png used on input line 231.
+(pdftex.def)             Requested size: 55.93393pt x 20.0pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 231.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 231.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 231.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 231.
+ [64 <./images/ProjectExplorerItemsComposition.png (PNG copy)> <./images/ProjectExplorerClassStructure.png (PNG copy)>]
+<images/Steuerbefehle_senden_SequenceDiagram.png, id=962, 849.1725pt x 1053.9375pt>
+File: images/Steuerbefehle_senden_SequenceDiagram.png Graphic file (type png)
+
+<use images/Steuerbefehle_senden_SequenceDiagram.png>
+Package pdftex.def Info: images/Steuerbefehle_senden_SequenceDiagram.png used on input line 235.
+(pdftex.def)             Requested size: 398.3386pt x 494.38579pt.
 )
 File: images/logo_hska.png Graphic file (type png)
  <use images/logo_hska.png>
@@ -2346,7 +2659,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 51.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 51.
- [53]
+ [65]
 File: images/logo_hska.png Graphic file (type png)
  <use images/logo_hska.png>
 Package pdftex.def Info: images/logo_hska.png used on input line 51.
@@ -2359,10 +2672,11 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 51.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 51.
- [54 <./images/SequenzdiagrammLaufzeitsicht.png (PNG copy)>]
+
+[66 <./images/Steuerbefehle_senden_SequenceDiagram.png (PNG copy)>]
 \openout2 = `src/chp_Realisierung.aux'.
 
-(src/chp_Realisierung.tex
+ (src/chp_Realisierung.tex
 Kapitel 8.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
@@ -2373,21 +2687,135 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 3.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 11.
+(babel)             in language  on input line 14.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 11.
+(babel)             in language  on input line 14.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 17.
+(babel)             in language  on input line 16.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 17.
+(babel)             in language  on input line 16.
+File: images/logo_hska.png Graphic file (type png)
+<use images/logo_hska.png>
+Package pdftex.def Info: images/logo_hska.png used on input line 24.
+(pdftex.def)             Requested size: 55.93393pt x 20.0pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 23.
+(babel)             in language  on input line 24.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 23.
+(babel)             in language  on input line 24.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 25.
+(babel)             in language  on input line 24.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 25.
+(babel)             in language  on input line 24.
+ [67
+
+
+
+]
+Overfull \hbox (26.24663pt too wide) in paragraph at lines 40--57
+\T1/cmtt/m/n/12 DockingManager \T1/cmr/m/n/12 be-sitzt die Pro-per-ties \T1/cmtt/m/n/12 DocumentsSource \T1/cmr/m/n/12 u
+nd \T1/cmtt/m/n/12 AnchorablesSource\T1/cmr/m/n/12 ,
+ []
+
+
+Overfull \hbox (33.98022pt too wide) in paragraph at lines 40--57
+\T1/cmr/m/n/12 bun-den, die vom Typ \T1/cmtt/m/n/12 ObservableCollection \T1/cmr/m/n/12 ist. Die Klas-se \T1/cmtt/m/n/12
+ ObservableCollection
+ []
+
+File: images/logo_hska.png Graphic file (type png)
+<use images/logo_hska.png>
+Package pdftex.def Info: images/logo_hska.png used on input line 57.
+(pdftex.def)             Requested size: 55.93393pt x 20.0pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 57.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 57.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 57.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 57.
+ [68]
+Overfull \hbox (29.05707pt too wide) in paragraph at lines 58--62
+\T1/cmr/m/n/12 muss ei-ne In-stanz von \T1/cmtt/m/n/12 PanesTemplateSelector \T1/cmr/m/n/12 der \T1/cmtt/m/n/12 LayoutIt
+emTemplateSelector\T1/cmr/m/n/12 -
+ []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 68.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 68.
+
+Overfull \hbox (22.63083pt too wide) in paragraph at lines 70--71
+\T1/cmtt/m/n/12 MainViewModel \T1/cmr/m/n/12 ist das View-Mo-del, mit der die View des Haupt-fens-ters \T1/cmtt/m/n/12 M
+ainWindow
+ []
+
+File: images/logo_hska.png Graphic file (type png)
+<use images/logo_hska.png>
+Package pdftex.def Info: images/logo_hska.png used on input line 71.
+(pdftex.def)             Requested size: 55.93393pt x 20.0pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 71.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 71.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 71.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 71.
+ [69]
+Overfull \hbox (68.19011pt too wide) in paragraph at lines 72--74
+\T1/cmr/m/n/12 ge-stellt wer-den. Die An-zahl der \T1/cmtt/m/n/12 DocumentViewModel\T1/cmr/m/n/12 -Objekte in der \T1/cm
+tt/m/n/12 ObservableCollection
+ []
+
+
+Overfull \hbox (23.64937pt too wide) in paragraph at lines 75--77
+[]\T1/cmr/m/n/12 Die Pro-per-ty \T1/cmtt/m/n/12 Anchorables \T1/cmr/m/n/12 stellt ei-ne ge-ne-ri-sche Auf-lis-tung vom T
+yp \T1/cmtt/m/n/12 IEnumberable
+ []
+
+File: images/logo_hska.png Graphic file (type png)
+<use images/logo_hska.png>
+Package pdftex.def Info: images/logo_hska.png used on input line 92.
+(pdftex.def)             Requested size: 55.93393pt x 20.0pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 92.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 92.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 92.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 92.
+ [70]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 112.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 112.
+File: images/logo_hska.png Graphic file (type png)
+ <use images/logo_hska.png>
+Package pdftex.def Info: images/logo_hska.png used on input line 128.
+(pdftex.def)             Requested size: 55.93393pt x 20.0pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 128.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 128.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 128.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 128.
+ [71]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 148.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 148.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 154.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 154.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 156.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 156.
 )
 File: images/logo_hska.png Graphic file (type png)
  <use images/logo_hska.png>
@@ -2401,13 +2829,10 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 52.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 52.
- [55
-
-
-
-]
+ [72]
 File: images/logo_hska.png Graphic file (type png)
- <use images/logo_hska.png>
+
+<use images/logo_hska.png>
 Package pdftex.def Info: images/logo_hska.png used on input line 52.
 (pdftex.def)             Requested size: 55.93393pt x 20.0pt.
 Package babel Info: Redefining ngerman shorthand "|
@@ -2418,7 +2843,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 52.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 52.
- [56]
+ [73]
 \openout2 = `src/chp_FazitUndAusblick.aux'.
 
  (src/chp_FazitUndAusblick.tex
@@ -2440,7 +2865,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 53.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 53.
- [57
+ [74
 
 
 
@@ -2450,13 +2875,34 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 69.
  (Masterarbeit.lof
-Overfull \hbox (31.03302pt too wide) in paragraph at lines 23--23
+Overfull \hbox (31.03302pt too wide) in paragraph at lines 25--25
  [][] [][]\T1/cmr/m/n/12 Darstellung der Kon-text-ab-gren-zung des Sys-tems im UML-Deployment 
  []
 
+File: images/logo_hska.png Graphic file (type png)
+<use images/logo_hska.png>
+Package pdftex.def Info: images/logo_hska.png used on input line 29.
+(pdftex.def)             Requested size: 55.93393pt x 20.0pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 29.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 29.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 29.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 29.
+ [75
+
+
+
+]
+Overfull \hbox (45.02957pt too wide) in paragraph at lines 30--30
+ [][] [][]\T1/cmr/m/n/12 Struktur der Klas-sen des Pro-jekt-ex-plo-rers in ei-nem UML-Klassendiagramm[] [][]  
+ []
+
 )
-\tf@lof=\write7
-\openout7 = `Masterarbeit.lof'.
+\tf@lof=\write8
+\openout8 = `Masterarbeit.lof'.
 
 File: images/logo_hska.png Graphic file (type png)
  <use images/logo_hska.png>
@@ -2470,18 +2916,14 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 72.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 72.
- [58
-
-
-
-]
+ [76]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 74.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 74.
  (Masterarbeit.lot)
-\tf@lot=\write8
-\openout8 = `Masterarbeit.lot'.
+\tf@lot=\write9
+\openout9 = `Masterarbeit.lot'.
 
 File: images/logo_hska.png Graphic file (type png)
  <use images/logo_hska.png>
@@ -2495,7 +2937,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 79.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 79.
- [59
+ [77
 
 
 ]
@@ -2504,11 +2946,41 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 81.
  (Masterarbeit.bbl
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 25.
+Underfull \hbox (badness 1571) in paragraph at lines 10--14
+[]\T1/cmr/m/n/12 ITB Com-pu-Pha-se.   Pawn Lan-gua-ge Gui-de , 01.2016.  Er-hält-
+ []
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
-File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-))
+
+Underfull \hbox (badness 10000) in paragraph at lines 73--78
+[]\T1/cmr/m/n/12 Dirk Bah-le.  A WPF MVVM In-Place-Edit Text-Box Con-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 73--78
+\T1/cmr/m/n/12 trol.  []$\T1/cmtt/m/n/12 https : / / www . codeproject . com / Articles / 802385 /
+ []
+
+File: images/logo_hska.png Graphic file (type png)
+<use images/logo_hska.png>
+Package pdftex.def Info: images/logo_hska.png used on input line 78.
+(pdftex.def)             Requested size: 55.93393pt x 20.0pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 78.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 78.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 78.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 78.
+ [78
+
+
+]
+Underfull \hbox (badness 1194) in paragraph at lines 98--103
+\T1/cmtt/m/n/12 / / www . microsoft . com / en-[]us / download / details . aspx ? id = 35825$[]\T1/cmr/m/n/12 , ab-
+ []
+
+)
 File: images/logo_hska.png Graphic file (type png)
  <use images/logo_hska.png>
 Package pdftex.def Info: images/logo_hska.png used on input line 89.
@@ -2521,52 +2993,43 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 89.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 89.
- [60
-
-
-]
+ [79]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 93.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 93.
- (Masterarbeit.aux
-(src/chp_Sperr.aux) (src/chp_Aufgabenstellung.aux) (src/chp_Einleitung.aux) (src/chp_Grundlagen.aux)
-(src/chp_Anforderungsanalyse.aux) (src/chp_IstAnalyse.aux) (src/chp_Evaluation.aux) (src/chp_Konzeption.aux)
-(src/chp_Design.aux) (src/chp_Realisierung.aux) (src/chp_FazitUndAusblick.aux))
+ (Masterarbeit.aux (src/chp_Sperr.aux) (src/chp_Aufgabenstellung.aux)
+(src/chp_Einleitung.aux) (src/chp_Grundlagen.aux) (src/chp_Anforderungsanalyse.aux) (src/chp_IstAnalyse.aux)
+(src/chp_Evaluation.aux) (src/chp_Konzeption.aux) (src/chp_Design.aux) (src/chp_Realisierung.aux)
+(src/chp_FazitUndAusblick.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 93.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 93.
+Package rerunfilecheck Info: File `Masterarbeit.out' has not changed.
+(rerunfilecheck)             Checksum: E41471C5396DC2403B76F98CB6E61BAA;7123.
 
-
-Package rerunfilecheck Warning: File `Masterarbeit.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Masterarbeit.out':
-(rerunfilecheck)             Before: 7EB754B0DF4DC1EC472141A6B526483D;6512
-(rerunfilecheck)             After:  816D4D49855896903F85445F2D8D4C8F;6516.
 
 LaTeX Warning: There were undefined references.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 93.
  ) 
 Here is how much of TeX's memory you used:
- 22525 strings out of 493323
- 400349 string characters out of 3139066
- 482678 words of memory out of 3000000
- 25321 multiletter control sequences out of 15000+200000
- 19013 words of font info for 49 fonts, out of 3000000 for 9000
+ 24020 strings out of 493323
+ 425121 string characters out of 3139066
+ 516642 words of memory out of 3000000
+ 26727 multiletter control sequences out of 15000+200000
+ 19688 words of font info for 50 fonts, out of 3000000 for 9000
  1142 hyphenation exceptions out of 8191
- 57i,18n,54p,792b,532s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\erbda\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1200.pk> <C:\Users\erbda\AppData\Loca
-l\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\erbda\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jk
-nappen\ec\dpi600\tcrm1200.pk> <C:\Users\erbda\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk> <
-C:\Users\erbda\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsl1200.pk> <C:\Users\erbda\AppData\Local\Mi
-KTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk> <C:\Users\erbda\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknapp
-en\ec\dpi600\ecbx1200.pk> <C:\Users\erbda\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2074.pk> <C:\U
-sers\erbda\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm2074.pk> <C:\Users\erbda\AppData\Local\MiKTeX
-\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2488.pk> <C:\Users\erbda\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\e
-c\dpi600\ecrm1200.pk>
-Output written on Masterarbeit.pdf (66 pages, 3781452 bytes).
+ 57i,18n,54p,939b,534s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\erbda\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1200.pk> <C:\Users\erbda\AppData\Loca
+l\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1200.pk> <C:\Users\erbda\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jk
+nappen\ec\dpi600\ecbx1440.pk> <C:\Users\erbda\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk> <
+C:\Users\erbda\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk> <C:\Users\erbda\AppData\Local\Mi
+KTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsl1200.pk> <C:\Users\erbda\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknapp
+en\ec\dpi600\ecti1200.pk> <C:\Users\erbda\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\U
+sers\erbda\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2074.pk> <C:\Users\erbda\AppData\Local\MiKTeX
+\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm2074.pk> <C:\Users\erbda\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\e
+c\dpi600\ecbx2488.pk> <C:\Users\erbda\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk>
+Output written on Masterarbeit.pdf (85 pages, 2580004 bytes).
 PDF statistics:
- 1398 PDF objects out of 1440 (max. 8388607)
- 194 named destinations out of 1000 (max. 500000)
- 821 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1691 PDF objects out of 1728 (max. 8388607)
+ 242 named destinations out of 1000 (max. 500000)
+ 920 words of extra memory for PDF output out of 10000 (max. 10000000)
 

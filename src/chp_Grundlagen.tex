@@ -2,50 +2,57 @@
 
 
 
-\section{GIGABOX}
+\section{GIGABOX-Steuergeräte}
 
 \subsection{Überblick}
-GIGABOX ist eine Produktfamilie von Steuergeräten der Firma GIGATRONIK. GIGABOX-Steuergeräte werden hauptsächlich in der Fahrzeugentwicklung eingesetzt, um prototypische Kommunikationslösungen im Fahrzeug schnell realisieren zu können. Beispielhafte Anwendungen sind der Einsatz als Gateway und die Ansteuerung von Treiber-ICs im Automobil. 
+GIGABOX ist eine Produktfamilie von Steuergeräten der Firma GIGATRONIK. GIGABOX-Steuergeräte werden in der Fahrzeugentwicklung eingesetzt, um prototypische Kommunikationslösungen im Fahrzeug schnell und kostengünstig realisieren zu können. Beispielanwendungen sind der Einsatz als Gateway und die Ansteuerung von Treiber-ICs im Automobil. 
 
-GIGABOX-Steuergeräte werden in unterschiedlicher Hardwareausstattung und Funktionalität angeboten. Typischerweise verfügen sie über diverse Kommunikationsschnittstellen die im Automotive-Bereich benötigt werden wie CAN und LIN. Außerdem stehen digitale und analoge Ein- und Ausgänge zur Verfügung.
-Das neueste Modell der GIGABOX, die GIGABOX FD, befindet sich aktuell noch in der Entwicklung.
-Im Folgenden wird ausschließlich auf die GIGABOX FD näher eingegangen, da nur diese für die vorliegende Arbeit von Bedeutung ist. 
+GIGABOX-Steuergeräte werden in unterschiedlicher Hardwareausstattung und Funktionalität angeboten. Typischerweise verfügen sie über diverse Kommunikationsschnittstellen, die im Automotive-Bereich eingesetzt werden wie CAN und LIN. Außerdem stehen digitale und analoge Ein- und Ausgänge zur Verfügung. 
+
+Das neueste Modell der GIGABOX, die GIGABOX FD, befindet sich aktuell noch in der Entwicklung. Im Vergleich zu älteren Modellen ermöglicht sie neue Funktionen wie Kommunikation über CAN FD oder Bluetooth.
 
 \subsection{Einsatzszenarien}
 
-Das Use-Case-Diagramm in Abbildung \ref{fig:UseCasesGIGABOX} zeigt drei typische Einsatzszenarien der GIGABOX. 
+Das Use-Case-Diagramm in Abbildung \ref{fig:UseCasesGIGABOX} zeigt drei typische Einsatzszenarien einer GIGABOX. 
 
 
 \begin{enumerate}
-	\item Einsatz als Gateway zur Modifikation von Busbotschaften
+	\item \textbf{Einsatz als Gateway zur Modifikation von Busbotschaften}
 
 	Beispiel:
 
 Ein Fahrzeughersteller entwickelt das Nachfolgemodell einer PKW-Modellreihe. 
-Einige Busbotschaften, die die Steuergeräte untereinander austauschen, wurden für das neue Modell verändert oder wurden neu hinzugefügt. Der Großteil der Busbotschaften sind allerdings identisch wie beim alten Modell.
-Die Funktion einer neu entwickelten Klimaanlage soll nun im realen neuen Fahrzeugmodell überprüft werden. Allerdings ist das neue Modell noch nicht so weit entwickelt, dass es eine sinnvolle Testumgebung darstellen kann. Die neue Klimaanlage wird deshalb im alten Fahrzeugmodell getestet. Die für das Klimasteuergerät relevanten Busbotschaften werden dann mithilfe einer GIGABOX so manipuliert, dass sie den Botschaften entsprechen, die im neuen Fahrzeugmodell am Klimasteuergerät ankommen.
+Für das neue Fahrzeugmodell wurde eine neue Klimaanlage entwickelt, deren Funktionsfähigkeit im realen neuen Modell überprüft werden soll.
+Einige Busbotschaften, die die Steuergeräte untereinander austauschen, wurden für das neue Modell verändert oder wurden neu hinzugefügt. Der Großteil der Busbotschaften sind allerdings identisch wie beim alten Modell.  \\
+Das neue Modell ist allerdings noch nicht so weit entwickelt, dass es eine sinnvolle Testumgebung darstellen kann. Die neue Klimaanlage wird deshalb im alten Fahrzeugmodell getestet. Die für das Klimasteuergerät relevanten Busbotschaften können dann mithilfe einer GIGABOX so manipuliert werden, dass sie den Botschaften entsprechen, die im neuen Fahrzeugmodell am Klimasteuergerät ankommen würden.
 
  
 
-	\item Funktionalität des Fahrzeugs erweitern
+	\item \textbf{Funktionalität des Fahrzeugs erweitern}
 
 \begin{itemize}
-	\item Rapid Prototyping: Eine neue Funktion soll möglichst schnell und unkompliziert gestestet werden
+	\item Rapid Prototyping: Eine neue Funktionalität soll möglichst schnell und unkompliziert gestestet werden
 	
 	Beispiel: 
 	
-	Blinker-LEDs sollen nicht mehr gleichzeitig angesteuert werden, sondern nacheinander von innen nach außen mit kurzer zeitlicher Verzögerung.
+	Ein Fahrzeughersteller möchte eine neue Idee ausprobieren.
+	Die LEDs des Fahrzeugblinkers sollen dabei nicht mehr gleichzeitig aufleuchten, sondern nacheinander von innen nach außen mit kurzer zeitlicher Verzögerung.
+	Zur Umsetzung dieser Idee kann eine GIGABOX verwendet werden. Registriert die GIGABOX eine Botschaft auf dem CAN-Bus, die eine Anweisung zum Blinken enthält, können die einzelnen LEDs des Blinkers zeitlich verzögert in der gewünschten Reihenfolge über die digitalen Ausgänge aktiviert werden. 
 	
 	\item Serieneinsatz: Eine neue zusätzliche Funktion soll realisiert werden bei Fahrzeugumbau
 	
 	Beispiel:
 	
-	Eine Mercedes E-Klasse soll zu einem Leichenwagen umgebaut werden, der elektrisch verstellbare Fensterjalousien besitzt. Mithilfe einer GIGABOX können die elektrisch verstellbaren Fensterjalousien realisiert werden.
+	Ein PKW soll zu einem Leichenwagen umgebaut werden, der elektrisch verstellbare Fensterjalousien besitzen soll. 
+	Über einen Schalter soll die Höhe der Jalousien eingestellt werden können.
+	Dazu wird ein Steuergerät benötigt, das die Stellung der Schalter einliest und die zur Höhenverstellung zuständigen Motoren ansteuert.
+	Eine GIGABOX kann diese Aufgaben übernehmen, da sie über die benötigten digitalen Ein- und Ausgänge verfügt.
+	
 
 	
 \end{itemize}
  
-\item Restbussimulation: 
+\item \textbf{Restbussimulation} 
 
 Eine GIGABOX kann Steuergeräte innerhalb eines Bussystems simulieren.
 Steuergeräte können damit getestet werden, ohne das komplette Bussystem aufbauen zu müssen.
@@ -114,7 +121,7 @@ Der Einsatz von einer Applikationsplatine ermöglicht die Funktionserweiterung de
 \end{figure}
 
 
-\subsection{Software der GIGABOX FD}
+\subsection{Softwarearchitektur der GIGABOX FD}
 
 Abbildung \ref{fig:Softwarearchitektur} gibt einen Überblick über die Softwarearchitektur der GIGABOX FD. 
 
@@ -124,9 +131,7 @@ Vom Middleware Layer aus kann über die API des Hardware Abstraction Layers auf d
 Außerdem befindet sich dort das Transportprotokoll ISO-TP für CAN-Bus. Das Protokoll wird benötigt, um Botschaften zu verschicken, die die maximale Nutzdatengröße von 8 Byte eines CAN-Frames überschreiten.
 Um die Pawn virtuelle Maschine (VM) an den HAL anzubinden, befindet sich auf dem Middleware Layer zusätzlich die PAWN Driver Abstraction.
 
-
-Auf dem Application Layer läuft das Betriebssystem FreeRTOS, ein Echtzeitbetriebssystem für eingebettete Systeme. Innerhalb von FreeRTOS ist die Pawn VM, der Bootloader und eine Konsole implementiert. In der Pawn-Umgebung wird eine Pawn Skriptapplikation ausgeführt, die vom Endanwender auf den Flash-Speicher der GIGABOX FD aufgespielt werden kann. Das Skript ermöglicht die Ansteuerung bzw. Abfrage der Kommunikationsschnittstellen sowie das Steuern bzw. Beobachten der digitalen/analogen Ein-/Ausgänge der GIGABOX FD.
- 
+Auf dem Application Layer ist die Pawn VM und der Bootloader implementiert. Eine Abstraktionsebene über der Pawn VM liegt die Skript Applikation, die vom Endanwender auf den Flash-Speicher der GIGABOX FD aufgespielt werden kann. Das Skript ermöglicht die Ansteuerung bzw. Abfrage der Kommunikationsschnittstellen sowie das Steuern bzw. Beobachten der digitalen/analogen Ein-/Ausgänge der GIGABOX FD. Auf dieser Ebene ist außerdem die Konsole angesiedelt, an die der Anwender Befehle senden kann über USB.
 
 
 
@@ -134,36 +139,24 @@ Auf dem Application Layer läuft das Betriebssystem FreeRTOS, ein Echtzeitbetrieb
 \begin{figure}[!htbp]
 	\centering
 		\includegraphics[width=\textwidth]{images/GIGABOXFD_SWArchitektur.png}
-	\caption{Hardwareüberblick GIGABOX FD}
+	\caption{Softwarearchitektur der GIGABOX FD}
 	\label{fig:Softwarearchitektur}
 \end{figure}
 
 
-
-
-
-
-
-
-
-Beschreibung Funktionsweise GIGABOX aus Softwaresicht. Skript-Applikation und Bootapplikation. Virtuelle Maschine läuft in Skript-Applikation. Auf virtueller Maschine wird Bytecode ausgeführt. Der Bytecode wurde vom PAWN-Compiler (in configurAIDER) aus einer Skriptdatei erzeugt.  Quelle: Bachelorarbeit Christian Eissler Absch. 4.1 \textcolor[rgb]{1,0,0}{(Arbeit über GIGABOX FD -> Funktionsweise bei den alten GIGABOXEN gleich?)}
-
-\textcolor[rgb]{1,0,0}{Eventgetriebene Programmierung -> bei eintreffen einer CAN-Botschaf wird Event ausgelöst}
-
-
-
-
-
-
-
 \section{Pawn}
 
-Pawn ist eine Skriptsprache mit einer C ähnlichen Syntax sowie eine zugehörige virtuelle Maschine, auf der kompilierter Pawn Sourcecode ausgeführt werden kann. Das PAWN-Paket, das Kompiler und virtuelle Maschine beinhaltet, ist kostenlos verfügbar und wurde unter der Apache Lizenz 2.0 veröffentlicht. Die Sprache wurde abgeleitet von der Sprache "`Small-C"', die wiederum eine Teilmenge von C darstellt und für Mikrocontroller entwickelt wurde.
+Pawn ist eine Skriptsprache mit einer C ähnlichen Syntax sowie eine zugehörige virtuelle Maschine, auf der kompilierter Pawn-Quellcode ausgeführt werden kann. Das Pawn-Paket, das Kompiler und virtuelle Maschine beinhaltet, ist kostenlos verfügbar und wurde unter der Apache Lizenz 2.0 veröffentlicht. Die Sprache wurde abgeleitet von der Sprache "`Small-C"', die wiederum eine Teilmenge von C darstellt und für Mikrocontroller entwickelt wurde.
 Pawn wurde erstmal 1998 öffentlich zugänglich gemacht, damals noch unter dem Namen "`SMALL"' und wird seitdem regelmäßig weiterentwickelt.
 
-Pawn Sourcecode kann mithilfe des PAWN-Compilers in Bytecode kompiliert werden. Der Bytecode wird anschließend auf der zugehörigen virtuellen Maschine interpretiert. Dies bedeutet, dass für jede Bytecode-Anweisung definierte Funktionen aus einer C-Klassenbibliothek aufgerufen werden. Die Ausführung von Bytecode auf einer virtuellen Maschine bietet im Vergleich zur Ausführung von nativem Code auf der Zielhardware den Vorteil, dass der Code unabhängig von der eingesetzten Hardware lauffähig ist. Der Code kann folglich plattformunabhängig eingesetzt werden. Die virtuelle Maschine muss dagegen an die eingesetzte Plattform angepasst werden.
-Dieser Vorteil muss allerdings mit Geschwindigkeitseinbußen bei der Programmausführung bezahlt werden.
-Bei der Entwicklung von PAWN wurde besonders auf Einfachheit, Schnelligkeit und Robustheit wert gelegt. Es wurde entwickelt zur Anwendung auf Mikrocontroller mit geringer Rechenleistung und Speicherkapazität. Die Sprache benötigt deshalb wenig Overhead.
+Pawn-Quellcode kann mithilfe des Pawn-Kompilers in Bytecode kompiliert werden. Der Bytecode wird anschließend auf der zugehörigen virtuellen Maschine interpretiert. Dies bedeutet, dass für jede Bytecode-Anweisung definierte Funktionen aus einer C-Klassenbibliothek aufgerufen werden. Die Ausführung von Bytecode auf einer virtuellen Maschine bietet im Vergleich zur Ausführung von nativem Code auf der Zielhardware den Vorteil, dass der Code unabhängig von der eingesetzten Hardware lauffähig ist. Der Code kann folglich plattformunabhängig eingesetzt werden. Die virtuelle Maschine muss dagegen an die eingesetzte Plattform angepasst werden.
+Dieser Vorteil wird allerdings mit Geschwindigkeitseinbußen bei der Programmausführung bezahlt.
+Bei der Entwicklung von Pawn wurde besonders auf eine einfache Syntax, Schnelligkeit in der Codeausführung und Robustheit wert gelegt. 
+Die virtuelle Maschine eignet sich aus diesem Grund auch zur Einbindung in Mikrocontroller mit geringer Rechenleistung und Speicherkapazität.
+
+In Bezug auf GIGABOX-Steuergeräte wird Pawn benutzt, um GIGABOX-Applikationen zu erstellen. Mithilfe von GIGABOX-Applikationen kann der Anwender Funktionen für GIGABOX-Steuergeräte entwickeln und die Applikation anschließend auf GIGABOX-Steuergeräte flashen, auf denen eine Pawn-VM implementiert ist. 
+GIGABOX-Applikationen werden mithilfe eventgetriebener Programmierung entwickelt. Sobald ein definiertes Event wie z. B. der Empfang einer CAN-Botschaft eintritt, wird die dem Event zugeordnete Funktion aufgerufen.
+ 
 
 \cite{PawnImplementersGuide}, \cite{PawnLanguageGuide}
 
@@ -239,22 +232,29 @@ Abbildung \ref{fig:ProductQualityModel} zeigt eine Übersicht über die acht Quali
 
 
 Um das Qualitätsmerkmal "`Usability"' zu verfeinern, kann die Norm EN ISO 9241-110 (Grundsätze der Dialoggestaltung) herangezogen werden.
-Diese beschreibt, welche Eigenschaften Dialoge erfüllen sollen, um eine gute Usability zu erreichen und werden im folgenden aufgezählt:
+Diese beschreibt, welche Eigenschaften Dialoge erfüllen sollen, um eine gute Usability zu erreichen. Die sieben Grundsätze der Dialoggestaltung werden im Folgenden nach Quelle \cite{MCInteraktion}, Kapitel 8.3 zitiert.
 
 
 
 	
 \begin{itemize}
-		\item Aufgabenangemessenheit: "`Ein Dialog ist aufgabenangemessen, wenn er den Benutzer unterstützt, seine Arbeitsaufgabe effektiv und effizient zu erledigen."'
-		\item Selbstbeschreibungsfähigkeit: "`Ein Dialog ist in dem Maße selbstbeschreibungsfähig, in dem für den Benutzer zu jeder Zeit offensichtlich ist, in welchem Dialog, an welcher Stelle er sich befindet, welche Handlungen unternommen werden können und wie diese ausgeführt werden können."'
-		\item Lernförderlichkeit
-		\item Steuerbarkeit
-		\item Erwartungskonformität: "`Ein Dialog ist erwartungskonform, wenn er konsistent ist und den Merkmalen des Benutzers entspricht, z.B. seinen Kenntnissen aus dem Arbeitsgebiet, seiner Ausbildung und seiner Erfahrung sowie den allgemein anerkannten Konventionen."'
-		\item Individualisierbarkeit
-		\item Fehlertolerant:  "`Ein Dialog ist fehlertolerant, wenn das beabsichtigte Arbeitsergebnis trotz erkennbar fehlerhafter Eingaben entweder mit keinem oder mit minimalem Korrekturaufwand durch den Benutzer erreicht werden kann."'
+		\item Aufgabenangemessenheit: "`Ein interaktives System ist \textit{aufgabenangemessen}, wenn es den Benutzer unterstützt, seine Arbeitsaufgabe zu erledigen, d.h. wenn Funktionalität und Dialog auf den charakteristischen Eigenschaften der Arbeitsaufgabe basieren, anstatt auf der zur Aufgabenerledigung eingesetzten Technologie."'
+		
+		\item Selbstbeschreibungsfähigkeit: "`Ein Dialog ist in dem Maße \textit{selbstbeschreibungsfähig}, in dem für den Benutzer zu jeder Zeit offensichtlich ist, in welchem Dialog, an welcher Stelle er sich befindet, welche Handlungen unternommen werden können und wie diese ausgeführt werden können."'
+		
+		\item Lernförderlichkeit: "`Ein Dialog ist \textit{lernförderlich}, wenn er den Benutzer beim Erlernen der Nutzung des interaktiven Systems unterstützt und anleitet."'
+		
+		\item Steuerbarkeit: "`Ein Dialog ist \textit{steuerbar}, wenn der Benutzer in der Lage ist, den Dialogablauf zu starten sowie seine Richtung und Geschwindigkeit zu beeinflussen, bis das Ziel erreicht ist."'
+		
+		\item Erwartungskonformität: "`Ein Dialog ist \textit{erwartungskonform}, wenn er den aus dem Nutzungskontext heraus vorhersehbaren Benutzerbelangen sowie allgemein anerkannten Konventionen entspricht."'
+		
+		\item Individualisierbarkeit: "`Ein Dialog ist \textit{individualisierbar}, ween Benutzer die Mensch-System-Interaktion und die Darstellung von Informationen ändern können, um diese an ihre individuellen Fähigkeiten und Bedürfnisse anzupassen.
+		
+		\item Fehlertolerant:  "`Ein Dialog ist \textit{fehlertolerant}, wenn das beabsichtigte Arbeitsergebnis trotz erkennbar fehlerhafter Eingaben entweder mit keinem oder mit minimalem Korrekturaufwand durch den Benutzer erreicht werden kann."'
 
 
 	Quelle: Wikipedia -> überprüfen ob andere Quelle verfügbar ist, am Besten die Norm direkt
+	Als Quelle kann Paper von PH Weingarten "`Usability und Usability Engineering genommen werden"'. Hieraus die Stichpunkte noch verfeinern
 
 \end{itemize}
 
@@ -282,10 +282,19 @@ Die FCL ist eine objektorientierte Klassenbibliothek mit einer Auflistung wieder
 
 Mit Einführung des .NET Frameworks 3.0 im Jahr 2006 wurde Windows Presentation Foundation (WPF) veröffentlicht, ein Framework zur Erstellung von grafischen Benutzeroberflächen. WPF stellt den Nachfolger für das seit Version 1.0 im .NET Framework enthaltene Windows Forms. Es können Desktop- sowie Webanwendungen erstellt werden. 
 
-Eines der zentralen Konzepte von WPF ist die Verwendung der XML-basierten Beschreibungssprache Extensible Application Markup Language (XAML) zur Beschreibung der Benutzeroberfläche. XAML ermöglicht eine übersichtlichere und kompaktere Beschreibung der Benutzeroberfläche als die Erstellung in C\#. Die Logik zu einer erstellten Benutzeroberfläche wird in C\# programmiert. Dies kann in der zum XAML-File gehörenden Codebehind-Datei erfolgen oder in einem eigenen C\#-Sourcefile, das über DataBindings oder Commands an die XAML-Datei angebunden werden kann.
-
-Außerdem werden die Leistungsressourcen der Grafikkarten mit 3D-Beschleunigern besser ausgenutzt im Vergleich zu Windows Forms, da zum Rendern der GUI DirectX benutzt wird anstatt Graphics Device Interface+ (GDI+). Mithilfe von DirectX kann WPF grafische Elemente selbst zeichnen anstatt durch dass sie durch das Betriebssystem gezeichnet werden.  
+WPF nutzt die Leistungsressourcen von Grafikkarten mit 3D-Beschleunigern besser aus als Windows Forms, da zum Rendern der GUI-Inhalte DirectX benutzt wird anstatt Graphics Device Interface+ (GDI+). Mithilfe von DirectX kann WPF grafische Elemente selbst zeichnen anstatt dass sie durch das Betriebssystem gezeichnet werden.  
 Ein weiterer Vorteil von WPF ist das vektorbasierte Zeichnen der Anwendungsinhalte. Dies ermöglicht eine beliebige Skalierung der Inhalte ohne Verpixelung.
 
+Eines der zentralen Konzepte von WPF ist die Verwendung der XML-basierten Beschreibungssprache Extensible Application Markup Language (XAML) zur Beschreibung der Benutzeroberfläche. XAML ermöglicht eine übersichtlichere und kompaktere Beschreibung der Benutzeroberfläche als die Programmierung der Oberfläche in C\#. 
+
+Die Beschreibung einer Benutzeroberfläche mit XAML wird in einer XAML-Datei vorgenommen. 
+Jede XAML-Datei ist untrennbar mit einer Codebehind-Datei gekoppelt, in der die Logik der Benutzeroberfläche in C\# programmiert werden kann.
+Die Logik kann allerdings auch in einer eigenen C\#-Quellcodedatei programmiert werden und über sogenannte DataBindings und Commands an die XAML-Datei angebunden werden.
+Darstellung und Logik können auf diese Weisen getrennt werden, was unter anderem eine effektivere Zusammenarbeit zwischen Designern der Benutzeroberfläche und Entwicklern der Anwendungslogik ermöglicht. 
+
+Ein Designer kann mithilfe eines Design-Tools wie z. B. Microsoft Expression Blend die Benutzeroberfläche entwerfen und daraus eine XAML-Datei generieren. 
+Der Entwickler der Anwendungslogik kann anschließend auf Grundlage der XAML-Datei des Designers die gewünschte Logik zu der GUI entwickeln.
+
+ 
 
 

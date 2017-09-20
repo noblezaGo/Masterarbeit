@@ -3,11 +3,11 @@
 \BOOKMARK [1][-]{section.1.1}{Motivaton}{chapter.1}% 3
 \BOOKMARK [1][-]{section.1.2}{Aufgabenstellung}{chapter.1}% 4
 \BOOKMARK [0][-]{chapter.2}{Grundlagen}{}% 5
-\BOOKMARK [1][-]{section.2.1}{GIGABOX}{chapter.2}% 6
+\BOOKMARK [1][-]{section.2.1}{GIGABOX-Steuerger\344te}{chapter.2}% 6
 \BOOKMARK [2][-]{subsection.2.1.1}{\334berblick}{section.2.1}% 7
-\BOOKMARK [2][-]{subsection.2.1.2}{Anwendungen}{section.2.1}% 8
+\BOOKMARK [2][-]{subsection.2.1.2}{Einsatzszenarien}{section.2.1}% 8
 \BOOKMARK [2][-]{subsection.2.1.3}{Hardware der GIGABOX FD}{section.2.1}% 9
-\BOOKMARK [2][-]{subsection.2.1.4}{Software der GIGABOX FD}{section.2.1}% 10
+\BOOKMARK [2][-]{subsection.2.1.4}{Softwarearchitektur der GIGABOX FD}{section.2.1}% 10
 \BOOKMARK [1][-]{section.2.2}{Pawn}{chapter.2}% 11
 \BOOKMARK [1][-]{section.2.3}{Softwareentwicklungsprozess}{chapter.2}% 12
 \BOOKMARK [2][-]{subsection.2.3.1}{V-Modell}{section.2.3}% 13
@@ -16,14 +16,14 @@
 \BOOKMARK [2][-]{subsection.2.4.1}{.NET Framework}{section.2.4}% 16
 \BOOKMARK [2][-]{subsection.2.4.2}{Windows Presentation Framework\(WPF\)}{section.2.4}% 17
 \BOOKMARK [0][-]{chapter.3}{Anforderungsanalyse}{}% 18
-\BOOKMARK [1][-]{section.3.1}{\334bersicht}{chapter.3}% 19
+\BOOKMARK [1][-]{section.3.1}{\334berblick}{chapter.3}% 19
 \BOOKMARK [1][-]{section.3.2}{Ermittlung und Bewertung von funktionalen Anforderungen}{chapter.3}% 20
 \BOOKMARK [2][-]{subsection.3.2.1}{Erstellung von Projekten mit Baumstruktur}{section.3.2}% 21
 \BOOKMARK [2][-]{subsection.3.2.2}{Einstellung der Sprache}{section.3.2}% 22
 \BOOKMARK [2][-]{subsection.3.2.3}{Texteditor zur Erstellung von PAWN-Skripten}{section.3.2}% 23
 \BOOKMARK [2][-]{subsection.3.2.4}{Konfigurieren einer GIGABOX ohne PAWN-Kenntnisse}{section.3.2}% 24
 \BOOKMARK [2][-]{subsection.3.2.5}{Verbundene GIGABOXEN auflisten}{section.3.2}% 25
-\BOOKMARK [2][-]{subsection.3.2.6}{PAWN-Compiler}{section.3.2}% 26
+\BOOKMARK [2][-]{subsection.3.2.6}{Kompilieren von Pawn-Quellcodedateien}{section.3.2}% 26
 \BOOKMARK [2][-]{subsection.3.2.7}{Beschreiben/Auslesen des Flash-Speichers der GIGABOX}{section.3.2}% 27
 \BOOKMARK [2][-]{subsection.3.2.8}{Kommunikation mit einer GIGABOX}{section.3.2}% 28
 \BOOKMARK [2][-]{subsection.3.2.9}{Kommunikation mit dem Benutzer}{section.3.2}% 29
@@ -52,35 +52,43 @@
 \BOOKMARK [2][-]{subsection.4.3.8}{Ausgabe von Ereignismeldungen}{section.4.3}% 52
 \BOOKMARK [2][-]{subsection.4.3.9}{Ergebnis}{section.4.3}% 53
 \BOOKMARK [0][-]{chapter.5}{Evaluation}{}% 54
-\BOOKMARK [1][-]{section.5.1}{Funktionalit\344t und Usability des Ist-Zustands}{chapter.5}% 55
-\BOOKMARK [2][-]{subsection.5.1.1}{Einstellung der Sprache}{section.5.1}% 56
-\BOOKMARK [2][-]{subsection.5.1.2}{Bereitstellung von Dokumentation zur GIGABOX, configurAIDER und PAWN}{section.5.1}% 57
-\BOOKMARK [2][-]{subsection.5.1.3}{Verbindung zu einer GIGABOX herstellen}{section.5.1}% 58
-\BOOKMARK [2][-]{subsection.5.1.4}{PAWN-Code kompilieren}{section.5.1}% 59
-\BOOKMARK [2][-]{subsection.5.1.5}{PAWN-Code entwickeln}{section.5.1}% 60
-\BOOKMARK [2][-]{subsection.5.1.6}{\334bertragen von Skript-Applikationen}{section.5.1}% 61
-\BOOKMARK [2][-]{subsection.5.1.7}{Kommunikaton mit verbundener GIGABOX}{section.5.1}% 62
-\BOOKMARK [2][-]{subsection.5.1.8}{Ausgabe von Ereignismeldungen des configurAIDERs}{section.5.1}% 63
-\BOOKMARK [1][-]{section.5.2}{Differenz zwischen Anforderungen und Ist-Zustand}{chapter.5}% 64
-\BOOKMARK [1][-]{section.5.3}{Quellcode des configurAIDERs}{chapter.5}% 65
-\BOOKMARK [1][-]{section.5.4}{Ergebnis}{chapter.5}% 66
-\BOOKMARK [0][-]{chapter.6}{Konzeption}{}% 67
-\BOOKMARK [1][-]{section.6.1}{\334bersicht}{chapter.6}% 68
-\BOOKMARK [1][-]{section.6.2}{Erweiterung des bestehenden configurAIDERs um neue Features}{chapter.6}% 69
-\BOOKMARK [1][-]{section.6.3}{Neuentwicklung des configurAIDERs}{chapter.6}% 70
-\BOOKMARK [1][-]{section.6.4}{Ergebnis}{chapter.6}% 71
-\BOOKMARK [0][-]{chapter.7}{Design}{}% 72
-\BOOKMARK [1][-]{section.7.1}{Entwurf der Benutzeroberfl\344che}{chapter.7}% 73
-\BOOKMARK [1][-]{section.7.2}{Entwurf der Softwarearchitektur}{chapter.7}% 74
-\BOOKMARK [2][-]{subsection.7.2.1}{Entwurf der Kontextabgrenzung}{section.7.2}% 75
-\BOOKMARK [2][-]{subsection.7.2.2}{Entwurf der Laufzeitsicht}{section.7.2}% 76
-\BOOKMARK [0][-]{chapter.8}{Realisierung}{}% 77
-\BOOKMARK [1][-]{section.8.1}{Andockbare Fenster}{chapter.8}% 78
-\BOOKMARK [1][-]{section.8.2}{Text Editor}{chapter.8}% 79
-\BOOKMARK [1][-]{section.8.3}{Projektexplorer}{chapter.8}% 80
-\BOOKMARK [1][-]{section.8.4}{Konsole}{chapter.8}% 81
-\BOOKMARK [1][-]{section.8.5}{Kommunikation mit GIGABOX}{chapter.8}% 82
-\BOOKMARK [0][-]{chapter.9}{Fazit und Ausblick}{}% 83
-\BOOKMARK [0][-]{section*.25}{Abbildungsverzeichnis}{}% 84
-\BOOKMARK [0][-]{section*.27}{Tabellenverzeichnis}{}% 85
-\BOOKMARK [0][-]{section*.29}{Literaturverzeichnis}{}% 86
+\BOOKMARK [1][-]{section.5.1}{\334berblick}{chapter.5}% 55
+\BOOKMARK [1][-]{section.5.2}{Funktionalit\344t und Usability des Ist-Zustands}{chapter.5}% 56
+\BOOKMARK [2][-]{subsection.5.2.1}{Einstellung der Sprache}{section.5.2}% 57
+\BOOKMARK [2][-]{subsection.5.2.2}{Bereitstellung von Dokumentation zur GIGABOX, configurAIDER und PAWN}{section.5.2}% 58
+\BOOKMARK [2][-]{subsection.5.2.3}{Verbindung zu einer GIGABOX herstellen}{section.5.2}% 59
+\BOOKMARK [2][-]{subsection.5.2.4}{PAWN-Code kompilieren}{section.5.2}% 60
+\BOOKMARK [2][-]{subsection.5.2.5}{PAWN-Code entwickeln}{section.5.2}% 61
+\BOOKMARK [2][-]{subsection.5.2.6}{\334bertragen von Skript-Applikationen}{section.5.2}% 62
+\BOOKMARK [2][-]{subsection.5.2.7}{Kommunikaton mit verbundener GIGABOX}{section.5.2}% 63
+\BOOKMARK [2][-]{subsection.5.2.8}{Ausgabe von Ereignismeldungen des configurAIDERs}{section.5.2}% 64
+\BOOKMARK [1][-]{section.5.3}{Differenz zwischen Anforderungen und Ist-Zustand}{chapter.5}% 65
+\BOOKMARK [1][-]{section.5.4}{Quellcode des configurAIDERs}{chapter.5}% 66
+\BOOKMARK [1][-]{section.5.5}{Ergebnis}{chapter.5}% 67
+\BOOKMARK [0][-]{chapter.6}{Konzeption}{}% 68
+\BOOKMARK [1][-]{section.6.1}{\334berblick}{chapter.6}% 69
+\BOOKMARK [1][-]{section.6.2}{Erweiterung des bestehenden configurAIDERs um neue Features}{chapter.6}% 70
+\BOOKMARK [1][-]{section.6.3}{Neuentwicklung des configurAIDERs}{chapter.6}% 71
+\BOOKMARK [1][-]{section.6.4}{Ergebnis}{chapter.6}% 72
+\BOOKMARK [0][-]{chapter.7}{Design}{}% 73
+\BOOKMARK [1][-]{section.7.1}{\334berblick}{chapter.7}% 74
+\BOOKMARK [1][-]{section.7.2}{Entwurf der Benutzeroberfl\344che}{chapter.7}% 75
+\BOOKMARK [1][-]{section.7.3}{Entwurf der Softwarearchitektur}{chapter.7}% 76
+\BOOKMARK [2][-]{subsection.7.3.1}{Model-View-ViewModel-Pattern \(MVVM-Pattern\)}{section.7.3}% 77
+\BOOKMARK [2][-]{subsection.7.3.2}{Dependency Injection}{section.7.3}% 78
+\BOOKMARK [2][-]{subsection.7.3.3}{Entwurf der Kontextabgrenzung}{section.7.3}% 79
+\BOOKMARK [2][-]{subsection.7.3.4}{Entwurf der Bausteinsicht}{section.7.3}% 80
+\BOOKMARK [2][-]{subsection.7.3.5}{Entwurf der Laufzeitsicht}{section.7.3}% 81
+\BOOKMARK [0][-]{chapter.8}{Realisierung}{}% 82
+\BOOKMARK [1][-]{section.8.1}{\334berblick}{chapter.8}% 83
+\BOOKMARK [1][-]{section.8.2}{Hauptfenster}{chapter.8}% 84
+\BOOKMARK [2][-]{subsection.8.2.1}{View}{section.8.2}% 85
+\BOOKMARK [2][-]{subsection.8.2.2}{ViewModel}{section.8.2}% 86
+\BOOKMARK [1][-]{section.8.3}{Texteditor}{chapter.8}% 87
+\BOOKMARK [1][-]{section.8.4}{Projektexplorer}{chapter.8}% 88
+\BOOKMARK [1][-]{section.8.5}{Konsole}{chapter.8}% 89
+\BOOKMARK [1][-]{section.8.6}{Kommunikation mit GIGABOX}{chapter.8}% 90
+\BOOKMARK [0][-]{chapter.9}{Fazit und Ausblick}{}% 91
+\BOOKMARK [0][-]{section*.35}{Abbildungsverzeichnis}{}% 92
+\BOOKMARK [0][-]{section*.37}{Tabellenverzeichnis}{}% 93
+\BOOKMARK [0][-]{section*.39}{Literaturverzeichnis}{}% 94

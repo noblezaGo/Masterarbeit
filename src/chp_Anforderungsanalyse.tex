@@ -1,12 +1,12 @@
 \chapter{Anforderungsanalyse} \label{chp:Anforderungsanalyse}
 
-\section{Übersicht}
+\section{Überblick}
 
 In diesem Kapitel soll eine Anforderungsanalyse für eine Entwicklungsumgebung für GIGABOX-Steuergeräte durchgeführt werden.
 In Abbildung \ref{fig:UseCasesGIGABOX} wurde gezeigt, für welche Anwendungen GIGABOXEN eingesetzt werden. 
 Die Anforderungen an die Entwicklungsumgebung wurden so gestellt, dass sie Softwareentwicklern für GIGABOX-Funktionen die Umsetzung dieser Anwendungen ermöglicht und möglichst große Unterstützung bei der Codeentwicklung bietet.
 
-Zuerst wurden Gespräche Gespräche mit Entwicklern geführt, vorhandener Programmcode aus realisierten Projekten analysiert und selbstständig Codeentwicklung mit dem bestehenden configurAIDER betrieben um herauszufinden, welche Use-Cases eine IDE zur Entwicklung von Funktionen für GIGABOX-Steuergeräte abdecken soll. Aus dieser Analyse entstanden die in Abbildung \ref{fig:UseCases} veranschaulichten Use-Cases.
+Zuerst wurden Gespräche Gespräche mit Entwicklern geführt, vorhandener Programmcode aus realisierten Projekten analysiert und selbstständig Codeentwicklung mit dem bestehenden configurAIDER betrieben um herauszufinden, welche Use Cases eine IDE zur Entwicklung von Funktionen für GIGABOX-Steuergeräte abdecken soll. Aus dieser Analyse entstanden die in Abbildung \ref{fig:UseCases} veranschaulichten Use-Cases.
 
 \begin{figure}[!htbp]
 	\centering
@@ -16,7 +16,7 @@ Zuerst wurden Gespräche Gespräche mit Entwicklern geführt, vorhandener Programmc
 \end{figure}
 
 
-Von den ermittelten Use-Cases wurden direkt die funktionalen Anforderungen abgeleitet, die im folgenden Abschnitt näher beleuchtet werden.
+Von den ermittelten Use Cases wurden direkt die funktionalen Anforderungen abgeleitet, die im folgenden Abschnitt näher beleuchtet werden.
 
 Auf Basis der Qualitätsmerkmale für die Anforderungsspezifikation im Standard IEEE 830-1998 werden die ermittelten funktionalen Anforderungen eingeteilt in drei Prioritärsklassen: 
 
@@ -32,17 +32,17 @@ Auf Basis der Qualitätsmerkmale für die Anforderungsspezifikation im Standard IE
 
 
 Zur Ermittlung der nichtfunktionalen Anforderungen wurden bekannte Vorgehensmodelle und Normen der Softwareentwicklung herangezogen.  
-Die hergeleiteten nichtfunktionalen Anforderungen sollen bei der Entwicklung beachtet werden, um eine hohe Qualität der zu entwickelenden Software sicherzustellen. Auf eine Bewertung wird verzichtet.
+Die hergeleiteten nichtfunktionalen Anforderungen sollen bei der Entwicklung beachtet werden, um eine hohe Qualität der zu entwickelnden Software sicherzustellen. Auf eine Bewertung wird verzichtet.
 
 Quelle: \cite{SWRequirements}
 
 \section{Ermittlung und Bewertung von funktionalen Anforderungen}
 
-\subsection{Erstellung von Projekten mit Baumstruktur}
+\subsection{Erstellung von Projekten mit Baumstruktur} \label{sec:ProjekteErstellen}
 
 \emph{Beschreibung}: 
 
-Innerhalb eines Projektes können verschiedene GIGABOX-Modelle angelegt werden. Für jedes angelegte GIGABOX-Modell können PAWN-Skripte erstellt werden mit der zum Modell passenden Dateiendung .gt**.p. Für jedes angelegte GIGABOX-Modell können Include-Files hinzugefügt werden.
+Innerhalb eines Projektes können verschiedene GIGABOX-Modelle angelegt werden. Für jedes angelegte GIGABOX-Modell können PAWN-Skripte erstellt werden mit der zum Modell passenden Dateiendung .p. Für jedes angelegte GIGABOX-Modell können Include-Files hinzugefügt werden.
 Der Benutzer erhält einen strukturierten Überblick über alle seine GIGABOX-Projekte und alle für ein Projekt entwickelten Skripte. Das Öffnen eines Skriptes erfolgt komfortabel über Doppelklick auf ein Skript in der Projektstruktur. Lästiges navigieren durch die Dateistruktur des PCs beim Öffnen eines Skriptes entfällt + der Benutzer muss den Ablageort im Dateisystem nicht wissen. 
 
 \emph{Bewertung}:
@@ -187,7 +187,7 @@ Erleichtert es Kunden ohne Programmierkenntnisse, selbständig GIGABOX-Funktional
 Im Vergleich zur direkten Codeentwicklung können allerdings nur eingeschränkte Funktionalitäten realisiert werden. Erfahrene Softwareentwickler werden aufgrund dieser Tatsache PAWN-Code direkt entwickeln. 
 Einteilung in Klasse "`Optional"'.
 
-\subsection{Verbundene GIGABOXEN auflisten}
+\subsection{Verbundene GIGABOXEN auflisten} \label{sec:GIGABOXENauflisten}
 
 
 		
@@ -206,7 +206,7 @@ Einteilung in Klasse "`Optional"'.
 
 
 
-\subsection{PAWN-Compiler}
+\subsection{Kompilieren von Pawn-Quellcodedateien} \label{sec:Kompilieren}
 
 	\emph{Beschreibung:}
 	
@@ -220,11 +220,11 @@ Einteilung in Klasse "`Optional"'.
 
 
 
-\subsection{Beschreiben/Auslesen des Flash-Speichers der GIGABOX}
+\subsection{Beschreiben/Auslesen des Flash-Speichers der GIGABOX} \label{sec:FlashenGIGABOX}
 
 	\emph{Beschreibung:}
 	
-	Skript-Applikationen können vom PC auf den Flash-Speicher einer GIGABOX übertragen werden. Sich bereits auf dem Flash-Speicher befindliche Skripte können auf den PC geladen und angezeigt werden. Die Übertragung soll jeweils per Kabel über die USB-Schnittstelle und per Bluetooth möglich sein.
+Kompilierte	Skript-Applikationen können vom PC auf den Flash-Speicher einer GIGABOX übertragen werden. Sich bereits auf dem Flash-Speicher befindliche Skripte können auf den PC geladen und angezeigt werden. Die Übertragung soll jeweils per Kabel über die USB-Schnittstelle und per Bluetooth möglich sein.
 	
 	
 	\emph{Bewertung:}
@@ -233,7 +233,7 @@ Einteilung in Klasse "`Optional"'.
 Bluetooth-Übertragung wird in Klasse "`Optional"' eingestuft, da es wenige Use-Cases gibt, bei denen eine Funkübertragung Vorteile gegenüber der Kabelübertragung bietet. Ein möglicher Use-Case wäre eine schwer zugängliche GIGABOX im Fahrzeug, auf die ein neues Skript aufgespielt werden soll. Eine Übertragung per Bluetooth würde einen aufwändigen Ausbau der GIGABOX aus dem Fahrzeug ersparen.	
 
 
-\subsection{Kommunikation mit einer GIGABOX}
+\subsection{Kommunikation mit einer GIGABOX} \label{sec:KommunikationMitGIGABOX}
 
 	\emph{Beschreibung:}
 	
@@ -294,7 +294,7 @@ Der Benutzer kann zeilenweise zu den folgenden Anweisungen springen.
 Damit können die Funktionen in die Prioritätsklasse "`Optional"' eingeteilt werden.
 	
 
-\subsection{Bereitstellung von Dokumentationen}
+\subsection{Bereitstellung von Dokumentationen} \label{sec:BereitstellungDoku}
 
 	\emph{Beschreibung:}
 	

@@ -1,11 +1,48 @@
 \chapter{Design}
 
-\section{Entwurf der Benutzeroberfläche}
+\section{Überblick}
+
+In Kapitel \ref{chp:Evaluation} wurde entschieden, eine Neuentwicklung des configurAIDERs weiter zu verfolgen. Hierzu muss die Benutzeroberfläche neu entworfen werden, eine neue Software-Architektur entwickelt werden und anshließend eine Umsetzung in Programmcode erfolgen. Dieses Kapitel beschäftigt sich mit dem Entwurf einer neuen Benutzeroberfläche und dem herleiten einer neuen Softwarearchitektur. 
+
+\section{Entwurf der Benutzeroberfläche} \label{sec:EntwurfUI}
+
+Bei dem Entwurf der GUI sollen die in Abschnitt \ref{sec:QualitätskriterienSW} definierten Grundsätze der Dialoggestaltung aus ISO ISO/IEC 25010 beachtet werden.
+ 
+Die Hauptelemente der Benutzeroberfläche sollen ein Texteditor, ein Projektexplorer, eine Geräteliste sowie eine Konsole bilden. 
+Zur Bedienung dieser Hauptelemente soll die GUI über eine Menüleiste, eine Toolbar mit Buttons sowie über Kontextmenüs verfügen.
+Die Menüleiste soll alle möglichen Funktionen bereitstellen, die im jeweiligen Bedienungskontext zur Verfügung stehen. 
+Den Zugriff auf häufig benötigte Funktionen soll die Toolbar ermöglichen.
+
+Folgende Buttons soll die Toolbar enthalten:
+
+\begin{itemize}
+	\item Neues Projekt erstellen
+	\item Projekt öffnen
+	\item Datei öffnen
+	\item Datei speichern
+	\item Datei speichern unter
+	\item Datei kompilieren
+	\item Datei flashen
+\end{itemize}
+
+Die vier GUI-Hauptelemente sollen innerhalb eines einzelnen Programmfensters dargestellt werden, um dem Benutzer einen zentralen Zugriff auf alle zur Verfügung stehenden Funktionen zu ermöglichen. Als zentrales Element soll in der Mitte des Fensters der Texteditor angeordnet werden, da für die Anzeige von Quellcode viel Platz beansprucht wird. Um innerhalb von größeren Programmskripten zu navigieren, muss der Texteditor scrollbar sein.
+Die Konsole soll unterhalb des Texteditors ausgerichtet sein, da ein breites Eingabefeld für Befehle benötigt wird. Da in vertikale Richtung wenig Platz zur Verfügung steht, muss die Textausgabe der Konsole scrollbar sein. 
+Die Inhalte des Projektexplorers und der Geräteliste sind in Listenform aufgebaut und benötigen demnach viel Platz in vertikale Richtung. Die Anordnung dieser Elemente rechts und links des Texteditors ermöglichen somit eine optimale Darstellung.
+
+(Vereinzelt Designbegründung nach ISO einfügen)
+
+Abbildung \ref{fig:Mockup} zeigt ein Mockup der Benutzeroberfläche, das die beschriebenen Anordnungen der GUI-Elemente umsetzt.
 
 
 
+\begin{figure}[!htbp]
+	\centering
+		\includegraphics[width=\textwidth]{images/configurAIDER_Mockup.png}
+	\caption{Mockup der Benutzeroberfläche des configurAIDERs}
+	\label{fig:Mockup}
+\end{figure}
 
-Entwurf mit Pencil hier einfügen
+
 
 Erläuterung des Entwurfes mit Bezugnahme auf ISO, die gute Usability definiert
 
@@ -15,16 +52,67 @@ Erläuterung des Entwurfes mit Bezugnahme auf ISO, die gute Usability definiert
 
 \cite{EffSWArchitektur}
 
-Eine Softwarearchitektur definiert die Komponenten eines Systems, beschreibt deren wesentliche Merkmale und charakterisiert die Beziehungen dieser Komponenten. Sie beschreibt den statischen Aufbau einer Software im Sinne eines Bauplans und den dynamischen Ablauf einer Software im Sinne eines Ablaufplans. 
+\textit{"`The software architecture of a program or computing system is the structure or structures of the system, which comprises software components, the externally visible properties of those components and the relationship among them."'} \cite{DefSWArchitektur}
+
+Nach dieser in der Literatur oft zitierten Definition legt die Softwarearchitektur die Komponenten eines Systems fest, beschreibt deren wesentliche, von außen sichtbare Merkmale und charakterisiert die Beziehungen dieser Komponenten. Sie beschreibt den statischen Aufbau einer Software im Sinne eines Bauplans und den dynamischen Ablauf einer Software im Sinne eines Ablaufplans. 
 
 Die in diesem Kapitel vorgestellte Software-Architektur des configurAIDERs wurde entworfen auf Basis der funktionalen und nichtfunktionalen Anforderungen an Software in Kapitel \ref{chp:Anforderungsanalyse}. Wie im vorigen Kapitel "`Konzeption"' erläutert, werden nur Funktionen umgesetzt, die als "`Essential"' oder "`Conditional"' priorisiert wurden.
-\textcolor[rgb]{1,0,0}{Evtl. nochmal die Funktionen aufzählen (textuell oder als UseCaseDiagramm), die implementiert werden sollen}
+
+\subsection{Model-View-ViewModel-Pattern (MVVM-Pattern)}	\label{sec:MVVM}
+
+Das Model-View-ViewModel-Pattern (MVVM) ist ein Software-Architekturmuster. Das Muster basiert auf der Idee des Model-View-Controller-Patterns (MVC), die Verantwortlichkeiten für Darstellung und Layout der Benutzeroberfläche von der Logik der Benutzeroberfläche zu trennen. Das MVVM-Pattern verwendet drei Komponenten, die jeweils unterschiedliche, voneinander getrennte Verantwortlichkeiten besitzen. Diese drei Komponenten sind die View, das Model und das ViewModel.
+
+Die View ist zuständig für Aussehen und Struktur der Elemente der Benutzeroberfläche. In WPF wird die View in einer XAML-Datei beschrieben. Jede XAML-Datei ist untrennbar mit einer Codebehind-Datei gekoppelt, in der UI-Logik implementiert werden kann. Nach dem MVVM-Pattern soll im Codebehind keine Logik implementiert werden, die außerhalb der Verantwortlichkeiten der View liegt. 
+
+Das Model enthält die Daten, die dem Benutzer über die View angezeigt werden und von diesem bearbeitet werden können. Hier wird auch eine Validierung der eingegebenen Daten vorgenommen.
+
+Das ViewModel stellt das Bindeglied zwischen View und Model dar. Hier wird die UI-Logik implementiert. 
+Die Daten des Models werden im ViewModel manipuliert, um sie in geeigneter Weise über die View darstellen zu können. View und ViewModel werden nach dem MVVM-Pattern ausschließlich mithilfe von Data Bindings und Commands gekoppelt.
+Data Binding ermöglich der View, sich an Properties des ViewModels zu binden und damit auf benötigte Daten zugreifen zu können.
+Beispielsweise kann ein Texteingabefeld der View über Data Binding an eine \texttt{string}-Property im ViewModel gebunden werden. Im ViewModel steht dann der Inhalt der Textbox als \texttt{string} zur Verfügung, kann dort weiterverarbeitet und anschließend im Model gespeichert werden.
+Commands werden eingesetzt, um auf Benutzeraktionen wie einen Klick auf einen Button reagieren zu können. Jedes in der View definierte UI-Element, das das Interface \texttt{ICommandSource} implementiert, löst bei einer definierten Aktion ein Command aus.
+Über Data Binding kann auf ein Property vom Typ \texttt{ICommand} im ViewModel gebunden werden. Dort wird die \emph{Execute}-Methode, die im \texttt{ICommand}-Interface enthalten ist, aufgerufen. In der \emph{Execute}-Methode wird schließlich die Logik definiert, die die Benutzeraktion auslösen soll.
+
+
+
+
+Ändern sich im Model oder im ViewModel Daten, die über Data Binding an die View gebunden sind, muss die View über Änderungen informiert werden. Sie kann dann von dem Property, das die geänderten Daten bereitstellt, die Daten neu abfragen und die aktualisierten Daten auf der Benutzeroberfläche ausgeben. Ein solcher Benachrichtigungsmechanismus kann realisiert werden, indem alle Model- und ViewModel-Klassen das Interface \texttt{INotifyPropertyChanged} implementieren. Jede dieser Klassen muss dann ein Event deklarieren, das ein Delegat vom Typ \texttt{PropertyChangedEventHandler} verwendet. Wird ein Property neu gesetzt, wird das Event ausgelöst und als Folge davon die View darüber benachrichtigt, in welchem Property Änderungen vorgenommen wurden.
+
+Abbildung \ref{fig:MVVMPrinciple} zeigt beschriebene Prinzip aus Data Binding, Commands und Benachrichtigungen.
+
+\begin{figure}[!htbp]
+	\centering
+		\includegraphics[width=\textwidth]{images/MVVMPrinciple.png}
+	\caption{Prinzip des MVVM-Patter. Quelle: \cite{MSMVVM}}
+	\label{fig:MVVMPrinciple}
+\end{figure}
+
+Quelle: \cite{MSMVVM}, \cite{WPF}
+
+
+\subsection{Dependency Injection}
+ 
 
 
 \subsection{Entwurf der Kontextabgrenzung}
 
 Die Kontextabgrenzung zeigt das System als Blackbox und stellt das System in Kontext zu seiner Umgebung dar. Abbildung \ref{fig:Kontextabgrenzung} zeigt die Kontextabgrenzung des configurAIDERs als UML Deployment Diagramm. Es werden alle den configurAIDER umgebenden Systeme dargestellt, die zur Erfüllung der in der Anforderungsanlayse hergeleiteten Use-Cases (nur die als "`Essential"' oder "`Conditional"' klassifizierten) benötigt werden.
-Dazu zählt der Benutzer, eine GIGABOX und ein Datenspeicher. 
+
+GIGABOX Steuergeräte stehen in einer bidirektionalen Kommunikationsbeziehung mit dem configurAIDER über USB. Wenn eine GIGABOX an die USB-Schnittstelle des Computers angeschlossen wird, soll sie Geräteinformationen an den configurAIDER senden. Alle verbundenen GIGABOXEN können dann im configurAIDER mit den zugehörigen Geräteinformationen aufgelistet werden (Use Case "`Verbundene GIGABOXEN auflisten"' \ref{sec:GIGABOXENauflisten}).
+Die USB-Verbindung wird auch genutzt, um Befehle von der Konsole des configurAIDERs an eine GIGABOX zu senden und die Antwort von der GIGABOX zu empfangen (Use Case "`Kommunikation mit einer GIGABOX"' \ref{sec:KommunikationMitGIGABOX}). Zusätzlich wird die Kommunikationsverbindung für den Flashvorgang benötigt (Use Case "`Beschreiben/Auslesen des Flash-Speichers der GIGABOX"' \ref{sec:FlashenGIGABOX}).
+
+Der Benutzer steht ebenfalls in einer bidirektionalen Kommunikationsbeziehung mit dem configurAIDER. Er tätigt Eingaben über Eingabegeräte wie Maus und Tastatur und erhält Rückmeldung über Ausgabegeräte wie einen Bildschirm.
+
+Zur Erfüllung des Use Cases "`Erstellung von Projekten mit Baumstruktur"' \ref{sec:ProjekteErstellen} wird eine Projektdatei benötigt, in der die Projektstruktur und Informationen über die im Projekt enthaltenen Dateien wie Name und Pfad abgebildet sind. 
+Das XML-Format ist hervorragend geeignet um Informationen und hierarchische Strukturen maschinenlesbar abzubilden und wird deshalb für die Projektdatei verwendet.
+
+GIGABOX-Applikationen liegen als Pawn-Quellcodedatei (*.p) vor.
+Bei der Kompilierung wird eine Pawn-Quellcodedatei verwendet und in Bytecode kompiliert, der in eine Binärdatei (*.amx) geschrieben wird (Use Case "`Kompilieren von Pawn-Quellcodedateien"' \ref{sec:Kompilieren}). 
+    
+Zum Flashen einer GIGABOX-Applikation auf die GIGABOX muss der Bytecode der vom Compiler erzeugten Binärdatei (*.amx) im Intel Hex-Format vorliegen anstatt im Binärformat. Eine Umwandlung ist vonnöten.
+Die Umwandlung des Bytecodes in das Intel Hex-Format erzeugt eine Hex-Datei (*.hex). Diese Hex-Datei kann nun auf den Flash-Speicher der GIGABOX geschrieben werden.
+
+Der Benutzer soll aus dem configurAIDER heraus Hilfedokumentationen aufrufen können (Use Case Bereitstellung von Dokumentationen \ref{sec:BereitstellungDoku}). Die Dokumente liegen im PDF-Format vor und werden bei diesem Use Case aus dem configurAIDER aufgerufen und in dem auf dem Betriebssystem installierten PDF-Viewer angezeigt.
 
  
 \begin{figure}[!htbp]
@@ -35,30 +123,121 @@ Dazu zählt der Benutzer, eine GIGABOX und ein Datenspeicher.
 \end{figure}
 
 
-\subsection{Entwurf der Laufzeitsicht}
+\subsection{Entwurf der Bausteinsicht} \label{sec:Bausteinsicht}
 
-Die Laufzeitsicht veranschaulicht, wie die Komponenten eines Systems zur Laufzeit zusammenarbeiten. 
-Für jede Komponente des configurAIDERs wurde eine Laufzeitsicht mithilfe von UML Sequenzdiagrammen erstellt. Dort kann für jede Komponente abgelesen werden, mit welchen anderen Komponenten sich kommuniziert im Rahmen der wichtigsten Use-Cases.
+Die Bausteinsicht stellt den Quellcode eines Softwaresystems in unterschiedlichen Abstrakti
+onsebenen dar. Sie veranschaulicht die Struktur und die Zusammenhänge der unterschiedlichen Bausteine eines Systems.
+Bausteine werden hier innerhalb von UML-Diagrammen als Pakete, Komponenten und Klassen dargestellt. 
 
-Abbildung XX zeigt die Laufzeitsicht des configurAIDERs als UML Sequenzdiagramm. Für die wichtigsten Use-Cases werden die Kommunikationsabläufe zwischen den verschiedenen Komponenten dargestellt.
+\subsubsection{Abstraktionsebene 1}	\label{sec:Abstraktionsebene1}
+
+Abbildung \ref{fig:BausteinsichtTopLayer} zeigt die oberste Abstraktionsebene der Bausteinsicht des configurAIDERs. Das \texttt{Core}-Paket repräsentiert die ausführbare Datei (.exe) der Software. Hier ist sind die verschiedenen Views und die zugehörigen ViewModels enthalten. Die ViewModels übernehmen die Verantwortlichkeiten der Models mit. Es wurde auf Models verzichtet, da die Software nicht auf große Datenmengen zugreifen muss. Die Komplexität wird dadurch reduziert.
 
 \begin{figure}[!htbp]
 	\centering
-		\includegraphics[width=\textwidth]{images/SequenzdiagrammLaufzeitsicht.png}
-	\caption{Darstellung der Laufzeitsicht des Systems im UML Sequenzdiagramm}
-	\label{fig:Laufzeitsicht}
+		\includegraphics[width=\textwidth]{images/BausteinsichtTopLayer.png}
+	\caption{Darstellung der ersten Ebene der Bausteinsicht}
+	\label{fig:BausteinsichtTopLayer}
+\end{figure}
+
+
+Das \texttt{Core}-Paket benutzt die Pakete \texttt{AvalonEdit}, \texttt{AvalonDock}, \texttt{PawnCompilerLib}, \texttt{InplaceEditBoxLib} und \texttt{UsbDevicesLib}. 
+
+Bei \texttt{AvalonEdit} handelt es sich um einen WPF basierten Texteditor, dessen Quellcode frei einsehbar ist (Open Source) und für die verwendete Version 4.3.0 unter der GNU Lesser General Public License veröffentlicht wird. Entwickelt wurde \texttt{AvalonEdit} für die Open Source IDE "`SharpDevelop"', die eine kostenlose Alternative zu Microsofts IDE "`Visual Studio"' darstellt. \cite{AvalonEdit}
+
+
+\texttt{AvalonDock} ist ein Paket, das die Darstellung von Inhalten in frei andockbaren Fenstern ermöglicht.
+Seit der Veröffentlichung in der Version 2.0 kann \texttt{AvalonDock} auch unter Einhaltung des MVVM-Patterns verwendet werden.
+Es wird veröffentlicht unter der BSD-Lizenz und ist Open Source. \cite{AvalonDock}
+
+\texttt{InplaceEditBoxLib} ist ein Paket, das editierbare Textboxen zur Verfügung stellt. Die Textbox kann Text ausgeben und bei Bedarf ein Eingabefeld einblenden, über das der Benutzer den angezeigten Text ändern kann. Die Textboxen aus diesem Paket werden innerhalb des Projektexplorers des configurAIDERs benutzt, um dem Benutzer eine Neubenamung der Objekte zu ermöglichen. Der Quellcode ist frei zugänglich von Quelle \cite{EditTextBox} zu beziehen und steht unter der "`Code Project Open License (CPOL)"'. 
+
+\texttt{PawnCompilerLib} ist zuständig für die Kompilierung von Pawn-Quelldateien sowie für die Konvertierung der vom Compiler erzeugten Binärdateien in  Hex-Dateien. Der Pawn-Compiler "`pawncc.exe"' wird als Konsolenanwendung verwendet, frei beziehbar von Quelle \cite{PawnCompiler}. 
+Zur Umwandlung der Binärdateien in flashbare Hex-Dateien wird die Konsolenanwendung "`srec\_cat.exe"' verwendet, das im Paket "`SRecord 1.64"' von Quelle \cite{srecCat} enthalten ist.
+
+\texttt{UsbDevicesLib} ist verantwortlich für die USB-Kommunikation des configurAIDERs mit GIGABOX-Steuergeräten. \\
+Eine Abstraktionsebene unter \texttt{UsbNotification} liegen die Pakete \texttt{UsbDevicesLib}, \texttt{HidLib} und \texttt{GigaboxFdLib}.
+\texttt{UsbDevicesLib} ermöglicht es, über die Windows API eine Benachrichtigung zu bekommen, sobald ein USB-Gerät an der USB-Schnittstelle des PCs angeschlossen oder entfernt wird. Die Geräteliste des configurAIDERs kann somit stets aktualisiert werden, sobald eine solche Benachrichtigung registriert wird.	\\
+\texttt{HidLib} ermöglicht es, eine Verbindung zu einem USB-HID (Human Interface Device) Gerät herzustellen und mit diesem Daten auszutauschen. 
+Das Paket enthält Wrapper-Klassen, die die zur Kommunikation benötigten nativen APIs kapseln. 
+Die Klassen stellen ihrer Umgebung Programmfunktionen bereit, mithilfe derer Datenpakete an ein verbundenes USB-HID Gerät gesendet und empfangen werden können.
+\texttt{HidLib} basiert auf Quellcode des Projektes "`MightyHID"' verwendet, das von Quelle \cite{MightyHID} stammt.	\\
+Mithilfe des Paketes \texttt{GigaboxFdHid} wird die Kommunikation des configurAIDERS mit einer GIGABOX realisiert. 
+Der Benutzer soll einer GIGABOX Befehle über die Konsole des configurAIDER senden können sowie eine Hex-Datei auf den Flash-Speicher des Gerätes schreiben zu können. GIGABOXEN werden von einem PC als USB-HID Gerät erkannt, deshalb kann zur Datenübertragung das \texttt{HidLib}-Paket verwendet werden. 
+
+\subsubsection{Abstraktionsebene 2}
+
+Aufgrund der Vielzahl an Paketen wird die Verfeinerung der Abstraktion auf die Pakete \texttt{View} und \texttt{ViewModel} beschränkt. Der Code dieser Pakete wurde vollständig selbst entwickelt und basiert nicht auf Quellcode von Dritten.
+
+Grundsätzlich besteht der configurAIDER aus vier Elementen. Einer Menüleiste und Buttons in der Kopfzeile, einem Texteditor, einem Projektexplorer und einer Liste zur Anzeige aller angeschlossener GIGABOX-Geräte. Jedes der Elemente besitzt eine eigene View, die mithilfe einer XAML-Datei beschrieben wird. Daten und Logik zu jeder View werden durch verschiedene ViewModels bereitgestellt, die über Data Binding und Commands lose miteinander gekoppelt sind.
+
+\begin{figure}[!htbp]
+	\centering
+		\includegraphics[width=\textwidth]{images/ViewViewModelBinding.png}
+	\caption{Kopplung zwischen Views und  ViewModels}
+	\label{fig:ViewViewModelBinding}
+\end{figure}
+
+Das UML Klassendiagramm \ref{fig:ClassDiagramViewModels} zeigt die Struktur der ViewModel-Klassen im UML Klassendiagramm.
+
+\begin{figure}[!htbp]
+	\centering
+		\includegraphics[width=\textwidth]{images/ClassDiagramViewModels.png}
+	\caption{Struktur der ViewModel-Klassen im UML Klassendiagramm}
+	\label{fig:ClassDiagramViewModels}
 \end{figure}
 
 
 
-Was ist Softwarearchitektur? IEEE 1471-2000
+\texttt{ViewModelBase} ist die abstrakte Basisklasse aller ViewModels. Sie implementiert das Interface \texttt{INotifyPropertyChanged} und stellt Funktionen bereit, mithilfe derer die View über Datenänderungen innerhalb eines ViewModels informiert werden kann.
+Dieser Benachrichtigungsmechanismus, der im Rahmen des MVVM-Patterns verwendet wird, wurde in Abschnitt \ref{sec:MVVM} näher beschrieben.
+
+\subsubsection{Abstraktionsebene 3}
+
+Auf Abstraktionsebene 3 wird ausschließlich der Projektexplorer beschrieben, dieser besitzt trotz niedriger Abstraktion noch eine komplexe Struktur besitzt.
+Im Projektexplorer kann der Benutzer eine hierarchische Dateistruktur aus Elementen anlegen, wie sie beispielsweise vom Windows Explorer bekannt ist. Diese Elemente können ein Projekt, Ordner, Pawn-Skriptdateien und Pawn-Includedateien sein.
+
+Das Projektexplorerfenster wird durch die Klasse \texttt{ProjectExplorerContainerViewModel} repräsentiert, die auch die Kopplung mit \texttt{ProjectExplorerView} realisiert (siehe Abbildung \ref{fig:ViewViewModelBinding}). 
+Innerhalb des Projektexplorers kann ein Projekt angelegt werden, das durch die Klasse \texttt{ProjectViewModel} repräsentiert wird.
+Zu jedem Projekt können entweder Ordner (repräsentiert durch \texttt{FolderViewModel}), Pawn-Skriptdateien (repräsentiert durch \texttt{ScriptFileViewModel}) und Pawn-Includedateien (repräsentiert durch \texttt{IncludeFileViewModel}) hinzugefügt werden.
+Innerhalb eines Ordners können Pawn-Skriptdateien und Pawn-Includedateien angelegt werden.	\\
+Abbildung \ref{fig:ProjectExplorerItemsComposition} zeigt diese Zusammenhänge der Klasseninstanzen in einem UML-Klassendiagramm mithilfe von Kompositionen und den zugehörigen Multiplizitäten.
 
 
-Architekturmuster: Layer-Architektur: MVVM
-Bild mit MVVM Model, 3 Schichten
+\begin{figure}[!htbp]
+	\centering
+		\includegraphics[width=\textwidth]{images/ProjectExplorerItemsComposition.png}
+	\caption{Kompositionsbeziehungen zwischen den ViewModels des Projektexplorers in einem UML-Klassendiagramm}
+	\label{fig:ProjectExplorerItemsComposition}
+\end{figure}
 
-Architektur des configurAIDERS
+Alle beschriebenen Klassen, die Elemente im Projektexplorer repräsentieren, leiten von \texttt{ProjectExplorerItemViewModelBase} ab. \texttt{ProjectExplorerItemViewModelBase} implementiert das Interface \texttt{IProjectExplorerItem}. Das Interface legt fest, welche Properties und Methoden ein Element des Projektexplorers enthalten muss.	\\
+Abbildung \ref{fig:ProjectExplorerClassStructure} zeigt die Struktur der Klassen, die für den Projektexplorer von Bedeutung sind. 
 
-Module:
-Rahmenfenster  
-Projektverwaltung
+\begin{figure}[!htbp]
+	\centering
+		\includegraphics[width=\textwidth]{images/ProjectExplorerClassStructure.png}
+	\caption{Struktur der Klassen des Projektexplorers in einem UML-Klassendiagramm}
+	\label{fig:ProjectExplorerClassStructure}
+\end{figure}
+
+
+\subsection{Entwurf der Laufzeitsicht}
+
+Die Laufzeitsicht veranschaulicht, wie die in der Bausteinsicht gezeigten Klassen zur Laufzeit interagieren. 
+Für die wichtigsten Use Cases wurde jeweils eine Laufzeitsicht erstellt mithilfe von UML Sequenzdiagrammen.
+
+Beispielhaft wird hier die Laufzeitsicht des Use Cases "`Steuerbefehle an GIGABOX senden"' angeführt. Abbildung \ref{fig:SequenzdiagrammSteuerbefehle} zeigt das zugehörige Sequenzdiagramm. In der Darstellung des Diagrammes wird die Annahme getroffen, dass der Benutzer bereits eine GIGABOX angewählt hat, mit der kommuniziert werden soll. 
+
+
+\begin{figure}[!htbp]
+	\centering
+		\includegraphics[width=\textwidth]{images/Steuerbefehle_senden_SequenceDiagram.png}
+	\caption{Darstellung der Laufzeitsicht des Systems im UML Sequenzdiagramm}
+	\label{fig:SequenzdiagrammSteuerbefehle}
+\end{figure}
+
+Als initiale Handlung schreibt der Benutzer einen Befehl in die Konsole des configurAIDERs. Im Diagramm wird dies dargestellt durch die Nachricht \emph{WriteCommandToConsole()} an eine Instanz vom Typ \texttt{ConsoleView}, die die Benutzeroberfläche repräsentiert. Der eingegebene Befehl wird in einer Instanz von \texttt{ConsoleViewModel} gespeichert.
+Sobald der Benutzer die Eingabe mit Enter bestätigt, wird über einen Command die Instanz von \texttt{ConsoleViewModel} benachrichtigt, dass die Benutzereingabe ausgeführt werden soll. Die Funktion \emph{Open()} wird aufgerufen, die die Klasse \texttt{HIDDev} implementiert. Diese Funktion ermöglicht einen Lese- und Schreibzugriff auf das angewählte Gerät. Der vom Benutzer eingegebene Befehl wird nun an die GIGABOX gesendet. Für ein definiertes Zeitfenster wird anschließend auf eine Antwort gewartet. 
+Wird eine Antwort empfangen, wird diese in der Instanz von \texttt{ConsoleViewModel} gespeichert und auf die Konsole geschrieben. Abschließend wird der Lese- und Schreibzugriff zu dem Gerät wieder beendet.
+

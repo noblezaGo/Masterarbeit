@@ -1,18 +1,132 @@
 \chapter{Realisierung}
 
-\section{Andockbare Fenster}
+\section{Überblick}
 
-Realisierung mit AvalonDock
+In diesem Kapitel wird vorgestellt, wie das in Abschnitt \ref{sec:Neuentwicklung} vorgestellte Konzept, den configurAIDER vollständig neu zu entwickeln, umgesetzt wurde. Innerhalb des V-Modells beschreibt dieses Kapitel die Implementierungsphase. 
+Hier werden die in der Anforderungsanalyse festgelegten Anforderungen in Code umgesetzt unter Beachtung der in der vorherigen Phase entworfenen Softwarearchitektur. 
 
-Beschreibung der bereitgestellten Funktionen
+In Abschnitt \ref{sec:EntwurfUI} wurde ein Mockup der Benutzeroberfläche entworfen, an dem sich sich die tatsächlich realisierte GUI orientiert. 
+Sie besteht aus einem Hauptfenster, in das ein Texteditor, eine Geräteliste, eine Konsole und ein Projektexplorer eingebettet werden können. 
 
-Beschreibung der Verwendung/ Codeanbindung von AvalonDock
+Zu dem Hauptfenster und den Elementen wird jeweils beschrieben, wie die Benutzeroberfläche ("`View"') und die zugehörige Programmlogik ("`ViewModel"') erstellt wurde. 
 
-\section{Text Editor}
 
-Realisierung mit AvalonEdit
+\section{Hauptfenster}
 
-Beschreibung der Funktionen - Syntaxhighlighting, Zeilennummern, Autovervollständigung,...
+\subsection{View}
+
+Die View des Hauptfensters besteht aus einer horizontalen Menüleiste als oberstes Element, einer Symbolleiste sowie freier Fläche, in die andere Fensterelemente eingebettet werden können. Das Hauptfenster ist in einer XAML-Datei mit dem Namen "`MainWindow"' definiert.
+
+Zur Erstellung der Menüleiste wird eine Instanz der Klasse \texttt{Menu} erzeugt, die sich im Namespace \texttt{Systems.Windows.Controls} befindet. Menüeinträge können innerhalb eines \texttt{Menu}-Objektes mit Objekten der Klasse \texttt{MenuItem} erstellt werden. Durch Schachtelung von \texttt{MenuItem}-Objekten ineinander kann sehr einfach ein Menü mit ineinander geschachtelten Inhalten erstellt werden.   
+Sobald ein Mausklick auf das Element registriert wird, kann \texttt{MenuItem} einen Command auslösen. 
+Die Klasse stellt dazu die Property \texttt{Command} bereit, die über Data Binding an eine Property vom Typ \texttt{ICommand} eines ViewModels gebunden wird. Das Prinzip von Commands und Data Binding in WPF-Applikationen wurde in Abschnitt \ref{sec:MVVM} "`MVVM-Pattern"' näher erläutert. Das folgende Codebeispiel in XAML erstellt eine Menüleiste mit geschachtelten Menüeinträgen.
+(Evtl. Bild des erzeugten Menüs einfügen)  
+	
+	%
+%\begin{minted}[breaklines, linenos]{xml}
+%<Menu IsMainMenu="True" >
+	%<MenuItem Header="_Code" >
+		%<MenuItem Header="Compile" Command="{Binding OnCompileActiveDocumentCommand}"/>
+		%<MenuItem Header="Flash" Command="{Binding OnFlashActiveDocumentCommand}"/>
+	%</MenuItem>
+%</Menu>
+%\end{minted}
+
+Um Symbolleisten zu erstellen, stellt das .NET-Framework die Klasse \texttt{Toolbar} bereit. 
+Innerhalb der Symbolleiste wird die Klasse \texttt{Button} benutzt, um Schaltflächen zu kreieren. Objekte vom Typ \texttt{Button} können Commands auslösen, sobald ein Mausklick auf das Objekt registriert wird.
+Innerhalb der \texttt{Button}-Objekte werden Objekte der Klasse \texttt{Image} erstellt, über deren Property \texttt{Source} der Pfad zu einer Bilddatei angegeben wird.
+Die verwendeten Symbole stammen von der "`Visual Studio Image Library"', die von Microsoft frei zur Verfügung gestellt wird \cite{VSImgLib}.
+
+Innerhalb der verbleibenden leeren Fläche sollen andere Elemente eingebettet werden können. Hierzu wird AvalonDock verwendet. Das Paket ermöglicht es, Fenster an den Rändern eines Hauptfensters anzudocken, frei herauszulösen oder auszublenden. Mithilfe der \texttt{DockingManager}-Klasse werden die Fenster eingebettet. Es können zwei verschiedene Typen von Fenstern eingebunden werden. \\
+Der erste Typ ist \texttt{LayoutDocument} und kann innerhalb eines festen Rahmenfensters vom Typ \texttt{LayoutDocumentPane} eingebettet werden. 
+Fenster dieses Typs werden im Rahmenfenster als Tab dargestellt und sind prädestiniert dafür, Textdokumente anzuzeigen.
+Ein \texttt{LayoutDocument}-Element kann nicht an Ränder andocken. \\
+Der zweite Fenstertyp ist \texttt{LayoutAnchorable}, das in ein Rahmenfenster vom Typ \texttt{LayoutAnchorablePane} eingebettet wird. \texttt{LayoutAnchorablePane} kann an Rändern angedockt oder am Rand versteckt werden. \\
+Beide Fenstertypen können aus ihrem Rahmenfenster herausgelöst und als frei verschiebbares \texttt{LayoutFloatingWindow} dargestellt werden.
+\textcolor[rgb]{1,0,0}{Bild einfügen mit Kennzeichnung der Fenstertypen zum besseren Verständnis.
+}
+Die Klasse \texttt{DockingManager} besitzt die Properties \texttt{DocumentsSource} und \texttt{AnchorablesSource}, an die jeweils eine Property vom Typ \texttt{IEnumerable} gebunden werden kann. 
+In \texttt{IEnumerable} enthaltene Objekte, die an \texttt{DocumentsSource} gebunden sind, werden als Fenster vom Typ \texttt{LayoutDocument} dargestellt. 
+Analog dazu werden in \texttt{IEnumerable} enthaltene Objekte, die an \texttt{AnchorablesSource} gebunden sind, als Fenster vom Typ \texttt{LayoutAnchorable} dargestellt. \\
+An \texttt{DocumentsSource} wird die Property \texttt{Documents} von \texttt{MainViewModel} gebunden, die vom Typ \texttt{ObservableCollection} ist.
+Die Klasse \texttt{ObservableCollection} ist eine generische Collection, die die Interfaces \texttt{INotifyCollectionChanged} und \texttt{INotifyPropertyChanged} implementiert, die für den Benachrichtigungsmechanismus von ViewModel zu View benötigt werden (siehe Abschnitt \ref{sec:MVVM}, "`MVVM-Pattern"').
+\texttt{Documents} kann Objekte vom Typ \texttt{DocumentViewModel} enthalten, die geöffnete Textdokumente repräsentieren. \texttt{DocumentViewModel} wird im Abschnitt \ref{sec:Texteditor} Texteditor näher beschrieben.
+\\
+An \texttt{AnchorablesSource} wird die Property \texttt{Anchorables} von \texttt{MainViewModel} gebunden, die vom Typ \texttt{IEnumerable} ist. Im Gegensatz zu \texttt{Documents} wird hier keine \texttt{ObservableCollection} benötigt, da die Anzahl der \texttt{Anchorables} während der Laufzeit der Applikation stets gleich ist und somit kein Benachrichtigungsmechanismus über hinzugefügte oder gelöschte Objekte benötigt wird. Anchorables kann Objekte vom Typ \texttt{IAnchorable} enthalten. 
+Alle ViewModels, die ein Anchorable repräsentieren, müssen folglich das Interface \texttt{IAnchorable} implementieren.
+
+Über die Properties \texttt{DocumentsSource} und \texttt{AnchorablesSource} wird allerdings nur festgelegt, welche Daten dargestellt werden sollen, nicht aber wie diese Daten visualisiert werden sollen.
+Für die darzustellenden Elemente Texteditor, Projektexplorer, Konsole und Geräteliste muss deshalb Darstellung und Aussehen der zugehörigen Daten definiert werden. Für diese Elemente wurde deshalb jeweils eine eigene View erstellt, die im späteren Verlauf der Arbeit noch beschrieben werden. 
+Die Views wurden als \texttt{DataTemplate} erstellt. Mit \texttt{DataTemplates} lassen sich Vorlagen definieren, die die visuelle Präsentation von Daten beschreiben.  \\
+Die Klasse \texttt{PanesTemplateSelector} stellt die \texttt{DataTemplate}-Objekte zur Verfügung. Um AvalonDock das Aussehen der darzustellenden Daten mitzuteilen, muss eine Instanz von \texttt{PanesTemplateSelector} der \texttt{LayoutItemTemplateSelector}-Property von \texttt{DockingManager} zugewiesen werden. 
+
+LayoutItemContainerStyle von DockMAnager beschrieben
+
+Wie bereits erwähnt beinhaltet die ViewModel-Klasse MainViewModel die Logik zu der View des Hauptfensters. 
+
+
+\subsection{ViewModel}
+
+\texttt{MainViewModel} ist das ViewModel, mit der die View des Hauptfensters \texttt{MainWindow} über Data Binding und Commands gekoppelt ist. Es stellt Logik und Daten für \texttt{MainWindow} bereit, wie z.B. Objekte von ViewModel-Klassen, die die Inhalte der AvalonDock-Elemente definieren. 
+
+Die Property \texttt{Documents} stellt eine \texttt{ObservableCollection} bereit, in der sich Objekte vom Typ \texttt{DocumentViewModel} befinden. Diese Objekte repräsentieren Textdokumente, die in AvalonDock-Elementen vom Typ \texttt{DocumentLayout} dargestellt werden. Die Anzahl der \texttt{DocumentViewModel}-Objekte in der \texttt{ObservableCollection} definiert, wie viele \texttt{LayoutDocument}-Elemente von AvalonDock erstellt werden.
+In Abschnitt \ref{sec:Texteditor}, "`Texteditor"' wird die Klasse \texttt{DocumentViewModel} näher beschrieben. 
+
+Die Property \texttt{Anchorables} stellt eine generische Auflistung vom Typ \texttt{IEnumberable} zur Verfügung, in der sich Objekte vom Typ \texttt{IAnchorable} befinden. Die Anzahl der Objekte vom Typ \texttt{IAnchorables} in \texttt{Anchorables} definiert, wie viele \texttt{LayoutAnchorable}-Elemente von AvalonDock erstellt werden.
+Das Interface \texttt{IAnchorable} wird von allen ViewModels implementiert, deren zugehörige View in \texttt{LayoutAnchorable}-Elementen dargestellt werden. Dies sind die ViewModels \texttt{ProjectExplorerContainerViewModel}, \texttt{ConsoleViewModel} und \texttt{DeviceListViewModel}. Sie repräsentieren in dieser Reihenfolge den Projektexplorer, die Konsole sowie die Geräteliste.
+
+
+Außerdem wird in \texttt{MainViewModel} die Logik zu folgenden Steuerelementen des Menüs und der Toolbar festgelegt: 
+
+\begin{itemize}
+	\item \textsc{Save}: Speichert die im Texteditor angezeigte Pawn-Datei auf dem Dateipfad, auf dem das Dokument aktuell gespeichert ist.
+	\item \textsc{Save as}: Speichert die im Texteditor angezeigte Pawn-Datei auf einem Dateipfad, den der Benutzer in einem sich öffnenden Dialogfeldes angeben kann.
+	\item \textsc{Open}: Öffnet eine Pawn-Datei von einem Dateipfad, den der Benutzer in einem sich öffnenden Dialogfeldes angeben kann.
+	\item \textsc{Compile}: Kompiliert die im Texteditor angezeigte Pawn-Datei mit dem Pawn-Comiler 
+	\item \textsc{Flash}: Kompiliert die im Texteditor angezeigte Pawn-Datei und übertragt die erzeugte Hex-Datei auf den Flash-Speicher einer über USB mit dem PC verbundenen GIGABOX FD
+\end{itemize}
+
+Die Kopplung zwischen den Steuerelementen in der View und der zugehörigen Logik im ViewModel geschieht über Commands. 
+Die \texttt{Command}-Property eines Steuerelementes der View wird dabei an eine Property vom Typ \texttt{ICommand} des ViewModels gebunden.
+Ein Klick auf eines dieser Steuerelemente ruft die darauf gebundene \texttt{ICommand}-Property des ViewModels auf, worauf die dort implementierte Logik ausgeführt wird. Klickt der Benutzer beispielsweise auf den Button \textsc{Save} der Toolbar, wird die Property \texttt{OnSaveFileCommand} aufgerufen. Die dort implementierte Logik speichert das im Texteditor angezeigte Dokument auf dem aktuellen Dateipfad des Dokuments.
+ 
+
+
+\section{Texteditor}	\label{sec:Texteditor}
+
+Es wurde der in Abschnitt \ref{sec:Abstraktionsebene1} erwähnte Texteditor AvalonEdit in der Version 4.3.0 verwendet. 
+An dieser Stelle wird nicht näher auf den Quellcode von AvalonEdit eingegangen sondern beschrieben, wie der Editor in die Applikation integriert wurde.
+
+AvalonEdit stellt als Schnittstelle nach außen die Klasse \texttt{TextEditor} bereit, mit deren Hilfe der Texteditor in eine Applikation eingebettet werden kann.
+Die Einbindung von \texttt{TextEditor} erfolgt in der View \texttt{MainWindow} über die Property \texttt{LayoutItemTemplateSelector} der \texttt{DockingManager}-Klasse von AvalonDock.
+ 
+Über Properties von \texttt{TextEditor} kann der angezeigte Text festgelegt sowie Einstellungen zu Aussehen und Verhalten des Texteditors gemacht werden. 
+Die benötigten Properties wurden in \texttt{MainWindow} mithilfe von Data Binding an Properties der Klasse \texttt{DocumentViewModel} gebunden. 
+In DocumentViewModel können somit Einstellungen von AvalonEdit gesetzt werden.
+Dabei repräsentiert jedes Objekt von \texttt{DocumentViewModel} ein AvalonDock-Element vom Typ \texttt{DocumentLayout}.
+
+Die folgende Aufzählung zeigt, welche Eigenschaften des Texteditors in DocumentViewModel vorgenommen werden können:
+
+\begin{itemize}
+	\item Festlegung des angezeigten Textes.
+	\item Festlegung der Schriftgröße.
+	\item Festlegung der Schriftart.
+	\item Festlegung von Syntax-Highlighting. Für gängige Programmiersprachen bestehen vordefinierte Regeln des Syntax-Highlightings oder es können eigene Regeln in einer XML-Datei definiert werden.
+	\item Anzeige von Zeilennummern ein- oder ausschalten.
+	\item Abfrage, ob angezeigtes Dokument modifiziert wurde und sich von der ursprünglich geöffneten Version unterscheidet.
+	
+\end{itemize}
+
+DocumentViewModel enthält außerdem Funktionen, die das Öffnen von Dokumenten im Texteditor ermöglichen. Mit \emph{OpenDocumentFromPath()} kann ein Dokument von einem beliebigen Dateipfad geöffnet werden, die Funktion erwartet den Pfad als Argument.
+Mit \emph{OpenDocumentFromProjectExplorer()} kann ein Textdokument vom Projektexplorer aus geöffnet werden, indem ein Objekt vom Typ \texttt{IProjectExplorerItem} als Argument übergeben wird.
+
+Die Funktion \emph{Update()} dient dem Zweck, Daten im Texteditor zu aktualisieren, die im Projektexplorer geändert wurden.  
+Als Beispiel sei hier ein Projekt angeführt, in dem ein Textdokument angelegt wurde. Wird nun der Name des Projektes geändert, ändert sich gleichzeitig der Dateipfad des Textdokumentes, da dieses sich in einem Unterverzeichnis des Projektverzeichnisses befindet. Folglich muss das Objekt von \texttt{DocumentViewModel}, das das Textdokument repräsentiert, über die Änderung des Projektnamens informiert werden und der dort hinterlegte Dateipfad des Textdokumentes aktualisiert werden. Würde der Pfad nicht aktualisiert werden, würde ein Speichern des Dokumentes fehlschlagen, da der in \texttt{DocumentViewModel} hinterlegte Dateipfad nicht mehr existiert.
+Dieser Aktualisierungsmechanismus wurde nach dem Prinzip des Observer-Patterns implementiert.
+
+
+
+
 
 \section{Projektexplorer}
 
