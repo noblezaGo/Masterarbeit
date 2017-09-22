@@ -20,14 +20,15 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Mockup der Benutzeroberfl\"ache des configurAIDERs\relax }}{54}{figure.caption.23}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Prinzip des MVVM-Patter. Quelle: \cite {MSMVVM}\relax }}{56}{figure.caption.24}
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Darstellung der Kontextabgrenzung des Systems im UML-Deployment Diagramm\relax }}{58}{figure.caption.25}
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Darstellung der ersten Ebene der Bausteinsicht\relax }}{59}{figure.caption.27}
-\contentsline {figure}{\numberline {7.5}{\ignorespaces Kopplung zwischen Views und ViewModels\relax }}{61}{figure.caption.29}
-\contentsline {figure}{\numberline {7.6}{\ignorespaces Struktur der ViewModel-Klassen im UML Klassendiagramm\relax }}{62}{figure.caption.30}
-\contentsline {figure}{\numberline {7.7}{\ignorespaces Kompositionsbeziehungen zwischen den ViewModels des Projektexplorers in einem UML-Klassendiagramm\relax }}{64}{figure.caption.32}
-\contentsline {figure}{\numberline {7.8}{\ignorespaces Struktur der Klassen des Projektexplorers in einem UML-Klassendiagramm\relax }}{64}{figure.caption.33}
-\contentsline {figure}{\numberline {7.9}{\ignorespaces Darstellung der Laufzeitsicht des Systems im UML Sequenzdiagramm\relax }}{66}{figure.caption.34}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Mockup der Benutzeroberfl\"ache des configurAIDERs\relax }}{53}{figure.caption.23}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Prinzip des MVVM-Patter. Quelle: \cite {MSMVVM}\relax }}{57}{figure.caption.24}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Darstellung der Kontextabgrenzung des Systems im UML-Deployment Diagramm\relax }}{59}{figure.caption.25}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Darstellung der ersten Ebene der Bausteinsicht\relax }}{60}{figure.caption.27}
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Kopplung zwischen Views und ViewModels\relax }}{62}{figure.caption.29}
+\contentsline {figure}{\numberline {7.6}{\ignorespaces Struktur der ViewModel-Klassen im UML Klassendiagramm\relax }}{63}{figure.caption.30}
+\contentsline {figure}{\numberline {7.7}{\ignorespaces Kompositionsbeziehungen zwischen den ViewModels des Projektexplorers in einem UML-Klassendiagramm\relax }}{65}{figure.caption.32}
+\contentsline {figure}{\numberline {7.8}{\ignorespaces Struktur der Klassen des Projektexplorers in einem UML-Klassendiagramm\relax }}{65}{figure.caption.33}
+\contentsline {figure}{\numberline {7.9}{\ignorespaces Darstellung der Laufzeitsicht des Systems im UML Sequenzdiagramm\relax }}{67}{figure.caption.34}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Mockup der Benutzeroberfl\"ache des configurAIDERs\relax }}{71}{figure.caption.36}
 \addvspace {10\p@ }

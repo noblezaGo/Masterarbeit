@@ -6,14 +6,24 @@ In Kapitel \ref{chp:Evaluation} wurde entschieden, eine Neuentwicklung des confi
 
 \section{Entwurf der Benutzeroberfläche} \label{sec:EntwurfUI}
 
-Bei dem Entwurf der GUI sollen die in Abschnitt \ref{sec:QualitätskriterienSW} definierten Grundsätze der Dialoggestaltung aus ISO ISO/IEC 25010 beachtet werden.
- 
-Die Hauptelemente der Benutzeroberfläche sollen ein Texteditor, ein Projektexplorer, eine Geräteliste sowie eine Konsole bilden. 
-Zur Bedienung dieser Hauptelemente soll die GUI über eine Menüleiste, eine Toolbar mit Buttons sowie über Kontextmenüs verfügen.
-Die Menüleiste soll alle möglichen Funktionen bereitstellen, die im jeweiligen Bedienungskontext zur Verfügung stehen. 
-Den Zugriff auf häufig benötigte Funktionen soll die Toolbar ermöglichen.
+Die Benutzeroberfläche soll so entworfen werden, dass die in der Anforderungsanalyse erarbeiteten Use Cases erfüllt werden können.
+Zusätzlich sollen die in Abschnitt \ref{sec:QualitätskriterienSW} definierten Grundsätze der Dialoggestaltung aus ISO ISO/IEC 25010 beachtet werden.
 
-Folgende Buttons soll die Toolbar enthalten:
+Abbildung \ref{fig:Mockup} zeigt ein Mockup der Benutzeroberfläche, das diese Kriterien erfüllt.
+
+\begin{figure}[!htbp]
+	\centering
+		\includegraphics[width=\textwidth]{images/configurAIDER_Mockup.png}
+	\caption{Mockup der Benutzeroberfläche des configurAIDERs}
+	\label{fig:Mockup}
+\end{figure}
+
+Die Hauptelemente der Benutzeroberfläche sind ein Texteditor, ein Projektexplorer, eine Geräteliste sowie eine Konsole. 
+Zur Bedienung dieser Hauptelemente verfügt die GUI über eine Menüleiste, eine Toolbar mit Buttons sowie über Kontextmenüs.
+Die Menüleiste stellt Funktionen bereit, die im jeweiligen Bedienungskontext zur Verfügung stehen. 
+Den Zugriff auf häufig benötigte Funktionen soll eine Toolbar ermöglichen.
+
+Die Toolbar enthält folgende Buttons:
 
 \begin{itemize}
 	\item Neues Projekt erstellen
@@ -25,24 +35,25 @@ Folgende Buttons soll die Toolbar enthalten:
 	\item Datei flashen
 \end{itemize}
 
-Die vier GUI-Hauptelemente sollen innerhalb eines einzelnen Programmfensters dargestellt werden, um dem Benutzer einen zentralen Zugriff auf alle zur Verfügung stehenden Funktionen zu ermöglichen. Als zentrales Element soll in der Mitte des Fensters der Texteditor angeordnet werden, da für die Anzeige von Quellcode viel Platz beansprucht wird. Um innerhalb von größeren Programmskripten zu navigieren, muss der Texteditor scrollbar sein.
-Die Konsole soll unterhalb des Texteditors ausgerichtet sein, da ein breites Eingabefeld für Befehle benötigt wird. Da in vertikale Richtung wenig Platz zur Verfügung steht, muss die Textausgabe der Konsole scrollbar sein. 
-Die Inhalte des Projektexplorers und der Geräteliste sind in Listenform aufgebaut und benötigen demnach viel Platz in vertikale Richtung. Die Anordnung dieser Elemente rechts und links des Texteditors ermöglichen somit eine optimale Darstellung.
+Die vier GUI-Hauptelemente werden innerhalb eines einzelnen Programmfensters dargestellt, um dem Benutzer einen zentralen Zugriff auf alle zur Verfügung stehenden Funktionen zu ermöglichen. 
+
+Als zentrales Element ist in der Mitte des Fensters der Texteditor angeordnet, da für die Anzeige von Quellcode viel Platz beansprucht wird. Um innerhalb von größeren Programmskripten zu navigieren, muss der Texteditor scrollbar sein.	
+
+Die Konsole ist unterhalb des Texteditors ausgerichtet, da ein breites Eingabefeld für Befehle benötigt wird. 
+Sie besteht aus einer Eingabezeile, die als oberstes Steuerelement angeordnet ist sowie aus einem darunterliegenden Ausgabefeld.
+Da in vertikale Richtung wenig Platz zur Verfügung steht, muss die Textausgabe der Konsole scrollbar sein. 
+
+Der Projektexplorer kann ein Projekt darstellen, das eine Baumstruktur aus Ordnern und Pawn-Dateien beinhaltet. 
+Er kann ein Projekt beinhalten, das das Wurzelelement des Baumes ist und Ebene 1 der Struktur darstellt. 
+Die Kindelemente des Projektes können Ordner sowie Pawn-Dateien sein, sie repräsentieren Ebene 2 der Struktur.
+Ordner wiederum können nur Pawn-Dateien als Kindelemente enthalten, somit ist die Baumstruktur auf drei Ebenen beschränkt. 
+Das Hinzufügen von Kindelementen soll über ein Kontextmenü des Elternelementes möglich sein.
+
+In der Geräteliste werden über USB verbundene GIGABOX FD-Geräte untereinander aufgelistet. Zu jedem Gerät wird eine Checkbox dargestellt, mit der eine GIGABOX als Zielgerät ausgewählt werden kann. 
+Wurde ein Zielgerät festgelegt, steht im configurAIDER die Flash-Funktion zur Verfügung und in die Konsole eingegebene Befehl werden an das Zielgerät gesendet.
+
 
 (Vereinzelt Designbegründung nach ISO einfügen)
-
-Abbildung \ref{fig:Mockup} zeigt ein Mockup der Benutzeroberfläche, das die beschriebenen Anordnungen der GUI-Elemente umsetzt.
-
-
-
-\begin{figure}[!htbp]
-	\centering
-		\includegraphics[width=\textwidth]{images/configurAIDER_Mockup.png}
-	\caption{Mockup der Benutzeroberfläche des configurAIDERs}
-	\label{fig:Mockup}
-\end{figure}
-
-
 
 Erläuterung des Entwurfes mit Bezugnahme auf ISO, die gute Usability definiert
 
@@ -80,6 +91,8 @@ Commands werden eingesetzt, um auf Benutzeraktionen wie einen Klick auf einen Bu
 
 Abbildung \ref{fig:MVVMPrinciple} zeigt beschriebene Prinzip aus Data Binding, Commands und Benachrichtigungen.
 
+Quelle: \cite{MSMVVM}, \cite{WPF}
+
 \begin{figure}[!htbp]
 	\centering
 		\includegraphics[width=\textwidth]{images/MVVMPrinciple.png}
@@ -87,7 +100,7 @@ Abbildung \ref{fig:MVVMPrinciple} zeigt beschriebene Prinzip aus Data Binding, C
 	\label{fig:MVVMPrinciple}
 \end{figure}
 
-Quelle: \cite{MSMVVM}, \cite{WPF}
+
 
 
 \subsection{Dependency Injection}

@@ -81,14 +81,15 @@
 \BOOKMARK [2][-]{subsection.7.3.5}{Entwurf der Laufzeitsicht}{section.7.3}% 81
 \BOOKMARK [0][-]{chapter.8}{Realisierung}{}% 82
 \BOOKMARK [1][-]{section.8.1}{\334berblick}{chapter.8}% 83
-\BOOKMARK [1][-]{section.8.2}{Hauptfenster}{chapter.8}% 84
-\BOOKMARK [2][-]{subsection.8.2.1}{View}{section.8.2}% 85
-\BOOKMARK [2][-]{subsection.8.2.2}{ViewModel}{section.8.2}% 86
-\BOOKMARK [1][-]{section.8.3}{Texteditor}{chapter.8}% 87
-\BOOKMARK [1][-]{section.8.4}{Projektexplorer}{chapter.8}% 88
-\BOOKMARK [1][-]{section.8.5}{Konsole}{chapter.8}% 89
-\BOOKMARK [1][-]{section.8.6}{Kommunikation mit GIGABOX}{chapter.8}% 90
-\BOOKMARK [0][-]{chapter.9}{Fazit und Ausblick}{}% 91
-\BOOKMARK [0][-]{section*.35}{Abbildungsverzeichnis}{}% 92
-\BOOKMARK [0][-]{section*.37}{Tabellenverzeichnis}{}% 93
-\BOOKMARK [0][-]{section*.39}{Literaturverzeichnis}{}% 94
+\BOOKMARK [1][-]{section.8.2}{Core-Paket}{chapter.8}% 84
+\BOOKMARK [2][-]{subsection.8.2.1}{Erstellung des Hauptfensters}{section.8.2}% 85
+\BOOKMARK [2][-]{subsection.8.2.2}{Erstellung des Texteditors}{section.8.2}% 86
+\BOOKMARK [2][-]{subsection.8.2.3}{Erstellung des Projektexplorers}{section.8.2}% 87
+\BOOKMARK [2][-]{subsection.8.2.4}{Erstellung der Konsole}{section.8.2}% 88
+\BOOKMARK [2][-]{subsection.8.2.5}{Erstellung der Ger\344teliste}{section.8.2}% 89
+\BOOKMARK [1][-]{section.8.3}{UsbDevicesLib-Paket}{chapter.8}% 90
+\BOOKMARK [1][-]{section.8.4}{PawnCompilerLib-Paket}{chapter.8}% 91
+\BOOKMARK [0][-]{chapter.9}{Fazit und Ausblick}{}% 92
+\BOOKMARK [0][-]{section*.42}{Abbildungsverzeichnis}{}% 93
+\BOOKMARK [0][-]{section*.44}{Tabellenverzeichnis}{}% 94
+\BOOKMARK [0][-]{section*.46}{Literaturverzeichnis}{}% 95
