@@ -149,12 +149,47 @@ Dieser Aktualisierungsmechanismus wurde nach dem Prinzip des Observer-Patterns i
 
 
 
-
-
-
 \subsection{Erstellung des Projektexplorers}
 
+\subsubsection{View}
 
+Die View des Projektexplorers ist in der XAML-Datei \texttt{ProjectExplorerView} definiert. 
+\texttt{ProjectExplorerView} wird in einem AvalonDock-Fenster vom Typ \texttt{LayoutAnchorable} dargestellt, der Aufruf erfolgt in der View des Hauptfensters \texttt{MainWindow}.
+
+Im Projektexplorer kann ein Projekt erstellt und geöffnet werden, das als Baumstruktur dargestellt wird und aus Ordnern, Pawn-Skriptdateien sowie Pawn-Includedateien besteht. 
+Das Projekt repräsentiert das Wurzelelement des Baumes und stellt Ebene 1 der Struktur dar. 
+Die Kindelemente des Projektes können Ordner sowie Pawn-Dateien sein, sie repräsentieren Ebene 2 der Struktur.
+Ordner wiederum können nur Pawn-Dateien als Kindelemente enthalten, somit ist die Baumstruktur auf drei Ebenen beschränkt. 
+
+WPF stellt die Klasse \texttt{TreeView} zur Verfügung, um Objekte in einer Baumstruktur anzuordnen. 
+Objekte in einer \texttt{TreeView} können ein- und aufgeklappt werden, um Kindelemente ein- oder auszublenden. \\
+An die Property \texttt{ItemsSource} von \texttt{TreeView} kann ein Objekt vom Typ \texttt{IEnumerable} gebunden werden, die alle Objekte enthalten muss, die in der Baumstruktur dargestellt werden sollen.
+\texttt{ItemsSource} wird deshalb an die Property \texttt{Project} gebunden, die in \texttt{ProjectExplorerContainerViewModel} enthalten ist. Diese stellt eine \texttt{ObservableCollection} zur Verfügung, die Objekte vom Typ \texttt{IProjectExplorerItem} enthalten muss. \\
+Die Struktur der Klassen, mit denen der Projektexplorer realisiert wurde, wurde in Abschnitt \ref{sec:Abstraktionsebene3} "`Abstraktionsebene 3"' vorgestellt.
+Wie in dem Klassendiagramm in Abbildung \ref{fig:ProjectExplorerClassStructure} zu erkennen ist, wird \texttt{IProjectExplorerItem} von der abstrakten Basisklasse \texttt{ProjectExplorerViewModelBase} implementiert.
+Die Klassen \texttt{ProjectViewModel}, \texttt{FolderViewModel}, \texttt{ScriptFileViewModel} sowie \texttt{IncludeFileViewModel} leiten von dieser Basisklasse ab und repräsentieren jeweils ein Baumelement des Projektexplorers.
+Die \texttt{ObservableCollection}, die \texttt{Project} zur Verfügung stellt, kann somit ausschließlich Instanzen dieser Klassen enthalten.
+
+Mithilfe der Klasse \texttt{HierarchicalDataTemplate} können Vorlagen erstellt werden, in denen definiert wird, wie die Objekte von \texttt{Projects} visuell präsentiert werden. 
+Für jede Klasse, die \texttt{IProjectExplorerItem} implementiert, wurde deshalb eine solche Vorlage definiert.
+
+Die visuelle Präsentation jedes Baumelementes erfolgt durch ein Icon und eine Textbox. \\
+Die Icons wurden mithilfe der \texttt{Image}-Klasse eingebunden. Sie stammen von der "`Visual Studio Image Library"', die von Microsoft frei zur Verfügung gestellt wird \cite{VSImgLib}. \\
+
+Die Textbox soll über zwei Modi verfügen, "`Editierbar"' und "`Nichteditierbar"'. Im Modus "`Nichteditierbar"' soll der Name des Baumelementes ausgegeben werden, eine Editierung des Namens soll nicht möglich sein. In Modus "`Editierbar"' soll der Elementname umbenannt werden können, wobei ein Eingabefeld eingeblendet werden soll. Der bisherige Elementname soll im Eingabefeld ausgewählt und markiert sein.
+Der Wechsel von Modus 1 in Modus 2 soll entweder über einen zweimaligen Linksklick auf die Textbox oder über das Kontextmenü des Elementes möglich sein. 
+WPF enthält keine Textbox, die die beschriebenen Anforderungen erfüllt. Es wurde deshalb das Paket \texttt{InplaceEditBoxLib} verwendet, das in Abschnitt \ref{Abstraktionsebene1} "`Abstraktionsebene 1"' beschrieben wurde. 
+Um die Textbox innerhalb von \texttt{ProjectExplorerView} einzubinden, wurde die Klasse \texttt{EditBox} aus \texttt{InplaceEditBoxLib} verwendet.
+Die Textbox ermöglicht es, 
+
+
+
+
+
+
+
+
+\subsubsection{ViewModel}
 
 Realisierung mit TreeView
 
@@ -164,7 +199,7 @@ Beschreibung der Funktionen
 
 \subsubsection{View}
 
-Die View der Konsole ist in der XAML-Datei \texttt{ConsoleView} definiert. Die von \texttt{ConsoleView} erzeugten grafischen Elemente wird in einem \emph{AvalonDock}-Fenster vom Typ \texttt{LayoutAnchorable} dargestellt.
+Die View der Konsole ist in der XAML-Datei \texttt{ConsoleView} definiert. Die von \texttt{ConsoleView} erzeugten grafischen Elemente werden in einem \emph{AvalonDock}-Fenster vom Typ \texttt{LayoutAnchorable} dargestellt.
 
 Die Konsole besteht aus einer Eingabezeile, die als oberstes Fensterelement angeordnet ist, sowie aus einem scrollbaren Ausgabefeld.
 Die Ausgabemeldungen sollen untereinander angeordnet werden, wobei die neueste Meldung das unterste Textelement im Ausgabefeld sein soll.

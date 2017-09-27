@@ -2,7 +2,7 @@
 
 \section{Überblick}
 
-In Kapitel \ref{chp:Evaluation} wurde entschieden, eine Neuentwicklung des configurAIDERs weiter zu verfolgen. Hierzu muss die Benutzeroberfläche neu entworfen werden, eine neue Software-Architektur entwickelt werden und anshließend eine Umsetzung in Programmcode erfolgen. Dieses Kapitel beschäftigt sich mit dem Entwurf einer neuen Benutzeroberfläche und dem herleiten einer neuen Softwarearchitektur. 
+In Kapitel \ref{chp:Evaluation} wurde entschieden, eine Neuentwicklung des configurAIDERs weiter zu verfolgen. Hierzu muss die Benutzeroberfläche neu entworfen werden, eine neue Software-Architektur entwickelt werden und anschließend eine Umsetzung in Programmcode erfolgen. Dieses Kapitel beschäftigt sich mit dem Entwurf einer neuen Benutzeroberfläche und dem Herleiten einer neuen Softwarearchitektur. 
 
 \section{Entwurf der Benutzeroberfläche} \label{sec:EntwurfUI}
 
@@ -44,7 +44,7 @@ Sie besteht aus einer Eingabezeile, die als oberstes Steuerelement angeordnet is
 Da in vertikale Richtung wenig Platz zur Verfügung steht, muss die Textausgabe der Konsole scrollbar sein. 
 
 Der Projektexplorer kann ein Projekt darstellen, das eine Baumstruktur aus Ordnern und Pawn-Dateien beinhaltet. 
-Er kann ein Projekt beinhalten, das das Wurzelelement des Baumes ist und Ebene 1 der Struktur darstellt. 
+Das Projekt repräsentiert das Wurzelelement des Baumes und stellt Ebene 1 der Struktur dar. 
 Die Kindelemente des Projektes können Ordner sowie Pawn-Dateien sein, sie repräsentieren Ebene 2 der Struktur.
 Ordner wiederum können nur Pawn-Dateien als Kindelemente enthalten, somit ist die Baumstruktur auf drei Ebenen beschränkt. 
 Das Hinzufügen von Kindelementen soll über ein Kontextmenü des Elternelementes möglich sein.
@@ -61,13 +61,21 @@ Erläuterung des Entwurfes mit Bezugnahme auf ISO, die gute Usability definiert
 	
 \section{Entwurf der Softwarearchitektur}
 
-\cite{EffSWArchitektur}
-
 \textit{"`The software architecture of a program or computing system is the structure or structures of the system, which comprises software components, the externally visible properties of those components and the relationship among them."'} \cite{DefSWArchitektur}
 
 Nach dieser in der Literatur oft zitierten Definition legt die Softwarearchitektur die Komponenten eines Systems fest, beschreibt deren wesentliche, von außen sichtbare Merkmale und charakterisiert die Beziehungen dieser Komponenten. Sie beschreibt den statischen Aufbau einer Software im Sinne eines Bauplans und den dynamischen Ablauf einer Software im Sinne eines Ablaufplans. 
 
 Die in diesem Kapitel vorgestellte Software-Architektur des configurAIDERs wurde entworfen auf Basis der funktionalen und nichtfunktionalen Anforderungen an Software in Kapitel \ref{chp:Anforderungsanalyse}. Wie im vorigen Kapitel "`Konzeption"' erläutert, werden nur Funktionen umgesetzt, die als "`Essential"' oder "`Conditional"' priorisiert wurden.
+
+Die Softwarearchitektur wird aus verschiedenen Sichten dargestellt, da eine einzelne Darstellung die Komplexität eines Systems nicht wiedergeben kann. 
+Jede Sicht zeigt das System detailliert aus einer bestimmten Perspektive. Details, die für eine Sicht nicht von Bedeutung sind, werden vernachlässigt. Es werden drei Arten von Sichten verwendet: die Kontextabgrenzung, die Bausteinsicht und die Laufzeitsicht.
+Die verschiedenen Sichten werden in UML-Diagrammen dargestellt. Für die Darstellung der Kontextabgrenzung wird ein Deployment Diagramm verwendet, für die Bausteinsicht Klassendiagramme und für die Laufzeitsicht Sequenzdiagramme. 
+Die Einteilung in diese Sichtarten wird in Buch \cite{EffSWArchitektur} empfohlen.  
+
+Zur Verdeutlichung kann man sich die Erstellung einer Gebäudearchitektur anschauen, bei der ähnlich vorgegangen wird.
+ Das Gebäude wird aus verschiedenen Sichten dargestellt, z. B. Grundriss, Gebäudeplan und Elektroplan. Jede Sicht konzentriert sich auf die Darstellung von Details, die für diese Sicht wichtig sind und vernachlässigt dafür anderes, um die Darstellung nicht zu überladen.
+
+Quelle: \cite{EffSWArchitektur}
 
 \subsection{Model-View-ViewModel-Pattern (MVVM-Pattern)}	\label{sec:MVVM}
 
@@ -103,7 +111,7 @@ Quelle: \cite{MSMVVM}, \cite{WPF}
 
 
 
-\subsection{Dependency Injection}
+%\subsection{Dependency Injection}
  
 
 
@@ -138,8 +146,7 @@ Der Benutzer soll aus dem configurAIDER heraus Hilfedokumentationen aufrufen kön
 
 \subsection{Entwurf der Bausteinsicht} \label{sec:Bausteinsicht}
 
-Die Bausteinsicht stellt den Quellcode eines Softwaresystems in unterschiedlichen Abstrakti
-onsebenen dar. Sie veranschaulicht die Struktur und die Zusammenhänge der unterschiedlichen Bausteine eines Systems.
+Die Bausteinsicht stellt den Quellcode eines Softwaresystems in unterschiedlichen Abstraktionsebenen dar. Sie veranschaulicht die Struktur und die Zusammenhänge der unterschiedlichen Bausteine eines Systems.
 Bausteine werden hier innerhalb von UML-Diagrammen als Pakete, Komponenten und Klassen dargestellt. 
 
 \subsubsection{Abstraktionsebene 1}	\label{sec:Abstraktionsebene1}
@@ -205,7 +212,7 @@ Das UML Klassendiagramm \ref{fig:ClassDiagramViewModels} zeigt die Struktur der 
 \texttt{ViewModelBase} ist die abstrakte Basisklasse aller ViewModels. Sie implementiert das Interface \texttt{INotifyPropertyChanged} und stellt Funktionen bereit, mithilfe derer die View über Datenänderungen innerhalb eines ViewModels informiert werden kann.
 Dieser Benachrichtigungsmechanismus, der im Rahmen des MVVM-Patterns verwendet wird, wurde in Abschnitt \ref{sec:MVVM} näher beschrieben.
 
-\subsubsection{Abstraktionsebene 3}
+\subsubsection{Abstraktionsebene 3} \label{sec:Abstraktionsebene3}
 
 Auf Abstraktionsebene 3 wird ausschließlich der Projektexplorer beschrieben, dieser besitzt trotz niedriger Abstraktion noch eine komplexe Struktur besitzt.
 Im Projektexplorer kann der Benutzer eine hierarchische Dateistruktur aus Elementen anlegen, wie sie beispielsweise vom Windows Explorer bekannt ist. Diese Elemente können ein Projekt, Ordner, Pawn-Skriptdateien und Pawn-Includedateien sein.
@@ -224,7 +231,7 @@ Abbildung \ref{fig:ProjectExplorerItemsComposition} zeigt diese Zusammenhänge de
 	\label{fig:ProjectExplorerItemsComposition}
 \end{figure}
 
-Alle beschriebenen Klassen, die Elemente im Projektexplorer repräsentieren, leiten von \texttt{ProjectExplorerItemViewModelBase} ab. \texttt{ProjectExplorerItemViewModelBase} implementiert das Interface \texttt{IProjectExplorerItem}. Das Interface legt fest, welche Properties und Methoden ein Element des Projektexplorers enthalten muss.	\\
+Alle beschriebenen Klassen, die Elemente im Projektexplorer repräsentieren, leiten von \texttt{ProjectExplorerItemViewModelBase} ab. \texttt{ProjectExplorerItemViewModelBase} ist als abstrakte Klasse definiert und implementiert das Interface \texttt{IProjectExplorerItem}. Das Interface legt fest, welche Properties und Methoden ein Element des Projektexplorers enthalten muss.	\\
 Abbildung \ref{fig:ProjectExplorerClassStructure} zeigt die Struktur der Klassen, die für den Projektexplorer von Bedeutung sind. 
 
 \begin{figure}[!htbp]

@@ -1,18 +1,61 @@
 \chapter{Einleitung}
 
-\section{Motivaton}
+\section{Motivation}
 
-\textcolor[rgb]{1,0,0}{configurAIDER wurde im Rahmen von verschiedenen studentischen Arbeiten erstellt. Aktuell ergeben sich folgende Probleme:
-\begin{itemize}
-	\item nicht testbar, da das Sollverhalten nicht immer bekannt ist
-	\item nicht wartbar, da sich keiner im Code auskennt und keine saubere Dokumentation vorhanden ist
-	\item schwer erweiterbar, da sich keiner im Code auskennt und keine saubere Dokumentation vorhanden ist
-\end{itemize}
-}
--> Kommt erst spÃ¤ter rein
+Die Kommunikationsvernetzung innerhalb von Fahrzeugen ist in den letzten Jahren deutlich gestiegen und die Anzahl der verbauten Steuergeräte nahm deutlich zu. Zukünftig wird sich dieser Trend fortsetzen. Die Multimediaanwendungen nehmen zu, Internet ist im Fahrzeug verfügbar und Fahrzeuge sollen in Zukunft mit ihrer Umwelt kommunizieren können, Stichwort Car-2-X. Um diese steigenden Datenmengen verarbeiten und übertragen zu können, werden leistungsfähige Steuergeräte benötigt, die auf Basis von Busprotokollen mit hohen Datenübertragungsraten miteinander kommunizieren können. Eine Antwort auf diese steigenden Anforderungen sind Protokolle wie das im Jahre 2012 veröffentlichte CAN FD-Protokoll.
 
-EinfÃ¼hrung in das Thema...
-Ein paar SÃ¤tze zur Firma...
+Obwohl die Fahrzeugssysteme komplexer werden, müssen die Hersteller aufgrund des Konkurrenzdrucks die Entwicklungszyklen für neue Fahrzeugmodelle verkürzen und die Entwicklungs- und Herstellungskosten möglichst gering halten. 
+Auch bei der Entwicklung von Steuergeräten muss auf diese Herausforderungen reagiert werden. Es werden Möglichkeiten benötigt, schnell und kostengünstig neue prototypische Funktionen zu entwickeln und diese innerhalb einer realen oder simulierten Fahrzeugumgebung zu testen.
+
+Die Firma GIGATRONIK bietet mit ihren GIGABOX-Produkten dafür eine Lösung. Die Universalsteuergeräte sind ausgestattet mit Kommunikationsschnittstellen, die im Automotive-Bereich gängig sind sowie Ein- und Ausgängen. GIGABOX-Produkte können mit der Skriptsprache Pawn programmiert werden, die eine einfache Programmierung der gewünschten Steuergerätefunktionen ermöglicht. 
+Mit dem "`configurAIDER"' steht eine integrierte Entwicklungsumgebung (IDE) zur Verfügung, die die Entwicklung von GIGABOX-Applikationen ermöglicht.  
+
+Allerdings wird die aktuelle Produktpalette der GIGABOX nicht mehr den neuesten technischen Anforderungen gerecht, da keine CAN FD-Schnittstelle vorhanden ist. Im Moment wird deshalb die GIGABOX FD entwickelt, die die bisherige GIGABOX-Familie ablösen soll. Im Vergleich zu den Vorgängermodellen besitzt diese beispielsweise eine CAN FD-Schnittstelle sowie Bluetooth. Über Erweiterungsplatinen können zusätzliche Kommunikationstechnologien verwendet werden.  
+
+Im Rahmen dieser Neuentwicklung soll auch der "`configurAIDER"' auf den Prüfstand gestellt werden.
+Auf dem Gebiet der IDEs setzt z. B. "`Visual Studio"' von Microsoft hohe Maßstäbe. Eine hohe Usability sowie die Unterstützung des Anwenders bei der Codeentwicklung durch diverse Funktionalitäten 
+
+ bezüglich Usability der Applikation und Unterstützung des Anwenders bei der Codeentwicklung mit 
+
+Anwender von Desktopapplikationen stellen inzwischen höhere Anforderungen an die Usability als 
+
+
+Die vorliegende Masterthesis beschäftigt sich mit der Evaluierung 
+
+Mit der Entwicklung der GIGABOX FD soll nun auch der configurAIDER 
+
+Im Rahmen dieser Arbeit wurde untersucht, welche Anforderungen an eine IDE zur Erstellung von GIGABOX FD-Applikationen gestellt werden. Auf Basis einer Ist-Analyse des "`configurAIDER"' wurde dieser anschließend evaluiert und mit den Ergebnissen der Anforderungsanalyse verglichen.
+Es wurde dann entschieden, für die GIGABOX FD eine neue IDE zu entwickeln, die grundlegende Funktionen bereitstellt. Als Beispiel sei hier die Entwicklung von Quellcode in einem Texteditor genannt, der anschließend kompiliert werden kann. 
+
+
+können sie mit ihrer Umgebung kommunizieren und 
+Sensorwerte einlesen sowie Aktoren ansteuern.
+
+
+Dies führt auch zu neuen Herausforderungen in der Entwicklung 
+
+In der Fahrzeugentwicklung werden prototypische Lösungen benötigt, um schnell und kostengünstig neue Fahrzeugfunktionen auszuprobieren. Dazu können Universalsteuergeräte benutzt werden, die frei konfigurierbar sind und in ein bestehendes Bussystem integriert werden kann.
+
+Bei der Entwicklung von Fahrzeugen ist es oft vonnöten, in ein bestehendes Bussystem neue Busbotschaften zu integrieren oder bestehende Botschaften zu verändern.
+Busbotschaften in bestehenden Bussystemen zu verändern oder 
+
+Bei der prototypischen Entwicklung von neuen Fahrzeugfunktionen können Universalsteuergeräte eingesetzt werden, die in ein bestehendes Bussystem integriert werden. Damit lassen sich schnell 
+
+Bei der Entwicklung von neuen Fahrzeugfunktionen werden flexible Lösungen benötigt, mit denen neue Ste
+
+in ein bestehendes Bussystem 
+
+mit denen schnell und kostengünstig bestehende Bussysteme erweitert werden können
+
+Aufgrund des großen Datenaustauschs zwischen den Steuergeräten eines Fahrzeugs  
+Bei der Entwicklung von Fahrzeugen werden flexible und kostengünstige Lösungen benötigt, um ein bestehendes Bussystem zu erweitern
+
+es werden immer größere Datenmengen innerhalb der Fahrzeuge
+
+Im Bereich der Automotive-Entwicklung werden stets kürzere Entwicklungszeiten angestrebt. 
+
+Einführung in das Thema...
+Ein paar Sätze zur Firma...
 
 
 \section{Aufgabenstellung}	

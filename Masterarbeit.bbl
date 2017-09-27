@@ -36,15 +36,15 @@ Microsoft.
   \url{https://msdn.microsoft.com/de-de/library/vstudio/zw4w595w(v=vs.11)},
   Stand: 13.10.2015.
 
-\bibitem{EffSWArchitektur}
-Gernot Starke.
-\newblock {\em {Effektive Software Architekturen}}.
-\newblock Hanser Verlag, 2009.
-
 \bibitem{DefSWArchitektur}
 L.~Bass, P.~Clements, and R.~Kazman.
 \newblock {\em { Software Architecture in Practice }}.
 \newblock Addison-Wesley, 1998.
+
+\bibitem{EffSWArchitektur}
+Gernot Starke.
+\newblock {\em {Effektive Software Architekturen}}.
+\newblock Hanser Verlag, 2009.
 
 \bibitem{MSMVVM}
 Microsoft.
